@@ -10,14 +10,24 @@ background-color: rebeccapurple;
 /* height: 90px; */
 /* display: flex;
 justify-content: center; */
-background-color: brown;
+background-color: rgb(189, 149, 149);
 padding: 50px;
 gap: 10px;
+border-radius: 20px;
+
 
 }
 .box{
     color: white;
     border: 1px solid white;
-    padding: 20px;
+    padding: 15px;
+    border-radius: 20px;
     text-align: center;
+}
+.generate{
+    border: 1px solid white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+
 }
