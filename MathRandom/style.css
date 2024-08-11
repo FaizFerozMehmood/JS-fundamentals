@@ -1,0 +1,23 @@
+.container{
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+background-color: rebeccapurple;
+/* height: 90px; */
+/* display: flex;
+justify-content: center; */
+background-color: brown;
+padding: 50px;
+gap: 10px;
+
+}
+.box{
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+    text-align: center;
+}
