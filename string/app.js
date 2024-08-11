@@ -1,52 +1,40 @@
-
+//first letter capital rest of the letter in lowerCase
 function capitalize(word) {
-    return word.slice(0,1).toUpperCase()+word.slice(1).toLowerCase()
-
+return word[0].toUpperCase()+word.substring(1).toLowerCase()
 }
 
 console.log(capitalize("sam")); 
 console.log(capitalize("ALEX"));
 console.log(capitalize("chARLie"));
 
-/** @param {string} name */
-export function getNumberOfChars(name) {
-    // number of characters in: name
-    return name.length
+ function getNumberOfChars(name) {
+//     // number of characters in: name
+return name.length
 
 }
 
 
-/** @param {string} name */
-export function getFirstChar(name) {
+ function getFirstChar(name) {
     // first character of: name
-    return name.at(0)
-
-}
-
-/** @param {string} name */
-export function getLastChar(name) {
     return name[name.length-1]
-    // last character of: name
 
 }
 
-/** @param {string} name */
-export function getLower(name) {
-    // name all in lower case (example: "ABC" becomes "abc")
-    return name.toLowerCase()
 
-}
+//  function getLastChar(name) {
+//     // last character of: name
 
-/** @param {string} name */
-export function getUpper(name) {
-    // name all in upper case (example: "abc" becomes "ABC")
-    return name.toLocaleUpperCase()
+// }
 
-}
+//  function getLower(name) {
+//     // name all in lower case (example: "ABC" becomes "abc
+// /** @param {string} name */
+//  function getUpper(name) {
+//     // name all in upper case (example: "abc" becomes "ABC")
 
-/** @param {string} name */
-export function getCapitalized(name) {
-    return name[0].toUpperCase()+name.substring(1).toLowerCase()
-    // capitalized version of name (example: "alEX" becomes "Alex")
+// }
 
-}
+//  function getCapitalized(name) {
+//     // capitalized version of name (example: "alEX" becomes "Alex")
+
+// }
