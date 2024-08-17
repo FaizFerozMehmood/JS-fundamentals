@@ -13,3 +13,4 @@ textInput.addEventListener('change',()=>{
     
     }
 })
+// ++++++++++++++++++     substring(1,4) eg :(hello)   => ell, takes two parameter,starting and ending excluding and one perameter  eg:2 to end     ++++++++++++++++++++
