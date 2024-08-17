@@ -17,30 +17,36 @@ textInput.addEventListener("change", () => {
 // })
 // function show(valu){
 //   console.log(valu);
-  
+
 //   if(valu.length > 10){
 //   let store= valu.substring(0,10)+"..."
 //   console.log(store);
-  
+
 //   }
 // }
 // show(valu)
 
 // ++++++++++++++++++     substring(1,4) eg :(hello)   => ell, takes two parameter,starting and ending excluding and one perameter  eg:2 to end     ++++++++++++++++++++
 
-let vlu = "1,2,3,4,5,6,7"
+let vlu = "1,2,3,4,5,6,7";
 
-if(vlu.length>5){
-  let res = vlu.substring(0,6)+"..."
-    console.log(res);
-    
-}
-else{
-    console.log(vlu);
-    
+if (vlu.length > 5) {
+  let res = vlu.substring(0, 6) + "...";
+  console.log(res);
+} else {
+  console.log(vlu);
 }
 //indexOf()
-let words = ["faiz","hello"]
-let ind = words.indexOf("hello")
+let words = ["faiz", "hello"];
+let ind = words.indexOf("hello");
 console.log(ind);
 
+//++++++++++++++++++++++++++=IF ELSE +++++++++++++++++
+let number = [1, 23, 4, 5, 6, 67, 8];
+for (let i = 0; i < number.length; i++) {
+  if (number[i] % 2 === 0) {
+    console.log("even");
+  } else {
+    console.log("odd");
+  }
+}
