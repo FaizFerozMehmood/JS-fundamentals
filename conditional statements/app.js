@@ -10,6 +10,22 @@ textInput.addEventListener("change", () => {
   }
   textInput.value = "";
 });
+
+// textInput.addEventListener("change",()=>{
+//   let valu = textInput.value
+//   return valu
+// })
+// function show(valu){
+//   console.log(valu);
+  
+//   if(valu.length > 10){
+//   let store= valu.substring(0,10)+"..."
+//   console.log(store);
+  
+//   }
+// }
+// show(valu)
+
 // ++++++++++++++++++     substring(1,4) eg :(hello)   => ell, takes two parameter,starting and ending excluding and one perameter  eg:2 to end     ++++++++++++++++++++
 
 let vlu = "1,2,3,4,5,6,7"
@@ -27,3 +43,4 @@ else{
 let words = ["faiz","hello"]
 let ind = words.indexOf("hello")
 console.log(ind);
+
