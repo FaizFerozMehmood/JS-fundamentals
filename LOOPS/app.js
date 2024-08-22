@@ -25,3 +25,4 @@ function sumGrades(grades){
 
 }
 sumGrades([1,2,3,4,6])
+
