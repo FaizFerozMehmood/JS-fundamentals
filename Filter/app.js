@@ -5,14 +5,16 @@ const odd = arr.filter((data,index )=>{
     
 })
 console.log(odd);
-let zero = []
 
-const vlue = [1,0,6,0,0]
+var zero = []
+
+let vlue = [1,0,6,0,0]
 vlue.forEach((data,index)=>{
-    // console.log(data);
-    if(data <1){
-        vlue.push(zero)
-        console.log(data);
+       if(data === 0){
+        // console.log(data);
+        // zero.push("data",data)
+        
+        
         
     }
     

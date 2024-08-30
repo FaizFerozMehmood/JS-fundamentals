@@ -15,3 +15,17 @@ console.log(arry2);
 const ary = [1,2,3,44,5,6,7]
 const vl = ary.at(-1)
 console.log(vl);
+
+
+
+function fun(sumVlues){
+    let res = 0
+    sumVlues.forEach((data) => {
+        if(data >0){
+          res += data
+        }
+    })
+    return res
+
+}
+console.log("results=> "+fun([1,1,1,1,-5]));
