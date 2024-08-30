@@ -37,5 +37,5 @@ function myFunction(numbers){
    })
    return vl
 }
-console.log("results =>>>>>   ",myFunction([12,13,14,1,51]));
+console.log("results =>>>>>   ",myFunction([15, 5, 10]));
 
