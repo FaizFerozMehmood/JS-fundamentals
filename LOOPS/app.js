@@ -26,3 +26,16 @@ function sumGrades(grades){
 }
 sumGrades([1,2,3,4,6])
 
+// Complete the function sumOddNumbers such that it 
+// returns the sum of all the odd numbers from the numbers parameter it receives.
+// The function should also work for negative numbers.
+function myFunction(numbers){
+   let vl = 0
+   numbers.forEach((data) => {
+      data % 2!==0? vl += data :"nodata"
+   //   
+   })
+   return vl
+}
+console.log("results =>>>>>   ",myFunction([12,13,14,1,51]));
+
