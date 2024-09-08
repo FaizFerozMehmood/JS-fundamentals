@@ -19,3 +19,13 @@ vlue.forEach((data,index)=>{
     }
     
 })
+
+function returnOdd(numbers){
+   return numbers.filter((number)=>{
+        return number % 2 ===1
+    })
+
+}
+console.log(returnOdd([12,23,,34,54,61,11,12,13]));
+
+ 
