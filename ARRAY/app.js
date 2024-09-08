@@ -29,3 +29,13 @@ function fun(sumVlues){
 
 }
 console.log("results=> "+fun([1,1,1,1,-5]));
+
+
+
+function myfun(number,secNum){
+      return number.find((num)=>{
+        return num ===secNum
+      })
+}
+
+console.log(myfun([1,2,3,4,5],5));
