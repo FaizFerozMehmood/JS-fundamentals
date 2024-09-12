@@ -76,3 +76,20 @@ function myfun(e) {
   console.log(largestWord);
 }
 myfun("abchdhdhdh g hdg");
+
+
+let oddNum = ""
+let evenNum = ""
+for(var i = 0; i < 10; i++){
+if(i % 2 ===0){
+  let result = evenNum + i;
+  console.log(`Even number  :${result}`);
+  
+  
+}  
+else{
+  let oddres = oddNum + i
+  console.log(`Odd number  :${oddres}`);
+  
+}
+}
