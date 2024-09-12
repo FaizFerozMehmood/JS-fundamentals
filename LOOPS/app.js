@@ -39,3 +39,12 @@ function myFunction(numbers){
 }
 console.log("results =>>>>>   ",myFunction([-2, -3, 4, 5, 6]));
 
+
+function getNumbersOfStrings(strings){
+     return strings.map((str)=>{
+      return str.length
+     })
+}
+
+console.log(getNumbersOfStrings(["abc","dfrcjdjds"]));
+
