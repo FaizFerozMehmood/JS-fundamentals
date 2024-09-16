@@ -75,7 +75,7 @@ function myfun(e) {
   }
   // console.log(largestWord);
 }
-myfun("abchdhdhdh g hdg");
+// myfun("abchdhdhdh g hdg");
 
 
 let oddNum = ""
@@ -96,8 +96,34 @@ else{
 
 function myFun(e){
 
-   console.log(e.toString().includes("k"));
+  //  console.log(e.toString().includes("k"));
    
    
 }
-myFun(["faiz","mahmood"])
+// myFun(["faiz","mahmood"])
+
+
+
+function isContains(valu){
+
+     console.log(valu);
+     let myNum =["9"]
+     let findOut = valu.includes("4")
+     console.log(findOut);
+     
+     
+
+}
+// isContains(["123","4","56","7"])
+
+const myfUnction =(e) =>{
+let arr = e.split(" ")
+let res = arr.map((word)=>{
+ return word[0].toUpperCase()+word.slice(1).toLowerCase()
+})
+let result ="#"+ res.join("")
+return result
+
+
+}
+console.log(myfUnction("Hello i am faiz"))
