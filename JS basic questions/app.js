@@ -116,14 +116,61 @@ function isContains(valu){
 }
 // isContains(["123","4","56","7"])
 
-const myfUnction =(e) =>{
-let arr = e.split(" ")
-let res = arr.map((word)=>{
- return word[0].toUpperCase()+word.slice(1).toLowerCase()
-})
-let result ="#"+ res.join("")
-return result
+// const myfUnction =(e) =>{
+// let arr = e.split(" ")
+// let res = arr.map((word)=>{
+//  return word[0].toUpperCase()+word.slice(1).toLowerCase()
+// })
+// let result ="#"+ res.join("")
+// return result
 
+
+// }
+// console.log(myfUnction("Hello i am faiz"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function fn(e){
+//   // console.log(e.split());
+//   let convert = e.split()
+//  convert.map((word)=>{
+//   return word[0].toUpperCase()+word.slice(1).toLowerCaseCase()
+//   console.log(res);
+//   })
+  
+  
+// }
+
+
+// console.log(fn("hello javascript"));
+
+
+
+function getlength(e){
+  console.log(e.split());
+  let count=0
+  let convert =  e.split("")
+  convert.map((alpha)=>{
+    // console.log(alpha);
+    if(alpha==="L"|| alpha ==='l'){
+      count +=  alpha.length
+      
+    }
+    
+  })
+  return count
+  console.log(count);
+  
 
 }
-console.log(myfUnction("Hello i am faiz"))
+console.log(getlength("HelLo world"));
