@@ -140,6 +140,7 @@ function isContains(valu){
 
 
 
+
 // function fn(e){
 //   // console.log(e.split());
 //   let convert = e.split()
@@ -156,21 +157,21 @@ function isContains(valu){
 
 
 
-function getlength(e){
-  console.log(e.split());
-  let count=0
-  let convert =  e.split("")
-  convert.map((alpha)=>{
-    // console.log(alpha);
-    if(alpha==="L"|| alpha ==='l'){
-      count +=  alpha.length
+// function getlength(e){
+//   console.log(e.split());
+//   let count=0
+//   let convert =  e.split("")
+//   convert.map((alpha)=>{
+//     // console.log(alpha);
+//     if(alpha==="L"|| alpha ==='l'){
+//       count +=  alpha.length
       
-    }
+//     }
     
-  })
-  return count
-  console.log(count);
+//   })
+//   return count
+//   console.log(count);
   
 
-}
-console.log(getlength("HelLo world"));
+// }
+// console.log(getlength("HelLo world"));
