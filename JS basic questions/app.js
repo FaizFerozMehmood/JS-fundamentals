@@ -128,6 +128,15 @@ function isContains(valu){
 // }
 // console.log(myfUnction("Hello i am faiz"))
 
+function getResult(vl1,vl2,vl3){
+if(vl1===vl2 && vl2 === vl3) return "elvalteral"
+if(vl1 === vl2 || vl2 ===vl3 || vl1 === vl3) return "isoselese"
+return "scalene"
+}
+console.log(getResult(3,3,3));
+console.log(getResult(3,4,3));
+console.log(getResult(6,9,7));
+
 
 
 
