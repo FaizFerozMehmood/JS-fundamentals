@@ -129,8 +129,8 @@ function isContains(valu){
 // console.log(myfUnction("Hello i am faiz"))
 
 function getResult(vl1,vl2,vl3){
-if(vl1===vl2 && vl2 === vl3) return "elvalteral"
-if(vl1 === vl2 || vl2 ===vl3 || vl1 === vl3) return "isoselese"
+if(vl1===vl2 && vl2 === vl3) return "elquilteral"
+if(vl1 === vl2 || vl2 ===vl3 || vl1 === vl3) return "Isocelese"
 return "scalene"
 }
 console.log(getResult(3,3,3));
