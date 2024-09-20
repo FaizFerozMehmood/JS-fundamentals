@@ -104,16 +104,16 @@ function myFun(e){
 
 
 
-function isContains(valu){
+// function isContains(valu){
 
-     console.log(valu);
-     let myNum =["9"]
-     let findOut = valu.includes("4")
-     console.log(findOut);
+//      console.log(valu);
+//      let myNum =["9"]
+//      let findOut = valu.includes("4")
+//      console.log(findOut);
      
      
 
-}
+// }
 // isContains(["123","4","56","7"])
 
 // const myfUnction =(e) =>{
@@ -172,3 +172,19 @@ function isContains(valu){
 
 // }
 // console.log(getlength("HelLo world"));
+
+
+
+// Getting Data In Ascending Order using Sort Method
+
+
+ function getNumberInAscendingOrder(data){
+let sorted = data
+sorted.sort((a,b)=>a -b)
+console.log(sorted);
+
+  return sorted
+ }
+
+ console.log(getNumberInAscendingOrder([10,9,3,4,5,7]));
+ 
