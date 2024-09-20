@@ -181,10 +181,17 @@ function myFun(e){
  function getNumberInAscendingOrder(data){
 let sorted = data
 sorted.sort((a,b)=>a -b)
-console.log(sorted);
-
   return sorted
  }
-
  console.log(getNumberInAscendingOrder([10,9,3,4,5,7]));
+
+
+
+
+
+ function getNumberInDesendingOrder(data){
+  let descenting = data
+  return descenting.sort((a,b)=> b-a)
+ }
+ console.log(getNumberInDesendingOrder([12,3,4,5,6,8,9,0]));
  
