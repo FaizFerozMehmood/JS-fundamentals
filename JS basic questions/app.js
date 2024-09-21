@@ -201,7 +201,13 @@ sorted.sort((a,b)=>a -b)
     return index2
    }
 
-   console.log(index2);
+   console.log([,,index2]);
 
  }
 console.log(myFunn(["hello","javscript"]));
+
+
+
+let arr = ["a","b","c"]
+let [indexOne] = arr
+console.log(indexOne);
