@@ -183,15 +183,25 @@ let sorted = data
 sorted.sort((a,b)=>a -b)
   return sorted
  }
- console.log(getNumberInAscendingOrder([10,9,3,4,5,7]));
+//  console.log(getNumberInAscendingOrder([10,9,3,4,5,7]));
 
 
 
-
+//Descending Order
 
  function getNumberInDesendingOrder(data){
   let descenting = data
   return descenting.sort((a,b)=> b-a)
  }
- console.log(getNumberInDesendingOrder([12,3,4,5,6,8,9,0]));
- 
+//  console.log(getNumberInDesendingOrder([12,3,4,5,6,8,9,0]));
+ function myFunn(e){
+   let index1 = e[0]
+   let index2 = e[1]
+   if(index1.length < index2 ){
+    return index2
+   }
+
+   console.log(index2);
+
+ }
+console.log(myFunn(["hello","javscript"]));
