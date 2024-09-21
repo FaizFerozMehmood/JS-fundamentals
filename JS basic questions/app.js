@@ -209,5 +209,5 @@ console.log(myFunn(["hello","javscript"]));
 
 
 let arr = ["a","b","c"]
-let [indexOne] = arr
+let [,,indexOne] = arr
 console.log(indexOne);
