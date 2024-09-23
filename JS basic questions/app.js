@@ -191,11 +191,11 @@ function UrFunction(arr){
 // console.log(arr);
 const filteredarr = arr.filter((data)=>{
   console.log(data);
-  let arr2 = "ali"
-   data.toLowerCase().includes(arr2)
+  let arr2 = ["ali"]
+  return data.toLowerCase().includes(arr2)
   
 })
-
+return filteredarr
 }
 
 console.log(UrFunction(["faiz","mahmood","umair"]));
