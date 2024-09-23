@@ -185,3 +185,16 @@ let arr = ["a", "b", "c"];
 let [, , indexOne] = arr;
 console.log(indexOne);
 
+
+
+function UrFunction(arr){
+// console.log(arr);
+const filteredarr = arr.filter((data)=>{
+  console.log(data);
+  return data.toLowerCase().includes("ali")
+  
+})
+
+}
+
+console.log(UrFunction(["faiz","mahmood","umair"]));
