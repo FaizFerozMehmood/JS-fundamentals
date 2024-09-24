@@ -209,11 +209,11 @@ let largest = 0
 for(let i = 0; i< vlu.length;i++){
 // console.log(i);
 if(vlu[i]> largest){
-  largest++
+  largest+=vlu[i]
+}
+
 }
 console.log(largest);
 
 }
-
-}
-console.log(myfunctionToGetMax([1,2,3,4,5,6]));
+console.log(myfunctionToGetMax([1,2,3,4,5,8]));
