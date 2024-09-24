@@ -179,7 +179,7 @@ function myFunn(e) {
 
   console.log([, , index2]);
 }
-console.log(myFunn(["hello", "javscript"]));
+// console.log(myFunn(["hello", "javscript"]));
 
 let arr = ["a", "b", "c"];
 let [, , indexOne] = arr;
@@ -198,4 +198,22 @@ const filteredarr = arr.filter((data)=>{
 return filteredarr
 }
 
-console.log(UrFunction(["faiz","mahmood","umair"]));
+// console.log(UrFunction(["faiz","mahmood","umair"]));
+
+
+
+const myfunctionToGetMax = (e) =>{
+console.log(e);
+let vlu = e
+let largest = 0
+for(let i = 0; i< vlu.length;i++){
+// console.log(i);
+if(vlu[i]> largest){
+  largest++
+}
+console.log(largest);
+
+}
+
+}
+console.log(myfunctionToGetMax([1,2,3,4,5,6]));
