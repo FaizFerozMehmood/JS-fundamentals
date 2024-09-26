@@ -210,7 +210,8 @@ return filteredarr
 
 // For most use cases, (Math.max with the spread operator) is the simplest and most efficient.
 const myfunctionToGetMax = (e) =>{
-return Math.max(...e)
+// return Math.max(...e)
+return Math.min(...e)
 
 }
-console.log(myfunctionToGetMax([1,2,3,4,5,1000]));
+console.log(myfunctionToGetMax([1,2,20000,3,4,5,1000]));
