@@ -203,17 +203,7 @@ return filteredarr
 
 
 const myfunctionToGetMax = (e) =>{
-console.log(e);
-let vlu = e
-let largest = 0
-for(let i = 0; i< vlu.length;i++){
-// console.log(i);
-if(vlu[i]> largest){
-  largest+=vlu[i]
-}
-
-}
-console.log(largest);
+return Math.max(...e)
 
 }
 console.log(myfunctionToGetMax([1,2,3,4,5,8]));
