@@ -208,7 +208,7 @@ return filteredarr
 
 
 
-// For most use cases,  (Math.max with the spread operator) is the simplest and most efficient.
+// For most use cases, (Math.max with the spread operator) is the simplest and most efficient.
 const myfunctionToGetMax = (e) =>{
 return Math.max(...e)
 
