@@ -219,6 +219,9 @@ return Math.min(...e)
 
 
 function funToGetPosition(e){
-
+ console.log(e);
+ let index = e.indexOf("faiz")
+ return index
+ 
 }
 console.log(funToGetPosition(["faiz"]));
