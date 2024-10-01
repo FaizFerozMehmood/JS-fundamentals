@@ -214,4 +214,11 @@ const myfunctionToGetMax = (e) =>{
 return Math.min(...e)
 
 }
-console.log(myfunctionToGetMax([1,2,20000,3,4,5,1000]));
+// console.log(myfunctionToGetMax([1,2,20000,3,4,5,1000]));
+
+
+
+function funToGetPosition(e){
+
+}
+console.log(funToGetPosition(["faiz"]));
