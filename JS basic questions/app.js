@@ -225,3 +225,13 @@ function funToGetPosition(e){
  
 }
 console.log(funToGetPosition(["faiz"]));
+
+function funToGetPosition(e){
+let convert = e.split("")
+console.log(convert);
+
+  let index = convert.indexOf("faiz")
+  return index
+  
+ }
+ console.log(funToGetPosition("faiz"));
