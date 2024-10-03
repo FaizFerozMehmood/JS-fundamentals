@@ -7,7 +7,14 @@
 //     // console.log(arr[i]);
 //     let check =Math.floor(Math.random()+arr[i])
 //     console.log(check);
-    
+<button class="btn">Click Me</button>
+
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', () => {
+  let name = 'Jni';
+  console.log(name.toUpperCase())
+})
 
     
 // }
