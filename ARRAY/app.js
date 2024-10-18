@@ -52,3 +52,11 @@ const result = {
   ...obj3,
 };
 console.log(result);
+
+
+function yourFun(){
+console.log(arguments);
+
+}
+console.log(yourFun(12,"faiz"));
+
