@@ -242,3 +242,11 @@
  }
  console.log(herFun([1,2,3,4],[4]));
  
+
+ const inventory = [
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+];
+const rs = inventory.find((fruit)=>fruit.name=="apples");
+console.log(rs);
