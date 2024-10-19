@@ -250,3 +250,13 @@
 ];
 const rs = inventory.find((fruit)=>fruit.name=="apples");
 console.log(rs);
+const emoji1 = "😋"
+const emoji2 = "😋"
+if(emoji1==emoji2){
+  console.log("😊");
+  
+}
+else{
+  console.log("😫");
+  
+}
