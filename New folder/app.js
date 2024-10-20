@@ -21,8 +21,33 @@
 
 
 
-let arr = [12,12,13,13,14,14]
-const respose = arr.filter((e)=>{
-console.log(e);
-if(e)
-})
+// let arr = [12,12,13,13,14,14]
+// const respose = arr.filter((e)=>{
+// console.log(e);
+// if(e)
+// })
+
+
+const vlu = "faiz"
+localStorage.setItem("vlu",vlu)
+
+console.log(localStorage.getItem("vlu",vlu));
+
+
+const obj = {
+    name:"faiz",
+    age:23,
+    isStudent :true
+}
+
+localStorage.setItem('userInfo',JSON.stringify(obj))
+
+const storedObj = localStorage.getItem('userInfo')
+if(storedObj){
+    const userData = JSON.parse(storedObj)
+    console.log(userData);
+    
+}else{
+    console.log("there is might is something wrong!");
+    
+}
