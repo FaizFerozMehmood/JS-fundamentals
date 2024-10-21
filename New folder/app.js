@@ -48,6 +48,6 @@ if(storedObj){
     console.log(userData);
     
 }else{
-    console.log("there is might is something wrong!");
+    console.log("there is might be something wrong!");
     
 }
