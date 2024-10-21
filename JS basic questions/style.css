@@ -1,4 +1,21 @@
 .container{
-    height: 100vh;
-    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(235, 232, 232);
+    padding: 10px;
+    row-gap: 20px;
+   
+
 }
+
+    .box {
+        background-color: rgb(25, 19, 19);
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        color: white;  
+    }
