@@ -260,6 +260,22 @@ else{
   console.log("😫");
   
 }
+const jsQuestions = [
+  "1. What are the different data types in JavaScript?",
+  "2. What is the difference between '==' and '===' in JavaScript?",
+  "3. Explain how closures work in JavaScript.",
+  "4. What is the purpose of the 'this' keyword in JavaScript?",
+  "5. What are JavaScript Promises, and how do they work?",
+  "6. What is the difference between 'var', 'let', and 'const'?",
+  "7. What is event delegation in JavaScript?",
+  "8. Explain the concept of asynchronous programming in JavaScript.",
+  "9. How do you handle errors in JavaScript using try/catch?",
+  "10. What is the purpose of the 'async' and 'await' keywords?",
+  "11. How does prototypal inheritance work in JavaScript?",
+  "12. What is the difference between call(), apply(), and bind() methods?",
+  "13. What is the difference between synchronous and asynchronous JavaScript?"
+];
+console.log(jsQuestions);
 
 const boxes = document.getElementsByClassName('box')
 for(let i =0; i < boxes.length;i++){
@@ -274,7 +290,5 @@ for(let i =0; i < boxes.length;i++){
 function clearAll(){
   for(let i =0; i < boxes.length;i++){
     boxes[i].style.backgroundColor="black"
-
   }
-  
 }
