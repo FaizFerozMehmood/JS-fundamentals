@@ -264,9 +264,17 @@ else{
 const boxes = document.getElementsByClassName('box')
 for(let i =0; i < boxes.length;i++){
   boxes[i].addEventListener('click',function(){
-    console.log(this);
-    document.body.style.backgroundColor = "white";
+    clearAll()
+    this.style.backgroundColor = "white";
+    this.style.color = "black";
 
     
   })
+}
+function clearAll(){
+  for(let i =0; i < boxes.length;i++){
+    boxes[i].style.backgroundColor="black"
+
+  }
+  
 }
