@@ -283,7 +283,7 @@ for(let i =0; i < boxes.length;i++){
     clearAll()
     this.style.backgroundColor = "white";
     this.style.color = "black";
-    this.innerText = jsQuestions[1]
+    this.innerText = jsQuestions[Math.floor(Math.random()*jsQuestions.length)]
 
     
   })
