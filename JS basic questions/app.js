@@ -291,6 +291,8 @@ for(let i =0; i < boxes.length;i++){
 function clearAll(){
   for(let i =0; i < boxes.length;i++){
     boxes[i].style.backgroundColor="black"
+    boxes[i].style.color = "white"
+    boxes[i].innerText = i + 1
     
   }
 }
