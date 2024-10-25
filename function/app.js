@@ -26,4 +26,16 @@ function sayHello(firstName,lastName){
   };
   
  console.log(getFahrenheit(15));
+ const obj = {
+  name :"faiz",
+  age:24,
+  isStudent :true,
+ }
+let h2 = document.getElementById("heading")
+ function herFun(obj){
+  console.log(obj.isStudent||obj.name);
+  
+ }
+
+ herFun(obj)
  
