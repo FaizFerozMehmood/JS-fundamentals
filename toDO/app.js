@@ -8,11 +8,24 @@ const displayItem = ()=>{
     let savedValue = JSON.parse(localStorage.getItem("inputvalue")) || [];
     content.innerHTML = "";
 
-    savedValue.forEach(item => {
-        let displayItem = `<li>${item}</li>`
-        content.innerHTML+= displayItem
-        
+    savedValue.forEach((item,index) => {
+        // let displayItem = `<li onclick="myFunction(${index},savedValue)">${item}</li>`
+        let listitem = document.createElement('li')
+        listitem.textContent=item
+       listitem.addEventListener('click',()=>{
+        listitem.remove()
+        savedValue.splice(index,1)
+        localStorage.setItem('inputvalue',JSON.stringify(savedValue))
+       })        
+       content.appendChild(listitem)
     });
+}
+function myFunction(index,savedValue){
+    console.log(index);
+    let filtered = savedValue.filter((_,targeted)=> targeted!==index)
+    console.log("targeted=>",filtered);
+    
+    
 }
 add.addEventListener('click',()=>{
 let inputvalue  = input.value.trim()
