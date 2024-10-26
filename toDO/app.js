@@ -3,22 +3,48 @@ const add = document.getElementById('add');
 const content = document.getElementById('content');
 
 
-add.addEventListener('click',()=>{
-    console.log(input.value);
-    if(input.value.trim()){
 
-        localStorage.setItem("Inputvalue",input.value)
-        const storedValue = localStorage.getItem('Inputvalue')
-        console.log(storedValue);
+const displayItem = ()=>{
+    let savedValue = JSON.parse(localStorage.getItem("inputvalue")) || [];
+    content.innerHTML = "";
+
+    savedValue.forEach(item => {
+        let displayItem = `<li>${item}</li>`
+        content.innerHTML+= displayItem
         
-        let display = `<li>${storedValue}</li>`
-        content.innerHTML +=display
-        input.value =""
-    }
+    });
+}
+add.addEventListener('click',()=>{
+let inputvalue  = input.value.trim()
+if(inputvalue){
+    let storeditems = JSON.parse(localStorage.getItem("inputvalue")) || [];
+    storeditems.push(inputvalue)
+    localStorage.setItem('inputvalue',JSON.stringify(storeditems));
+    displayItem();
+        input.value = '';
+}
 })
 window.addEventListener('DOMContentLoaded',()=>{
-    const savedValue = localStorage.getItem('Inputvalue')
-    if(savedValue){
-        input.value = savedValue
-    }
+    displayItem()
 })
+
+// add.addEventListener('click',()=>{
+
+//     console.log(input.value);
+//     if(input.value.trim()){
+
+//         localStorage.setItem("Inputvalue",input.value)
+//         const storedValue = localStorage.getItem('Inputvalue')
+//         console.log(storedValue);
+        
+//         let display = `<li>${storedValue}</li>`
+//         content.innerHTML +=display
+//         input.value =""
+//     }
+// })
+// window.addEventListener('DOMContentLoaded',()=>{
+//     const savedValue = localStorage.getItem('Inputvalue')
+//     if(savedValue){
+//         input.value = savedValue
+//     }
+// })
