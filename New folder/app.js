@@ -60,7 +60,17 @@
 function roundNumber(number){
 let calculate = Math.round(number)
 return calculate
-
 }
 console.log(roundNumber(2.4));
 
+//Coding Question 2: Create a function called generateRandomInRange(min, max) that generates a
+//  random integer between min and max (inclusive) in JavaScript.
+// Hint: You can use Math.random() to generate a random
+//  number between 0 and 1, then scale and shift it to 
+//  fit within the specified range.
+
+function generateRandomInRange(min,max){
+    let generate = Math.round(Math.random(min,max)*10)
+    return generate
+}
+console.log(generateRandomInRange(3,6));
