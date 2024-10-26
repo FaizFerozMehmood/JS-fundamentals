@@ -88,3 +88,28 @@ console.log(convertToNumber("20"));
 console.log(convertToNumber("abc"));
 console.log(convertToNumber(20));
 console.log(convertToNumber(true));
+
+// Coding Question 5: Develop a JavaScript function named formatNumber(num, decimalPlaces)
+//  that formats a number num to a string 
+//  representation with the specified number of decimal places decimalPlaces.
+//   Ensure that the function returns a string even if the input is not a valid number.
+// Hint: Use the .toFixed() method to control 
+// the number of decimal places. Remember to
+//  handle non-numeric inputs gracefully
+//   to prevent errors.
+function formatNumber(num,decimalPlaces){
+    if(isNaN(num)){
+        return "NaN";
+
+    }
+    return Number(num).toFixed(decimalPlaces)
+}
+
+console.log(formatNumber(3.14159, 2))
+console.log(formatNumber("3.14159, 2"))
+console.log(formatNumber("abc", 2))
+
+
+
+
+
