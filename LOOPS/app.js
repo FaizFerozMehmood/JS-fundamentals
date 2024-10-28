@@ -48,10 +48,10 @@ function getNumbersOfStrings(strings){
 
 console.log(getNumbersOfStrings(["abc","dfrcjdjds"]));
 
-for (let i = 0; i <= 10;i++){
-   console.log(i);
+// for (let i = 0; i <= 10;i++){
+//    console.log(i);
    
-}
+// }
 
 
 function herFun(stri){
@@ -62,3 +62,8 @@ function herFun(stri){
 
 }
 console.log(herFun(["faiz","andHisPartner"]));
+
+
+for(let i = 1; i <= 10; i++){
+   console.log(`i = ${i}, ${i} * 2 = ${i * 2}`);
+}
