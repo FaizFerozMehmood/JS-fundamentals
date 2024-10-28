@@ -6,9 +6,7 @@ const deleteAll = document.getElementById('deleteAll')
 const displayItem = () => {
   let savedValue = JSON.parse(localStorage.getItem("inputvalue")) || [];
   content.innerHTML = "";
-  if(content.innerHTML===""){
-    
-  }
+ 
 
   savedValue.forEach((item, index) => {
     let listitem = document.createElement("li");
@@ -36,35 +34,19 @@ window.addEventListener("DOMContentLoaded", () => {
   displayItem();
 });
 deleteAll.addEventListener('click',()=>{
-  if(content.innerHTML  ===""){
+
+  if(content.innerText  ===""){
     return Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, cancel!',
-    }).then((result) => {
-      if (result.isConfirmed) {
-          Swal.fire(
-              'Deleted!',
-              'Your file has been deleted.',
-              'success'
-          );
-      } else {
-          Swal.fire(
-              'Cancelled',
-              'Your file is safe :)',
-              'error'
-          );
-      }
+      title: 'No items to delete',
+      text: "There are no items in the list to delete!",
+      icon: 'info',
     });
 
 
 
 
 
-    // alert("Nothing no delete!")
+    alert("Nothing no delete!")
   }
   localStorage.clear()
   content.innerText  =""
