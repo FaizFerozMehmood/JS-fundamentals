@@ -1,6 +1,7 @@
 const input = document.getElementById("input");
 const add = document.getElementById("add");
 const content = document.getElementById("content");
+const deleteAll = document.getElementById('deleteAll')
 
 const displayItem = () => {
   let savedValue = JSON.parse(localStorage.getItem("inputvalue")) || [];
@@ -19,7 +20,7 @@ const displayItem = () => {
 };
 add.addEventListener("click", () => {
   let inputvalue = input.value.trim();
-//   if (!inputvalue) alert('enter something!')
+  if (!inputvalue) alert('enter something!')
   if (inputvalue) {
     let storeditems = JSON.parse(localStorage.getItem("inputvalue")) || [];
     storeditems.push(inputvalue);
@@ -31,6 +32,41 @@ add.addEventListener("click", () => {
 window.addEventListener("DOMContentLoaded", () => {
   displayItem();
 });
+deleteAll.addEventListener('click',()=>{
+  if(content.innerHTML  ===""){
+    return Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+          Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+          );
+      } else {
+          Swal.fire(
+              'Cancelled',
+              'Your file is safe :)',
+              'error'
+          );
+      }
+    });
+
+
+
+
+
+    // alert("Nothing no delete!")
+  }
+  localStorage.clear()
+  content.innerText  =""
+})
+
 
 
 

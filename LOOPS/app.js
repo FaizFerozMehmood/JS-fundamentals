@@ -48,3 +48,7 @@ function getNumbersOfStrings(strings){
 
 console.log(getNumbersOfStrings(["abc","dfrcjdjds"]));
 
+for (let i = 0; i <= 10;i++){
+   console.log(i);
+   
+}
