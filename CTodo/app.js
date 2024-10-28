@@ -6,6 +6,9 @@ const deleteAll = document.getElementById('deleteAll')
 const displayItem = () => {
   let savedValue = JSON.parse(localStorage.getItem("inputvalue")) || [];
   content.innerHTML = "";
+  if(content.innerHTML===""){
+    
+  }
 
   savedValue.forEach((item, index) => {
     let listitem = document.createElement("li");
