@@ -52,3 +52,13 @@ for (let i = 0; i <= 10;i++){
    console.log(i);
    
 }
+
+
+function herFun(stri){
+   return stri.map((stri)=>{
+      return stri.length
+   })
+
+
+}
+console.log(herFun(["faiz","andHisPartner"]));
