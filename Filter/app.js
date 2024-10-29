@@ -29,3 +29,12 @@ function returnOdd(numbers){
 console.log(returnOdd([12,23,,34,54,61,11,12,13]));
 
  
+let findValue = (...rst)=>{
+     let vlu = rst.filter((vl)=> vl < 5)
+
+     console.log(vlu);
+  return vlu
+  
+    
+}
+console.log(findValue(2,3,4,6,7,8,9));

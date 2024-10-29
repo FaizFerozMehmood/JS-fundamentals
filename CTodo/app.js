@@ -40,6 +40,7 @@ deleteAll.addEventListener('click',()=>{
       title: 'No items to delete',
       text: "There are no items in the list to delete!",
       icon: 'info',
+   
     });
 
 
