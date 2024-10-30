@@ -38,3 +38,13 @@ return name.length
 //     // capitalized version of name (example: "alEX" becomes "Alex")
 
 // }
+
+
+function herFun(str){
+    console.log(str);
+    
+   return str.map((vlu)=>{
+    return vlu.length
+   })
+}
+console.log(herFun(["abc","fef"]));
