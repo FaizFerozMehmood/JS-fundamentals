@@ -9,12 +9,17 @@ const displayItem = () => {
 
   savedValue.forEach((item, index) => {
     let listitem = document.createElement("li");
-    listitem.textContent = item;
-    listitem.addEventListener("click", () => {
+    let deleteIcon = document.createElement("span")
+    deleteIcon.innerHTML = `<i class="fas fa-trash-alt"></i>`;
+    deleteIcon.style.marginLeft ="100px"
+    deleteIcon.style.cursor
+    listitem.textContent = item
+    deleteIcon.addEventListener("click", () => {
       listitem.remove();
       savedValue.splice(index, 1);
       localStorage.setItem("inputvalue", JSON.stringify(savedValue));
     });
+    listitem.appendChild(deleteIcon)
     content.appendChild(listitem);
   });
 };
