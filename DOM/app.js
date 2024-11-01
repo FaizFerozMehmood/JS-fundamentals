@@ -1,17 +1,45 @@
 // How do you select an HTML element by its ID and change its text content?
 
-const h1 = document.getElementById('hello')
-h1.innerText="HELLO JS!"
+const h1 = document.getElementById("hello");
+h1.innerText = "HELLO JS!";
 
 // What method would you use to add a new class to an HTML element?
-const cls = document.getElementById('class')
-const btn = document.querySelector('.btn')
+const cls = document.getElementById("class");
+const btn = document.querySelector(".btn");
 console.log(btn);
 
-btn.addEventListener('click',()=>{
+btn.addEventListener("click", () => {
+  cls.classList.add("newClass");
+});
 
-    cls.classList.add("newClass")
-   
-    
-})
+// How do you select an HTML element by its ID and change its text content?
+// What method would you use to add a new class to an HTML element?
+// How can you remove an existing class from an HTML element?
+// How do you create a new HTML element and add it to the DOM?
+// What’s the difference between innerText, textContent, and innerHTML?
+// How can you toggle a class on an HTML element?
+// How would you access the value of an input field in JavaScript?
+// How can you change the src attribute of an image using JavaScript?
+// What’s the best way to attach a click event listener to a button?
+// How do you prevent the default action of a form submission in JavaScript?
+// How can you change the style (e.g., color, font-size) of an element in JavaScript?
+// How would you find all elements with a specific class name?
+// How can you remove an element from the DOM?
+// What’s the purpose of event.stopPropagation() and when would you use it?
+// How can you add multiple classes to an element at once?
+// What method can you use to replace one element with another in the DOM?
+// How do you insert an element before another existing element?
+// How can you make an element’s visibility toggle on and off with a button click?
+// How do you get and set data attributes of an HTML element?
+// What’s the difference between using addEventListener and setting an onclick property?
 
+// How do you create a new HTML element and add it to the DOM?
+let arr = ["ab", "cd", "ef"];
+let NewHtmlEle = document.createElement("ul");
+NewHtmlEle.classList.add("unOrderedList");
+arr.map((vlu) => {
+  let list = document.createElement("li");
+  list.textContent = `list item :${vlu}`;
+  NewHtmlEle.appendChild(list);
+});
+document.body.appendChild(NewHtmlEle);
