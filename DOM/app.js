@@ -39,13 +39,13 @@ let NewHtmlEle = document.createElement("ul");
 NewHtmlEle.classList.add("unOrderedList");
 arr.map((vlu) => {
   let list = document.createElement("li");
-  list.textContent = `list item :${vlu}`;
+  list.textContent = vlu;
   NewHtmlEle.appendChild(list);
 });
 document.body.appendChild(NewHtmlEle);
 
 
-  const img = document.querySelector('.imageThatIsGoingToChange');
+  const img = document.querySelector('.imageThatIsGoingToBeChange');
   console.log(img);
   
 //   img.src ="https://images.unsplash.com/photo-1728901863101-9d82fe7f4276?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D"
