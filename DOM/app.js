@@ -1,16 +1,17 @@
-// How do you select an HTML element by its ID and change its text content?
+// // How do you select an HTML element by its ID and change its text content?
 
-const h1 = document.getElementById("hello");
-h1.innerText = "HELLO JS!";
+// const h1 = document.getElementById("hello");
+// h1.innerText = "HELLO JS!";
+// h1.remove()
 
-// What method would you use to add a new class to an HTML element?
-const cls = document.getElementById("class");
-const btn = document.querySelector(".btn");
-console.log(btn);
+// // What method would you use to add a new class to an HTML element?
+// const cls = document.getElementById("class");
+// const btn = document.querySelector(".btn");
+// console.log(btn);
 
-btn.addEventListener("click", () => {
-  cls.classList.add("newClass");
-});
+// btn.addEventListener("click", () => {
+//   cls.classList.add("newClass");
+// });
 
 // How do you select an HTML element by its ID and change its text content?
 // What method would you use to add a new class to an HTML element?
@@ -34,15 +35,15 @@ btn.addEventListener("click", () => {
 // What’s the difference between using addEventListener and setting an onclick property?
 
 // How do you create a new HTML element and add it to the DOM?
-let arr = ["ab", "cd", "ef"];
-let NewHtmlEle = document.createElement("ul");
-NewHtmlEle.classList.add("unOrderedList");
-arr.map((vlu) => {
-  let list = document.createElement("li");
-  list.textContent = vlu;
-  NewHtmlEle.appendChild(list);
-});
-document.body.appendChild(NewHtmlEle);
+// let arr = ["ab", "cd", "ef"];
+// let NewHtmlEle = document.createElement("ul");
+// NewHtmlEle.classList.add("unOrderedList");
+// arr.map((vlu) => {
+//   let list = document.createElement("li");
+//   list.textContent = vlu;
+//   NewHtmlEle.appendChild(list);
+// });
+// document.body.appendChild(NewHtmlEle);
 
 
   // const img = document.querySelector('.imageThatIsGoingToBeChange');
@@ -52,9 +53,21 @@ document.body.appendChild(NewHtmlEle);
   // img.setAttribute('src',"https://images.unsplash.com/photo-1728901863101-9d82fe7f4276?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D")
 
 
-  const form = document.getElementById('formm')
-  console.log(form);
-form.addEventListener('submit', (e) => {
-  console.log(e);
-  e.preventDefault();
-});
+//   const form = document.getElementById('formm')
+//   console.log(form);
+// form.addEventListener('submit', (e) => {
+//   console.log(e);
+//   e.preventDefault();
+// });
+const container = document.getElementById('container').addEventListener('click',function(){
+  console.log('hello container');
+  
+})
+console.log(container);
+const clickbtn = document.getElementById('btn').addEventListener('click',function(e){
+  console.log('btn clicked');
+  e.stopPropagation() //prevents the event from reaching the container
+  
+})
+console.log(clickbtn);
+
