@@ -59,15 +59,28 @@
 //   console.log(e);
 //   e.preventDefault();
 // });
-const container = document.getElementById('container').addEventListener('click',function(){
-  console.log('hello container');
+// const container = document.getElementById('container').addEventListener('click',function(){
+//   console.log('hello container');
   
-})
-console.log(container);
-const clickbtn = document.getElementById('btn').addEventListener('click',function(e){
-  console.log('btn clicked');
-  e.stopPropagation() //prevents the event from reaching the container
   
-})
-console.log(clickbtn);
+  
+// })
+// console.log(container);
+// const clickbtn = document.getElementById('btn').addEventListener('click',function(e){
+//   console.log('btn clicked');
+//   e.stopPropagation() //prevents the event from reaching the container
+  
+// })
+// console.log(clickbtn);
 
+const toggleBtn = document.getElementById('toggleBtn')
+const box = document.querySelector('.box')
+
+
+toggleBtn.addEventListener('click',()=>{
+if(box.style.display ==='none') {
+  box.style.display = 'block'
+} else{
+  box.style.display = 'none'
+}
+})
