@@ -73,14 +73,44 @@
 // })
 // console.log(clickbtn);
 
-const toggleBtn = document.getElementById('toggleBtn')
-const box = document.querySelector('.box')
+// const toggleBtn = document.getElementById('toggleBtn')
+// const box = document.querySelector('.box')
 
 
-toggleBtn.addEventListener('click',()=>{
-if(box.style.display ==='none') {
-  box.style.display = 'block'
-} else{
-  box.style.display = 'none'
-}
+// toggleBtn.addEventListener('click',()=>{
+// if(box.style.display ==='none') {
+//   box.style.display = 'block'
+// } else{
+//   box.style.display = 'none'
+// }
+// })
+
+
+const container = document.createElement('div')
+// compact version
+Object.assign(container.style,{
+  backgroundColor :"black",
+  height :"100px",
+  width:"100px",
+  display :"none"
 })
+
+// container.style.backgroundColor="black";
+// container.style.height="100px"
+// container.style.width="100px"
+// container.style.display="none"
+document.body.appendChild(container);
+
+ const btn = document.createElement('button')
+ btn.textContent = "toggle"
+ btn.style.color = "black"
+ document.body.appendChild(btn)
+ btn.addEventListener('click',()=>{
+// if(container.style.display === 'none'){
+//   container.style.display = 'block'
+// }
+// else{
+//   container.style.display = 'none'
+// }
+container.style.display = container.style.display === "none" ? "block" : "none"
+ })
