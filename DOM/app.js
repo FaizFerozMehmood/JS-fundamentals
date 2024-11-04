@@ -129,8 +129,8 @@ profession:"umair",
 }
 console.log(obj)
 
-const form = document.querySelector('form');
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevents the form from submitting
-  console.log('Form submission prevented.');
-});
+// const form = document.querySelector('form');
+// form.addEventListener('submit', function(event) {
+//   event.preventDefault(); // Prevents the form from submitting
+//   console.log('Form submission prevented.');
+// });

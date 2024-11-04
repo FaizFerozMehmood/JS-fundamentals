@@ -52,40 +52,57 @@
 
 
 
-const input = document.getElementById('input')
-const btn = document.getElementById('btn')
-const todoList = document.getElementById('Ulist')
-let todos = [];
+// const input = document.getElementById('input')
+// const btn = document.getElementById('btn')
+// const todoList = document.getElementById('Ulist')
+// let todos = [];
 
 
-btn.addEventListener('click', () => {
-  const task = input.value
-  if(!task) return alert("plzz enter todos")
+// btn.addEventListener('click', () => {
+//   const task = input.value
+//   if(!task) return alert("plzz enter todos")
   
-  if (task) {
-    todos.push(task)
-    input.value = ''
-    renderTodos() 
-  }
-});
+//   if (task) {
+//     todos.push(task)
+//     input.value = ''
+//     renderTodos() 
+//   }
+// });
 
-function renderTodos() {
-  todoList.innerHTML = '' 
+// function renderTodos() {
+//   todoList.innerHTML = '' 
 
-  todos.forEach((task, index) => {
-    const listItem = document.createElement('li')
-    listItem.innerText = task
+//   todos.forEach((task, index) => {
+//     const listItem = document.createElement('li')
+//     listItem.innerText = task
 
-    const deleteBtn = document.createElement('button')
-    deleteBtn.innerText = 'Delete'
-    deleteBtn.addEventListener('click', () => deleteTask(index)) 
+//     const deleteBtn = document.createElement('button')
+//     deleteBtn.innerText = 'Delete'
+//     deleteBtn.addEventListener('click', () => deleteTask(index)) 
 
-    listItem.appendChild(deleteBtn)
-    todoList.appendChild(listItem);
-  });
+//     listItem.appendChild(deleteBtn)
+//     todoList.appendChild(listItem);
+//   });
+// }
+
+// function deleteTask(index) {
+//   todos.splice(index, 1); 
+//   renderTodos(); 
+// }
+
+
+function checkData(){
+  let counter = '0'
+  
+  // console.log(counter);
+  // if(counter){
+  //   console.log("counter he bhai");
+    
+  // }
+  // else{
+  //   console.log("nahi he");
+    
+  // }
+  
 }
-
-function deleteTask(index) {
-  todos.splice(index, 1); 
-  renderTodos(); 
-}
+checkData()
