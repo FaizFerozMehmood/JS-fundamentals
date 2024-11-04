@@ -114,3 +114,17 @@ document.body.appendChild(container);
 // }
 container.style.display = container.style.display === "none" ? "block" : "none"
  })
+const onj = {
+  name:"faiz",
+  age:"21"
+}
+// const obj = Object.assign(onj,{
+//    profession:"umair",
+//   year:"20"
+// })
+const obj = {
+...onj,
+profession:"umair",
+  year:"20"
+}
+console.log(obj)
