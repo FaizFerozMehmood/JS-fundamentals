@@ -73,3 +73,23 @@ const index = array.indexOf(5);
 
 // array = [2, 9]
 console.log(array);
+
+
+
+function vlueSum(value){
+  console.log(value);
+  value.forEach((singleValue)=>{
+   let nm = 0;
+  if(singleValue > 0  ){
+     nm+=singleValue
+     
+    }
+    return nm
+    console.log(nm);
+  
+ })
+  
+
+}
+
+console.log(vlueSum([1,2,3,4]));
