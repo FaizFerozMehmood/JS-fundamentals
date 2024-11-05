@@ -6,19 +6,28 @@ async function getData() {
      throw new Error(`HTTP ERROR ${response.status}`)
     }
     const data = await response.json()
-    data.map((res)=>{
-    console.log(res);
+    processData(data)
+  //   data.map((res)=>{
+  //   console.log(res);
+
     
-  })
+  // })
     
 
-  
+
   } catch (error) {
     console.log("error fetching data",error);
     
   }
   
 }
+function processData(data){
+  console.log("processData=>",data);
+  data.map((singleData)=>{
+    console.log(singleData);
+    
+  })
+  
+
+}
 getData()
-// console.log(data);
-// 
