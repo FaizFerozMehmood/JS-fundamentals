@@ -5,8 +5,11 @@ async function getData() {
      console.log();
      throw new Error(`HTTP ERROR ${response.status}`)
     }
-    const data = await response.json()
-    processData(data)
+ else{
+  const data = await response.json()
+  processData(data)
+ }
+
   //   data.map((res)=>{
   //   console.log(res);
 
@@ -24,10 +27,12 @@ async function getData() {
 function processData(data){
   console.log("processData=>",data);
   data.map((singleData)=>{
-    console.log(singleData);
+    console.log(singleData);  
     
   })
   
 
 }
 getData()
+// console.log("dataa",data);
+
