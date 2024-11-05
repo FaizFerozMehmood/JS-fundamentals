@@ -32,9 +32,24 @@ async function getData() {
   
 }
 function processData(data){
-  console.log("processData=>",data);
+  // console.log("processData=>",data);
+  const container = document.querySelector('.container')
   data.map((singleData)=>{
     console.log(singleData);  
+    const img = document.createElement('img')
+    img.setAttribute('src',singleData.image)
+    container.appendChild(img)
+
+    // title===========>
+      const title = document.createElement('p')
+    title.textContent = singleData.title
+    container.appendChild(title)
+    
+
+    // price==============>
+      const price = document.createElement('p')
+    price.textContent = `Price : $${singleData.price}`
+    container.appendChild(price)
     
   })
   
