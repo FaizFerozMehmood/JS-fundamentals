@@ -1,5 +1,4 @@
 var employee = {
-    id: 101,
     name: "John Doe",
     position: "Software Engineer",
     department: "IT",
@@ -10,6 +9,4 @@ var employee = {
         return this.daysOff.includes(today);
     }
 };
-
-// Example usage:
 console.log(employee.isTodayOff());
