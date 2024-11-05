@@ -38,6 +38,7 @@ function processData(data){
     console.log(singleData);  
     const img = document.createElement('img')
     img.setAttribute('src',singleData.image)
+    img.classList.add('image')
     container.appendChild(img)
 
     // title===========>
