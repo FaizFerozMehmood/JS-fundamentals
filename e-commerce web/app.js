@@ -9,6 +9,13 @@ async function getData() {
   const data = await response.json()
   processData(data)
  }
+ //two ways to handle data; one is to pass call 
+//  a function created outside the scope;
+
+// 1=> call and pass respone as an arrgument.
+//and hendle the created function where you need.
+// 2=> another option is to handle respone inside the "try" scope
+
 
   //   data.map((res)=>{
   //   console.log(res);
