@@ -53,7 +53,7 @@ function processData(data){
 
 // button
     const btn = document.createElement('button')
-    btn.textContent = 'Add to card'
+    btn.innerText = 'Add to card'
     container.appendChild(btn)
     btn.addEventListener('click',()=> addToCard(singleData.price, singleData.image))
   })
