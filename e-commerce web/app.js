@@ -33,7 +33,7 @@ async function getData() {
 function processData(data){
   // console.log("processData=>",data);
   const container = document.querySelector('.container')
-  data.map((singleData)=>{
+  data.forEach((singleData)=>{
     // console.log(singleData);  
     const img = document.createElement('img')
     img.setAttribute('src',singleData.image)
@@ -61,10 +61,16 @@ function processData(data){
 
 }
 function addToCard(price,image){
-console.log("$",price);
-console.log(image);
+const cardItemDiv = document.querySelector('.cardItemDiv')
+const cardItemImage = document.createElement('img')
+cardItemImage.classList.add('.cardImage')
+cardItemImage.setAttribute('src',image)
+cardItemDiv.appendChild(cardItemImage)
 
-
+const cardItemPrice = document.createElement('p')
+// cardItemImage.classList.add('.cardImage')
+cardItemPrice.textContent = price
+cardItemDiv.appendChild(cardItemPrice)
 }
 
 getData()
