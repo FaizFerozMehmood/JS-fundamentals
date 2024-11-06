@@ -2,7 +2,6 @@ async function getData() {
   try {
     const response = await fetch('https://fakestoreapi.com/products')
     if(!response.ok){
-     console.log();
      throw new Error(`HTTP ERROR ${response.status}`)
     }
  else{
@@ -35,7 +34,7 @@ function processData(data){
   // console.log("processData=>",data);
   const container = document.querySelector('.container')
   data.map((singleData)=>{
-    console.log(singleData);  
+    // console.log(singleData);  
     const img = document.createElement('img')
     img.setAttribute('src',singleData.image)
     img.classList.add('image')
@@ -49,13 +48,24 @@ function processData(data){
 
     // price==============>
       const price = document.createElement('p')
-    price.textContent = `Price : $${singleData.price}`
+    price.textContent = `Price : ${singleData.price}`
     container.appendChild(price)
-    
+
+// button
+    const btn = document.createElement('button')
+    btn.textContent = 'Add to card'
+    container.appendChild(btn)
+    btn.addEventListener('click',()=> addToCard(singleData.price, singleData.image))
   })
   
 
 }
+function addToCard(price,image){
+console.log("$",price);
+console.log(image);
+
+
+}
+
 getData()
-// console.log("dataa",data);
 
