@@ -68,7 +68,6 @@ cardItemImage.setAttribute('src',image)
 cardItemDiv.appendChild(cardItemImage)
 
 const cardItemPrice = document.createElement('p')
-// cardItemImage.classList.add('.cardImage')
 cardItemPrice.textContent = price
 cardItemDiv.appendChild(cardItemPrice)
 }
