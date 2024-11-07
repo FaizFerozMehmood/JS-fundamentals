@@ -8,3 +8,18 @@ function handleData(){
         console.log(result);
         
     }
+
+
+    // Write a JavaScript function that reverses a number.
+// Example x = 32243;
+// Expected Output : 34223
+
+const getReverse =()=>{
+let number = 32243
+let vlu  = Number(number.toString().split("").reverse().join(''))
+
+return vlu
+
+
+}
+console.log(getReverse());
