@@ -32,26 +32,26 @@ async function getData() {
 }
 function processData(data){
   const container = document.querySelector('.container')
-  data.forEach((singleData)=>{
+  data.forEach((items)=>{
     const img = document.createElement('img')
-    img.setAttribute('src',singleData.image)
+    img.setAttribute('src',items.image)
     img.classList.add('image')
     container.appendChild(img)
     // price==============>
       const price = document.createElement('p')
-    price.textContent = `Price : ${singleData.price}`
+    price.textContent = `Price : ${items.price}`
     container.appendChild(price)
 
     // title===========>
       const title = document.createElement('p')
-    title.textContent = singleData.title
+    title.textContent = items.title
     container.appendChild(title)
 
 // button
     const btn = document.createElement('button')
     btn.innerText = 'Add to card'
     container.appendChild(btn)
-    btn.addEventListener('click',()=> addToCard(singleData.price, singleData.image))
+    btn.addEventListener('click',()=> addToCard(items.price, items.image))
   })
 
 }
