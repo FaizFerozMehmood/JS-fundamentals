@@ -31,25 +31,21 @@ async function getData() {
   
 }
 function processData(data){
-  // console.log("processData=>",data);
   const container = document.querySelector('.container')
   data.forEach((singleData)=>{
-    // console.log(singleData);  
     const img = document.createElement('img')
     img.setAttribute('src',singleData.image)
     img.classList.add('image')
     container.appendChild(img)
+    // price==============>
+      const price = document.createElement('p')
+    price.textContent = `Price : ${singleData.price}`
+    container.appendChild(price)
 
     // title===========>
       const title = document.createElement('p')
     title.textContent = singleData.title
     container.appendChild(title)
-    
-
-    // price==============>
-      const price = document.createElement('p')
-    price.textContent = `Price : ${singleData.price}`
-    container.appendChild(price)
 
 // button
     const btn = document.createElement('button')
@@ -57,19 +53,40 @@ function processData(data){
     container.appendChild(btn)
     btn.addEventListener('click',()=> addToCard(singleData.price, singleData.image))
   })
-  
 
 }
+//Cart
+
 function addToCard(price,image){
 const cardItemDiv = document.querySelector('.cardItemDiv')
+const subDiv = document.createElement('div');
 const cardItemImage = document.createElement('img')
 cardItemImage.classList.add('.cardImage')
 cardItemImage.setAttribute('src',image)
-cardItemDiv.appendChild(cardItemImage)
+subDiv.appendChild(cardItemImage)
 
 const cardItemPrice = document.createElement('p')
 cardItemPrice.textContent = price
-cardItemDiv.appendChild(cardItemPrice)
+const deleteicon = document.createElement('i');
+deleteicon.classList.add('fas', 'fa-trash')
+deleteicon.style.cursor = "pointer";
+subDiv.appendChild(deleteicon)
+deleteicon.addEventListener('click',()=>{
+  console.log("item deleted");
+
+  subDiv.remove()
+  
+})
+
+// if(price){
+// const numberOfaddedPrice = document.createElement('p')
+// numberOfaddedPrice.innerText =price + price
+// console.log(numberOfaddedPrice);
+
+//   cardItemDiv.appendChild(numberOfaddedPrice)
+// }
+subDiv.appendChild(cardItemPrice)
+cardItemDiv.appendChild(subDiv)
 }
 
 getData()
