@@ -49,44 +49,45 @@ function processData(data){
     title.textContent = items.title
     container.appendChild(title)
 
+
 // button
     const btn = document.createElement('button')
     btn.innerText = 'Add to card'
     container.appendChild(btn)
-    btn.addEventListener('click',()=> addToCard(items.price, items.image))
+    btn.addEventListener('click',()=> seeWhatInBag(items.price, items.image))
   })
 
 }
 //Cart
 
-function addToCard(price,image){
-const cardItemDiv = document.querySelector('.cardItemDiv')
-const subDiv = document.createElement('div');
-const cardItemImage = document.createElement('img')
-cardItemImage.classList.add('.cardImage')
-cardItemImage.setAttribute('src',image)
-subDiv.appendChild(cardItemImage)
+// function addToCard(price,image){
+// const cardItemDiv = document.querySelector('.cardItemDiv')
+// const subDiv = document.createElement('div');
+// const cardItemImage = document.createElement('img')
+// cardItemImage.classList.add('.cardImage')
+// cardItemImage.setAttribute('src',image)
+// subDiv.appendChild(cardItemImage)
 
-const cardItemPrice = document.createElement('p')
-cardItemPrice.textContent = price
-const deleteicon = document.createElement('i');
-deleteicon.classList.add('fas', 'fa-trash')
-deleteicon.style.cursor = "pointer";
-subDiv.appendChild(deleteicon)
+// const cardItemPrice = document.createElement('p')
+// cardItemPrice.textContent = price
+// const deleteicon = document.createElement('i');
+// deleteicon.classList.add('fas', 'fa-trash')
+// deleteicon.style.cursor = "pointer";
+// subDiv.appendChild(deleteicon)
 
-deleteicon.addEventListener('click',()=>{
-  subDiv.remove()
-})
+// deleteicon.addEventListener('click',()=>{
+//   subDiv.remove()
+// })
 
-// if(price){
-// const numberOfaddedPrice = document.createElement('p')
-// numberOfaddedPrice.innerText =price + price
-// console.log(numberOfaddedPrice);
 
-//   cardItemDiv.appendChild(numberOfaddedPrice)
+// subDiv.appendChild(cardItemPrice)
+// cardItemDiv.appendChild(subDiv)
 // }
-subDiv.appendChild(cardItemPrice)
-cardItemDiv.appendChild(subDiv)
+function seeWhatInBag(price,title){
+  console.log(price,title);
+  const counter = document.getElementById('spn')
+  counter.innerText = Number(1)
+  
 }
 
 getData()

@@ -17,6 +17,10 @@ margin: 0;
     color: #333;  
     cursor: pointer; 
 }
+#spn{
+font-size: small;
+background-color: rgb(222, 176, 120);
+}
 
 .image{
     height: 60px;
