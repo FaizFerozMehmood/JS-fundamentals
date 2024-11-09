@@ -1,3 +1,5 @@
+ const header = document.querySelector('.header')
+ 
 async function getData() {
   try {
     const response = await fetch('https://fakestoreapi.com/products')
@@ -71,11 +73,9 @@ const deleteicon = document.createElement('i');
 deleteicon.classList.add('fas', 'fa-trash')
 deleteicon.style.cursor = "pointer";
 subDiv.appendChild(deleteicon)
-deleteicon.addEventListener('click',()=>{
-  console.log("item deleted");
 
+deleteicon.addEventListener('click',()=>{
   subDiv.remove()
-  
 })
 
 // if(price){
