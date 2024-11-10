@@ -49,6 +49,14 @@ let herValue = [1,2,3,45,,6,7,8,89,0,]
 const valueIwant = herValue.filter((data)=>data % 2 ===0)
 console.log(valueIwant);
 
+const people = [
+  { name: "Alice", age: 22 },
+  { name: "Bob", age: 16 },
+  { name: "Charlie", age: 18 },
+  { name: "Diana", age: 25 }
+];
+const haveFilter = people.filter((person)=> person.age <=18)
+console.log(haveFilter);
 
 
 
