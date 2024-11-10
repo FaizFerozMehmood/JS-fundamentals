@@ -35,19 +35,19 @@
 
 let arr3 = [1,2,3,4]
 let lastvlu = arr3.at(-1)
-console.log(lastvlu);
+// console.log(lastvlu);
 
 
 let arryy = ["F","G"]
 let newARRAY = arryy.map((ele)=>{
   return ele +"add"
 })
-console.log(newARRAY);
+// console.log(newARRAY);
 
 // Describe how you would filter out only even numbers from an array.
 let herValue = [1,2,3,45,,6,7,8,89,0,]
 const valueIwant = herValue.filter((data)=>data % 2 ===0)
-console.log(valueIwant);
+// console.log(valueIwant);
 
 const people = [
   { name: "Alice", age: 22 },
@@ -55,8 +55,9 @@ const people = [
   { name: "Charlie", age: 18 },
   { name: "Diana", age: 25 }
 ];
+
 const haveFilter = people.filter((person)=> person.age <=18)
-console.log(haveFilter);
+// console.log(haveFilter);
 
 
 const items = [
@@ -67,9 +68,19 @@ const items = [
 ];
  let searched = "ap"
  let storedData = items.filter((product)=>product.name.toLowerCase().includes(searched.toLowerCase()) && product.id == "1")
-console.log(storedData);
+// console.log(storedData);
 
+const input = document.getElementById('input')
+const btn = document.getElementById('btn')
+let arrOfNames = ["faiz","umair","kaashif"]
+btn.addEventListener('click',()=>{
+  let inputarr = []
+  inputarr.push(input.value)
+  let v = arrOfNames.filter((vlue)=> vlue.toLowerCase().includes(inputarr))
+console.log(v);
 
+input.value=""
+})
 
 
 
@@ -78,18 +89,18 @@ console.log(storedData);
 //push() adds an element at the end of an array and returns new length
 const arr = [1, 2, 3, 4, 5];
 const vlu = arr.push("clock");
-console.log(vlu);
+// console.log(vlu);
 
 //returning first element from an array
 const arry = [1, 2, 3, 45];
 const arry2 = arry[0];
-console.log(arry2);
+// console.log(arry2);
 
 // returning last element of the array using at()
 
 const ary = [1, 2, 3, 44, 5, 6, 7];
 const vl = ary.at(-1);
-console.log(vl);
+// console.log(vl);
 
 function fun(sumVlues) {
   let res = 0;
@@ -100,7 +111,7 @@ function fun(sumVlues) {
   });
   return res;
 }
-console.log("results=> " + fun([1, 1, 1, 1, -5]));
+// console.log("results=> " + fun([1, 1, 1, 1, -5]));
 
 function myfun(number, secNum) {
   return number.find((num) => {
@@ -108,7 +119,7 @@ function myfun(number, secNum) {
   });
 }
 
-console.log(myfun([1, 2, 3, 4, 5], 5));
+// console.log(myfun([1, 2, 3, 4, 5], 5));
 
 const obj1 = {
   Name: "faiz",
@@ -128,20 +139,20 @@ const result = {
   ...obj2,
   ...obj3,
 };
-console.log(result);
+// console.log(result);
 
 
 function yourFun(){
-console.log(arguments);
+// console.log(arguments);
 
 }
-console.log(yourFun(12,"faiz"));
+// console.log(yourFun(12,"faiz"));
 
 
 
 const array = [2, 5, 9];
 
-// console.log(array);
+console.log(array);
 
 const index = array.indexOf(5);
 // if (index > -1) { // only splice array when item is found
@@ -149,12 +160,12 @@ const index = array.indexOf(5);
 // }
 
 // array = [2, 9]
-console.log(array);
+// console.log(array);
 
 
 
 function vlueSum(value){
-  console.log(value);
+  // console.log(value);
   value.forEach((singleValue)=>{
    let nm = 0;
   if(singleValue > 0  ){
@@ -162,11 +173,11 @@ function vlueSum(value){
      
     }
     return nm
-    console.log(nm);
+    // console.log(nm);
   
  })
   
 
 }
 
-console.log(vlueSum([1,2,3,4]));
+// console.log(vlueSum([1,2,3,4]));
