@@ -38,6 +38,12 @@ let lastvlu = arr3.at(-1)
 console.log(lastvlu);
 
 
+let arryy = ["F","G"]
+let newARRAY = arryy.map((ele)=>{
+  return ele +"add"
+})
+console.log(newARRAY);
+
 
 
 
