@@ -33,6 +33,9 @@
 // Would you like detailed explanations or examples for any of these questions?
 
 
+let arr3 = [1,2,3,4]
+let lastvlu = arr3.at(-1)
+console.log(lastvlu);
 
 
 

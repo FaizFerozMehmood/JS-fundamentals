@@ -4,6 +4,9 @@ async function getData() {
     const response = await fetch('https://fakestoreapi.com/products')
     if(!response.ok){
       console.log("error fetching data with the respone of something went wrong!");
+      // const loader = document.createElement('h3')
+      // loader.innerText="Loading...";
+      // document.body.innerHTML=loader
     }
    else{
     const data = await response.json()
@@ -20,19 +23,22 @@ getData()
 function hendleData(data){
   
   data.forEach(element => {
-  console.log(element);
   const ele = `<div class="shopping-card">
     <img src=${element.image} alt="Product Image" class="product-image">
     <div class="card-content">
         <h2 class="product-title">${element.title}</h2>
         <p class="product-description">${element.description}.</p>
-        <p class="product-price">${element.price}</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="product-price">$${element.price}</p>
+<button onclick="addtocart(${element.price}, '${element.title}')" class="add-to-cart">Add to Cart</button>
     </div>
 </div>
 `
 container.innerHTML+= ele
 });
+}
+function addtocart(th,title){
+  console.log("clicked",th,title);
+  
 }
 
 
