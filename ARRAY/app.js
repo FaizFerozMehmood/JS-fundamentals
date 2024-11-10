@@ -59,6 +59,16 @@ const haveFilter = people.filter((person)=> person.age <=18)
 console.log(haveFilter);
 
 
+const items = [
+  { id: 1, name: "Apple" },
+  { id: 2, name: "Banana" },
+  { id: 3, name: "Grape" },
+  { id: 4, name: "Orange" },
+];
+ let searched = "ap"
+ let storedData = items.filter((product)=>product.name.toLowerCase().includes(searched.toLowerCase()) && product.id == "1")
+console.log(storedData);
+
 
 
 
