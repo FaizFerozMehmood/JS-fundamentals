@@ -44,6 +44,10 @@ let newARRAY = arryy.map((ele)=>{
 })
 console.log(newARRAY);
 
+// Describe how you would filter out only even numbers from an array.
+let herValue = [1,2,3,45,,6,7,8,89,0,]
+const valueIwant = herValue.filter((data)=>data % 2 ===0)
+console.log(valueIwant);
 
 
 
