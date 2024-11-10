@@ -1,63 +1,171 @@
- const header = document.querySelector('.header')
- 
+const container = document.querySelector('.container')
 async function getData() {
   try {
     const response = await fetch('https://fakestoreapi.com/products')
     if(!response.ok){
-     throw new Error(`HTTP ERROR ${response.status}`)
+      console.log("error fetching data with the respone of something went wrong!");
     }
- else{
-  const data = await response.json()
-  processData(data)
- }
- //two ways to handle data; one is to pass call 
-//  a function created outside the scope;
-
-// 1=> call and pass respone as an arrgument.
-//and hendle the created function where you need.
-// 2=> another option is to handle respone inside the "try" scope
-
-
-  //   data.map((res)=>{
-  //   console.log(res);
-
-    
-  // })
-    
-
-
+   else{
+    const data = await response.json()
+    hendleData(data)
+   }
   } catch (error) {
-    console.log("error fetching data",error);
-    
+    console.log("error fetching data");
   }
-  
 }
-function processData(data){
-  const container = document.querySelector('.container')
-  data.forEach((items)=>{
-    const img = document.createElement('img')
-    img.setAttribute('src',items.image)
-    img.classList.add('image')
-    container.appendChild(img)
-    // price==============>
-      const price = document.createElement('p')
-    price.textContent = `Price : ${items.price}`
-    container.appendChild(price)
 
-    // title===========>
-      const title = document.createElement('p')
-    title.textContent = items.title
-    container.appendChild(title)
+
+getData()
+
+function hendleData(data){
+  
+  data.forEach(element => {
+  console.log(element);
+  const ele = `<div class="shopping-card">
+    <img src=${element.image} alt="Product Image" class="product-image">
+    <div class="card-content">
+        <h2 class="product-title">${element.title}</h2>
+        <p class="product-description">${element.description}.</p>
+        <p class="product-price">${element.price}</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+</div>
+`
+container.innerHTML+= ele
+});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  const header = document.querySelector('.header')
+ 
+// async function getData() {
+//   try {
+//     const response = await fetch('https://fakestoreapi.com/products')
+//     if(!response.ok){
+//      throw new Error(`HTTP ERROR ${response.status}`)
+//     }
+//  else{
+//   const data = await response.json()
+//   processData(data)
+//  }
+//  //two ways to handle data; one is to pass call 
+// //  a function created outside the scope;
+
+// // 1=> call and pass respone as an arrgument.
+// //and hendle the created function where you need.
+// // 2=> another option is to handle respone inside the "try" scope
+
+
+//   //   data.map((res)=>{
+//   //   console.log(res);
+
+    
+//   // })
+    
+
+
+//   } catch (error) {
+//     console.log("error fetching data",error);
+    
+//   }
+  
+// }
+// function processData(data){
+//   const container = document.querySelector('.container')
+//   data.forEach((items)=>{
+//     const img = document.createElement('img')
+//     img.setAttribute('src',items.image)
+//     img.classList.add('image')
+//     container.appendChild(img)
+//     // price==============>
+//       const price = document.createElement('p')
+//     price.textContent = `Price : ${items.price}`
+//     container.appendChild(price)
+
+//     // title===========>
+//       const title = document.createElement('p')
+//     title.textContent = items.title
+//     container.appendChild(title)
 
 
 // button
-    const btn = document.createElement('button')
-    btn.innerText = 'Add to card'
-    container.appendChild(btn)
-    btn.addEventListener('click',()=> seeWhatInBag(items.price, items.image))
-  })
+//     const btn = document.createElement('button')
+//     btn.innerText = 'Add to card'
+//     container.appendChild(btn)
+//     btn.addEventListener('click',()=> seeWhatInBag(items.price, items.image))
+//   })
 
-}
+// }
 //Cart
 
 // function addToCard(price,image){
@@ -83,12 +191,11 @@ function processData(data){
 // subDiv.appendChild(cardItemPrice)
 // cardItemDiv.appendChild(subDiv)
 // }
-function seeWhatInBag(price,title){
-  console.log(price,title);
-  const counter = document.getElementById('spn')
-  counter.innerText = Number(1)
-  
-}
+// function seeWhatInBag(price,title){
+ 
 
-getData()
+  
+// }
+
+// getData()
 
