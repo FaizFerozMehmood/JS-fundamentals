@@ -48,3 +48,21 @@ function herFun(str){
    })
 }
 console.log(herFun(["abc","fef"]));
+
+const input = document.getElementById('input')
+const btn  = document.getElementById('btn')
+btn.addEventListener('click',()=>{
+let userValue = input.value    
+if(isPalindrome(userValue)){
+    console.log(`${userValue} is palindrome`);
+    
+}
+else{
+    console.log(`${userValue} is not palindrome`);
+}
+})
+function isPalindrome(value){
+    let str = value.toLowerCase()
+    let reversed = str.split('').reverse().join('')
+    return str === reversed
+}
