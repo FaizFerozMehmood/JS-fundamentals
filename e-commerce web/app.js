@@ -1,19 +1,26 @@
 const container = document.querySelector('.container')
 async function getData() {
+
+  const loader = document.createElement('h3')
+    loader.innerText="Loading...";
+    loader.id = "loader"
+    document.body.appendChild(loader)
   try {
     const response = await fetch('https://fakestoreapi.com/products')
     if(!response.ok){
       console.log("error fetching data with the respone of something went wrong!");
-      // const loader = document.createElement('h3')
-      // loader.innerText="Loading...";
-      // document.body.innerHTML=loader
+    
     }
    else{
     const data = await response.json()
+    
     hendleData(data)
    }
   } catch (error) {
     console.log("error fetching data");
+  }
+  finally{
+    Document.body.removeChild(loader)
   }
 }
 

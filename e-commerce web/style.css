@@ -126,3 +126,8 @@ body{
 .add-to-cart:hover {
     background-color: #2980b9;
 }
+#loader{
+    display:  flex;
+    justify-content: center;
+    margin-top: 210px;
+}
