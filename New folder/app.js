@@ -108,6 +108,20 @@ function formatNumber(num,decimalPlaces){
 console.log(formatNumber(3.14159, 2))
 console.log(formatNumber("3.14159, 2"))
 console.log(formatNumber("abc", 2))
+let nmbr = "0"
+let nmbr2 = "1"
+const btn = document.createElement('button')
+btn.innerText = "click here"
+document.body.appendChild(btn)
+btn.addEventListener('click',()=>{
+let respose = Number(nmbr) + Number(nmbr2)
+const p = document.createElement('p')
+nmbr = respose
+p.innerText = nmbr
+document.body.appendChild(p)
+
+})
+
 
 
 

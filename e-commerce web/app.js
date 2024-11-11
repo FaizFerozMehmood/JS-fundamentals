@@ -23,8 +23,6 @@ async function getData() {
     document.body.removeChild(loader)
   }
 }
-
-
 getData()
 
 function hendleData(data){
