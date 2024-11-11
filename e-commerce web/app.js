@@ -20,7 +20,7 @@ async function getData() {
     console.log("error fetching data");
   }
   finally{
-    Document.body.removeChild(loader)
+    document.body.removeChild(loader)
   }
 }
 
