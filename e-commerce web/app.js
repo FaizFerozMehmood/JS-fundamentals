@@ -1,33 +1,44 @@
 const container = document.querySelector('.container')
+const footerbottom = document.querySelector('.footer-bottom')
 const icon = document.getElementById('icon')
-const spn = document.getElementById('spn')
+const spn = document.getElementById('spn');
+const storageData = JSON.parse(localStorage.getItem("products")) || [];
+const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
 async function getData() {
 
   const loader = document.createElement('h3')
     loader.innerText="Loading...";
     loader.id = "loader"
     document.body.appendChild(loader)
+    footerbottom.innerHTML =''
+
   try {
-    const response = await fetch('https://fakestoreapi.com/products')
+    const response = await fetch('https://fakestoreapi.com/products');
+
     if(!response.ok){
       console.log("error fetching data with the respone of something went wrong!");
     
     }
    else{
     const data = await response.json()
-    
+    localStorage.setItem("products",JSON.stringify(data))
     hendleData(data)
    }
   } catch (error) {
     console.log("error fetching data");
+    footerbottom.innerHTML =''
+
   }
   finally{
     document.body.removeChild(loader)
+    footerbottom.innerHTML =''
+
   }
 }
 getData()
 
 function hendleData(data){
+  spn.textContent = cartData?.length
   
   data.forEach(element => {
   const ele = `<div class="shopping-card">
@@ -36,16 +47,24 @@ function hendleData(data){
         <h2 class="product-title">${element.title}</h2>
         <p class="product-description">${element.description}.</p>
         <p class="product-price">$${element.price}</p>
-<button onclick="addtocart(${element.price}, '${element.title}')" class="add-to-cart">Add to Cart</button>
+<button onclick="addtocart('${element.id}')" class="add-to-cart">Add to Cart</button>
     </div>
 </div>
 `
 container.innerHTML+= ele
 });
 }
-function addtocart(price,title){
-  console.log(price,title);
+function addtocart(id){
+  console.log(id);
+  console.log(storageData);
   
+  const selectedData = storageData.find((product)=> product.id == id);
+  console.log(selectedData);
+  cartData.push(selectedData)
+  if(selectedData.length !== 0){
+    localStorage.setItem("products-cart",JSON.stringify(cartData));
+    getData()
+  }
 }
 icon.addEventListener('click',()=>{
 window.location.href  ="cartDetail.html"  
