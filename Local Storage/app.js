@@ -20,6 +20,7 @@
 // Is localStorage synchronous or asynchronous, and what impact does that have on performance?
 let str = "faiz";
 localStorage.setItem("myvalue", str);
+localStorage.removeItem('myvalue')
 let getValue = localStorage.getItem("myvalue");
 console.log(getValue);
 // arr//
@@ -30,9 +31,9 @@ console.log(getarr);
 
 // object
 let obj = {
-  name: "faiz",
-  age: "24",
-  isStudent: true,
+    name: "faiz",
+    age: "24",
+    isStudent: true,
 };
 
 localStorage.setItem("myObj", JSON.stringify(obj));
@@ -40,14 +41,17 @@ let getObj = JSON.parse(localStorage.getItem("myObj"));
 console.log(getObj);
 
 let arrOfObj = [
-  {
-    name: "faiz",
-    age: "24",
-    isStudent: true,
-  },
-  {a:"b",c:"d"}
+    {
+        name: "faiz",
+        age: "24",
+        isStudent: true,
+    },
+    {a:"b",c:"d"}
 ];
 localStorage.setItem("arrofobj",JSON.stringify(arrOfObj))
 let get = JSON.parse(localStorage.getItem('arrofobj'))
+
+localStorage.clear()
 console.log(get);
+console.log(localStorage);
 
