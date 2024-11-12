@@ -122,6 +122,18 @@ document.body.appendChild(p)
 
 })
 
+let strvalue = "maan"
+ let reverse = strvalue.split('').reverse().join('')
+ 
+// let isPalindrome = true;
+if(strvalue === reverse){
+  console.log(`${strvalue} is palindrome`);
+  
+}
+else{
+  console.log(`${strvalue} is not palindrome`);
+
+}
 
 
 
