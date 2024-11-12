@@ -1,4 +1,6 @@
 const container = document.querySelector('.container')
+const icon = document.getElementById('icon')
+const spn = document.getElementById('spn')
 async function getData() {
 
   const loader = document.createElement('h3')
@@ -41,10 +43,13 @@ function hendleData(data){
 container.innerHTML+= ele
 });
 }
-function addtocart(th,title){
-  console.log("clicked",th,title);
+function addtocart(price,title){
+  console.log(price,title);
   
 }
+icon.addEventListener('click',()=>{
+window.location.href  ="cartDetail.html"  
+})
 
 
 
