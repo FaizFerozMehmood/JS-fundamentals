@@ -18,24 +18,36 @@
 // How can you iterate over all keys in localStorage?
 // Explain how localStorage can be used to remember user preferences in a web application.
 // Is localStorage synchronous or asynchronous, and what impact does that have on performance?
-let str = "faiz"
-localStorage.setItem('myvalue', str)
-let getValue = localStorage.getItem('myvalue')
+let str = "faiz";
+localStorage.setItem("myvalue", str);
+let getValue = localStorage.getItem("myvalue");
 console.log(getValue);
 // arr//
-let arr = ["faiz","umair"]
-localStorage.setItem("myarr",arr)
-let getarr = localStorage.getItem('myarr') ||[]
+let arr = ["faiz", "umair"];
+localStorage.setItem("myarr", arr);
+let getarr = localStorage.getItem("myarr") || [];
 console.log(getarr);
 
 // object
 let obj = {
-    name:'faiz',
-    age: "24",
-    isStudent :true
-}
+  name: "faiz",
+  age: "24",
+  isStudent: true,
+};
 
-localStorage.setItem('myObj',JSON.stringify(obj))
-let getObj = JSON.parse(localStorage.getItem('myObj'))
+localStorage.setItem("myObj", JSON.stringify(obj));
+let getObj = JSON.parse(localStorage.getItem("myObj"));
 console.log(getObj);
+
+let arrOfObj = [
+  {
+    name: "faiz",
+    age: "24",
+    isStudent: true,
+  },
+  {a:"b",c:"d"}
+];
+localStorage.setItem("arrofobj",JSON.stringify(arrOfObj))
+let get = JSON.parse(localStorage.getItem('arrofobj'))
+console.log(get);
 
