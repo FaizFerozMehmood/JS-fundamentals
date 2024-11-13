@@ -194,3 +194,19 @@ console.log(uuu);
 let nestedArr = ["faiz",["mahmood"]]
 console.log(nestedArr.flat());
 
+
+let flag  = false 
+let hhh = [1,2,3,4,6,7]
+for(let i = 0;i< hhh.length;i++){
+if(hhh[i]===4){
+  flag = true
+  console.log('value is found in the array!');
+  break
+  
+}
+else{
+  console.log("not found");
+  
+}
+}
+
