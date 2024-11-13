@@ -181,3 +181,10 @@ function vlueSum(value){
 }
 
 // console.log(vlueSum([1,2,3,4]));
+
+let aryOfNames = ["faiz","ali"]
+let uuu = arrOfNames.findIndex((name)=>{
+  return name =="faiz"
+})
+
+console.log(uuu);
