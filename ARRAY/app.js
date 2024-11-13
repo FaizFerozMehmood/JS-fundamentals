@@ -188,3 +188,9 @@ let uuu = arrOfNames.findIndex((name)=>{
 })
 
 console.log(uuu);
+
+//Flat method concates nested array in a single array,it does not modify the original array!
+
+let nestedArr = ["faiz",["mahmood"]]
+console.log(nestedArr.flat());
+
