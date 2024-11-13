@@ -202,11 +202,9 @@ if(hhh[i]===4){
   flag = true
   console.log('value is found in the array!');
   break
-  
 }
 else{
   console.log("not found");
-  
 }
 }
 
