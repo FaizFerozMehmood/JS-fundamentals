@@ -149,6 +149,11 @@ let getAscending = ascending.sort((a,b)=>{
 console.log(getAscending);
 
 
+let fruits = ["orange","apple"]
+fruits.sort()
+console.log(fruits);  // ['apple', 'orange']
+
+
 
 
 
