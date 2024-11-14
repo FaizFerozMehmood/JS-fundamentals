@@ -4,19 +4,24 @@ let cardContainerInHomePage = document.getElementById(
 );
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
 console.log(cartData);
-
 btn.addEventListener('click',()=>{
     window.location.href = "index.html"
 })
 function getCartData() {
+    cardContainerInHomePage.innerHTML=''
   cartData.forEach((element,index) => {
     let ele = `<div class="product-card">
     <img src="${element.image}" alt="product image">
     <p class="title">${element.title}</p>
     <p class="price">${element.price}</p>
-    <button class="delete-btn">Delete</button>
+    <button onclick ="deleteItem(${index})" class="delete-btn">Delete</button>
 </div>`;
     cardContainerInHomePage.innerHTML += ele;
   });
 }
 getCartData();
+function deleteItem(ind){
+cartData.splice(ind,1)
+localStorage.setItem('products-cart',JSON.stringify(cartData))
+getCartData()
+}
