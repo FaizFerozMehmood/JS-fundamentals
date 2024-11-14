@@ -169,10 +169,10 @@ console.log(ind);
 
 let indd = ['faiz',"umaiar","ali"]
 let getInd = indd.indexOf('faiz')
-console.log(getInd);
 if(getInd !==-1){
   indd.splice(getInd,1)
 }
+console.log(getInd);
 console.log(indd);
 
 
