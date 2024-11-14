@@ -134,6 +134,20 @@ else{
   console.log(`${strvalue} is not palindrome`);
 
 }
+//descending order
+let sortt  = [1,2,3,4,56,]
+let newone = sortt.sort((a,b)=>{
+  return b-a
+})
+console.log(newone);
+
+// ascending oder
+let ascending = [0,39,3,45,6,7,7]
+let getAscending = ascending.sort((a,b)=>{
+  return a-b
+})
+console.log(getAscending);
+
 
 
 
