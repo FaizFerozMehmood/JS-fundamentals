@@ -143,6 +143,7 @@ console.log(newone);
 
 // ascending oder
 let ascending = [0,39,3,45,6,7,7]
+
 let getAscending = ascending.sort((a,b)=>{
   return a-b
 })
@@ -153,8 +154,18 @@ let fruits = ["orange","apple"]
 fruits.sort()
 console.log(fruits);  // ['apple', 'orange']
 
+// reverse//
+let rev = [0,39,3,45,6,7,7]
+rev.reverse()
+console.log(rev);
 
 
+let ind = ['faiz',"umaiar","ali"]
+let getValue = ind.indexOf("ali")
+if(getValue !==-1){
+  ind.splice(getValue,1)
+}
+console.log(ind);
 
 
 
