@@ -24,6 +24,7 @@ async function getData() {
     const data = await response.json()
     localStorage.setItem("products",JSON.stringify(data))
     hendleData(data)
+    getarr(data)
    }
   } catch (error) {
     console.log("error fetching data");
@@ -40,7 +41,7 @@ getData()
 
 function hendleData(data){
   spn.textContent = cartData?.length
-  
+  container.innerHTML =""
   data.forEach(element => {
   const ele = `<div class="shopping-card">
     <img src=${element.image} alt="Product Image" class="product-image">
@@ -58,7 +59,6 @@ container.innerHTML+= ele
 function addtocart(id){
   console.log(id);
   console.log(storageData);
-  
   const selectedData = storageData.find((product)=> product.id == id);
   console.log(selectedData);
   cartData.push(selectedData)
@@ -70,6 +70,17 @@ function addtocart(id){
 icon.addEventListener('click',()=>{
 window.location.href  ="cartDetail.html"  
 })
+function getarr(data){
+  input.addEventListener('input',(e)=>{
+    let inputValue = e.target.value
+    let filtered = data.filter((item)=>{
+      return item.title.includes(inputValue)
+    }
+  )
+  hendleData(filtered)
+    
+  })
+}
 
 
 
