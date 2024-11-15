@@ -106,3 +106,35 @@ function checkData(){
   
 }
 checkData()
+
+
+const input = document.getElementById('input');
+let container = document.querySelector('.container')
+const arry = ["faiz","mahmood","kurovi"];
+function renderBar(data){
+  container.innerHTML = ""
+  data.forEach((item)=>{
+  let ele = `<p>${item}</p>`
+  
+  container.innerHTML += ele
+    
+  })
+}
+renderBar(arry)
+  
+  input.addEventListener('input',(e)=>{
+    let inputValue = e.target.value;
+    let filterVal = arry.filter((val)=> val.includes(inputValue))
+    console.log(filterVal);
+    setTimeout(()=>{
+      renderBar(filterVal)
+    },1000)
+    
+  
+  
+    
+   
+    
+  })
+
+// }
