@@ -124,7 +124,9 @@ renderBar(arry)
   
   input.addEventListener('input',(e)=>{
     let inputValue = e.target.value;
-    let filterVal = arry.filter((val)=> val.includes(inputValue))
+    let filterVal = arry.filter((val)=> {
+     return val.includes(inputValue)
+    })
     console.log(filterVal);
     setTimeout(()=>{
       renderBar(filterVal)
