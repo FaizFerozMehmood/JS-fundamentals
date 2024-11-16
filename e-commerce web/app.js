@@ -18,7 +18,6 @@ async function getData() {
 
     if(!response.ok){
       console.log("error fetching data with the respone of something went wrong!");
-    
     }
    else{
     const data = await response.json()
@@ -29,33 +28,24 @@ async function getData() {
   } catch (error) {
     console.log("error fetching data");
     footerbottom.innerHTML =''
-
   }
   finally{
     document.body.removeChild(loader)
     footerbottom.innerHTML =''
-
   }
 }
-
 getData()
-
+let notFound = document.createElement('p')
 function hendleData(data){
-  console.log(data);
+  notFound.innerHTML=""
   if(data.length ===0){
-    let notFound = document.createElement('p')
     notFound.id ="noTfound"
     notFound.innerText ="sorry ! No data found against your search!"
     document.body.appendChild(notFound)
-    
-    
   }
-  
   spn.textContent = cartData?.length
   container.innerHTML =""
-  
   data.forEach(element => {
-    
   const ele = `<div class="shopping-card">
     <img src=${element.image} alt="Product Image" class="product-image">
     <div class="card-content">
