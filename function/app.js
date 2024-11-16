@@ -93,9 +93,9 @@
 
 function checkData(){
   let counter = 0
-  let arrOfNumBer = [1,2,3,4,5]
+  let arrOfNumBer = [0,false,3,4,5]
   arrOfNumBer.forEach((item)=>{
-    if(item){
+    if(!item){
 counter = counter + 1
     }
   })
