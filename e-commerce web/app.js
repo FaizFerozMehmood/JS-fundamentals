@@ -37,19 +37,25 @@ async function getData() {
 
   }
 }
-let nofound = document.createElement('p')
-nofound.innerText ="No data found!"
 
 getData()
 
 function hendleData(data){
+  console.log(data);
+  if(data.length ===0){
+    let notFound = document.createElement('p')
+    notFound.id ="noTfound"
+    notFound.innerText ="sorry ! No data found against your search!"
+    document.body.appendChild(notFound)
+    
+    
+  }
+  
   spn.textContent = cartData?.length
   container.innerHTML =""
-  if(container.innerHTML ===''){
-    container.appendChild(nofound)
-
-  }
+  
   data.forEach(element => {
+    
   const ele = `<div class="shopping-card">
     <img src=${element.image} alt="Product Image" class="product-image">
     <div class="card-content">
@@ -64,10 +70,8 @@ container.innerHTML+= ele
 });
 }
 function addtocart(id){
-  console.log(id);
   console.log(storageData);
   const selectedData = storageData.find((product)=> product.id == id);
-  console.log(selectedData);
   cartData.push(selectedData)
   if(selectedData.length !== 0){
     localStorage.setItem("products-cart",JSON.stringify(cartData));
@@ -84,7 +88,11 @@ function getarr(data){
       // if(!filtered){
       //   alert('no data')
       // }
+      // let respone =
       return item.title.includes(inputValue)
+      // console.log(respone);
+      
+      return  
     }
   )
   hendleData(filtered)
