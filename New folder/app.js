@@ -185,5 +185,15 @@ numAr.forEach((num)=>{
 console.log(count);
 
 
+let arry = [2,2,3,4,4,5,7,7]
+function removeDuplictate(abc){
+  let unique = []
+  for(let i = 0; i < abc.length;i++){
+    if(!unique.includes(abc[i]))
+     unique.push(abc[i])
+  }
 
+  return unique
+}
+console.log(removeDuplictate([1,1,2,2,3,3]));
 

@@ -6,7 +6,6 @@ const storageData = JSON.parse(localStorage.getItem("products")) || [];
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
 const input = document.getElementById('input')
 async function getData() {
-
   const loader = document.createElement('h3')
     loader.innerText="Loading...";
     loader.id = "loader"
@@ -77,7 +76,6 @@ function getarr(data){
     }
   )
   hendleData(filtered)
-    
   })
 }
 
