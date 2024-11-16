@@ -179,7 +179,7 @@ let numAr = [0,2,3,4]
 let count = 0;
 numAr.forEach((num)=>{
   if(num){
-    count = count +1
+  count ++
   }
 })
 console.log(count);

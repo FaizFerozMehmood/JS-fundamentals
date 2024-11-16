@@ -92,23 +92,22 @@
 
 
 function checkData(){
-  let counter = '0'
-  
-  // console.log(counter);
-  // if(counter){
-  //   console.log("counter he bhai");
-    
-  // }
-  // else{
-  //   console.log("nahi he");
-    
-  // }
+  let counter = 0
+  let arrOfNumBer = [1,2,3,4,5]
+  arrOfNumBer.forEach((item)=>{
+    if(item){
+counter = counter + 1
+    }
+  })
+
+  console.log("counter",counter);
   
 }
 checkData()
 
 
 const input = document.getElementById('input');
+const btn = document.getElementById('btn');
 let container = document.querySelector('.container')
 const arry = ["faiz","mahmood","kurovi"];
 function renderBar(data){
@@ -122,8 +121,10 @@ function renderBar(data){
 }
 renderBar(arry)
   
-  input.addEventListener('input',(e)=>{
-    let inputValue = e.target.value;
+  btn.addEventListener('click',()=>{
+    let inputValue = input.value
+    console.log(inputValue);
+    
     let filterVal = arry.filter((val)=> {
      return val.includes(inputValue)
     })

@@ -38,3 +38,5 @@ let findValue = (...rst)=>{
     
 }
 console.log(findValue(2,3,4,6,7,8,9));
+
+
