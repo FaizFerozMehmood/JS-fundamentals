@@ -175,6 +175,15 @@ if(getInd !==-1){
 console.log(getInd);
 console.log(indd);
 
+let numAr = [0,2,3,4]
+let count = 0;
+numAr.forEach((num)=>{
+  if(num){
+    count = count +1
+  }
+})
+console.log(count);
+
 
 
 

@@ -37,11 +37,18 @@ async function getData() {
 
   }
 }
+let nofound = document.createElement('p')
+nofound.innerText ="No data found!"
+
 getData()
 
 function hendleData(data){
   spn.textContent = cartData?.length
   container.innerHTML =""
+  if(container.innerHTML ===''){
+    container.appendChild(nofound)
+
+  }
   data.forEach(element => {
   const ele = `<div class="shopping-card">
     <img src=${element.image} alt="Product Image" class="product-image">
@@ -74,6 +81,9 @@ function getarr(data){
   input.addEventListener('input',(e)=>{
     let inputValue = e.target.value
     let filtered = data.filter((item)=>{
+      // if(!filtered){
+      //   alert('no data')
+      // }
       return item.title.includes(inputValue)
     }
   )
