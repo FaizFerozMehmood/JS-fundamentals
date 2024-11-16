@@ -200,5 +200,10 @@ body{
     color: #555;
     text-decoration: underline;
 }
+#noTfound{
+    display: flex;
+    place-content: center;
+    color: rgb(197, 34, 34);
+}
 
   

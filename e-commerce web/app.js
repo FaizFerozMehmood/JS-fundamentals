@@ -12,10 +12,8 @@ async function getData() {
     loader.id = "loader"
     document.body.appendChild(loader)
     footerbottom.innerHTML =''
-
   try {
     const response = await fetch('https://fakestoreapi.com/products');
-
     if(!response.ok){
       console.log("error fetching data with the respone of something went wrong!");
     }
@@ -75,14 +73,7 @@ function getarr(data){
   input.addEventListener('input',(e)=>{
     let inputValue = e.target.value
     let filtered = data.filter((item)=>{
-      // if(!filtered){
-      //   alert('no data')
-      // }
-      // let respone =
       return item.title.includes(inputValue)
-      // console.log(respone);
-      
-      return  
     }
   )
   hendleData(filtered)
