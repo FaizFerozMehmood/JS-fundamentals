@@ -199,10 +199,10 @@ console.log(removeDuplictate([1,1,2,2,3,3]));
 
 
 function pali(vl){
-  let pre = vl
-let res = vl.split('').reverse().join('')
-console.log(res,",,,,,", vl);
-return vl ===res
+  let pre = vl.toLowerCase().replace(/[^a-z0-9]/g, '')
+let res = pre.split('').reverse().join('').toLowerCase()
+console.log(res,",,,,,", pre);
+return pre ===res
 
 }
-console.log(pali('maam'));
+console.log(pali('A man, a plan, a canal, Panama'));
