@@ -206,3 +206,16 @@ return pre ===res
 
 }
 console.log(pali('A man, a plan, a canal, Panama'));
+
+
+function countOccurance(arr,num){
+let leng;
+for(let i = 0; i<arr.length; i++){
+  if(arr[i]===num){
+leng++    
+  }
+}
+
+
+}
+console.log(countOccurance([1,2,2,4,5,5,5,5,],5));
