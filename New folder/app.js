@@ -226,19 +226,15 @@ function printNumbers(vlue){
   let fizz = 0
 // console.log(vlue,"vlue");
 if(vlue % 3 ==0){
-  // console.log("fizz",vlue);
-  return vlue
-}
-if(vlue % 5 ==0){
-  console.log("buzz",vlue);
+  console.log("fizz",vlue);
 }
 if(vlue % 3 ==0 && vlue % 5 ==0){
   console.log("fizzbuzz",vlue);
 }
-
+if(vlue % 5 ==0){
+  console.log("buzz",vlue);
 }
-
-console.log(printNumbers());
+}
 
 
 for(let i = 0; i<=100; i++){
