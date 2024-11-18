@@ -44,3 +44,15 @@ for(let i = 0; i <= ary.length;i++){
     }
 }
 console.log(removeDuplicate);
+
+function getcount(vlue,checkValue){
+    let count = []
+vlue.forEach((data)=>{
+    if(data==checkValue){
+     count.push(data)
+     
+    }
+})
+return count
+}
+console.log(getcount([1,2,3,3,3,3],3));
