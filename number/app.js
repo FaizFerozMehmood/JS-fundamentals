@@ -50,9 +50,11 @@ function getcount(vlue,checkValue){
 vlue.forEach((data)=>{
     if(data==checkValue){
      count.push(data)
-     
     }
 })
 return count
 }
-console.log(getcount([1,2,3,3,3,3],3));
+// console.log(getcount([1,2,3,3,3,3],3));
+let fun = getcount([1,2,3,3,3,3],3)
+console.log(fun);
+
