@@ -200,10 +200,23 @@ body{
     color: #555;
     text-decoration: underline;
 }
+#input{
+    margin-right: 50px;
+    padding:7px 60px;
+    color: #ff6347; 
+    /* background-color: #941d1d; */
+    transform: scale(1.1);
+
+}
 #noTfound{
     display: flex;
     place-content: center;
     color: rgb(197, 34, 34);
 }
 
-  
+  /* //ERROR MESSAGE */
+#errorMessage{
+    display: flex;
+    place-content: center;
+    color: #9b6b63;
+}

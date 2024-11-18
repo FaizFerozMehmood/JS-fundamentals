@@ -15,6 +15,11 @@ function getCartData() {
     <p class="title">${element.title}</p>
     <p class="price">${element.price}</p>
     <button onclick ="deleteItem(${index})" class="delete-btn">Delete</button>
+    <button onclick ="increment(this)" class="">+</button>
+    <button onclick ="decrement(this)" class="">_</button>
+
+
+    
 </div>`;
     cardContainerInHomePage.innerHTML += ele;
   });

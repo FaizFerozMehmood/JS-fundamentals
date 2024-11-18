@@ -23,3 +23,24 @@ return vlu
 
 }
 console.log(getReverse());
+
+
+
+// removing duplicates using foreach
+let arrrr = [12,3,4,5,4,5,5,5]
+let uniqueValue = []
+arrrr.forEach((item)=>{
+if(!uniqueValue.includes(item))
+    uniqueValue.push(item)
+})
+console.log("value",uniqueValue);
+
+// removing duplicates using for loop
+let ary =[7,7,7,7,7,7,7,1]
+let removeDuplicate =[]
+for(let i = 0; i <= ary.length;i++){
+    if(!removeDuplicate.includes(ary[i])){
+        removeDuplicate.push(ary[i])
+    }
+}
+console.log(removeDuplicate);

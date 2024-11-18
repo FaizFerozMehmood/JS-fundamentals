@@ -17,6 +17,8 @@ async function fetchData(userName = "FaizFerozMehmood") {
 
 btn.addEventListener('click', () => {
   const userName = input.value
+  displayContent.innerHTML = '<p>Loading...</p>';
+
   if (!userName) {
     console.log("No data found");
   displayContent.innerHTML=`<p>please enter username</p>`
@@ -25,18 +27,18 @@ btn.addEventListener('click', () => {
 })
 
 
-
 function displayDaTA(data){
   console.log("data",data);
   data === undefined ? 
   displayContent.innerHTML = ''
   :displayContent.innerHTML=`
 <img id ="avatar" src=${data?.avatar_url} alt="">
-<p>${data?.followers}</p>
-<p>${data?.name}</p>
-    <p><a href=${data.html_url} target="_blank">View github profile</a></p>
+<p>Follower ${data?.followers}</p>
+    <strong>${data?.name}</strong>
 
 <p></p>
+    <p><a href=${data.html_url} target="_blank">View github profile</a></p>
+
 `
 
 }
@@ -53,6 +55,7 @@ async function defaultUser(){
     displayDaTA(jsonData)
   } catch (error) {
     console.error("Error fetching data:", error.message);
+    displayContent.innerHTML = `<p>Error fetching data</p>`
   }
 
 }

@@ -5,6 +5,7 @@ const spn = document.getElementById('spn');
 const storageData = JSON.parse(localStorage.getItem("products")) || [];
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
 const input = document.getElementById('input')
+
 async function getData() {
   const loader = document.createElement('h3')
     loader.innerText="Loading...";
@@ -24,6 +25,14 @@ async function getData() {
    }
   } catch (error) {
     console.log("error fetching data");
+    let er = document.createElement('h5')
+    er.innerText = `Something went wrong!
+    net::ERR_internet_disconnected🤔`
+    er.id ="errorMessage"
+    document.body.appendChild(er)
+    // loader.innerText=;
+
+
     footerbottom.innerHTML =''
   }
   finally{
