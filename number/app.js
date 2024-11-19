@@ -57,7 +57,18 @@ return count
 // console.log(getcount([1,2,3,3,3,3],3));
 let fun = getcount([1,2,3,3,3,3],3)
 console.log(fun);
+
+
+
 let numm = '1'
 let numPlus =   Number(numm) + Number("2")
 console.log(numPlus);
 
+function defaul(vlu="faiz"){
+if(!vlu){
+console.log("value mad");
+
+}
+return vlu
+}
+console.log(defaul());
