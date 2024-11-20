@@ -64,9 +64,10 @@ let numm = '1'
 let numPlus =   Number(numm) + Number("2")
 console.log(numPlus);
 
-function defaul(vlu="faiz"){
+function defaul(vlu){
 if(!vlu){
-console.log("value mad");
+// console.log("value mad");
+return "value mad "
 
 }
 return vlu

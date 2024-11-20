@@ -1,0 +1,138 @@
+Scenario 1:
+Create a function updateQuantity(action, quantity) that:
+
+Increases the quantity if action is "increase".
+Decreases the quantity if action is "decrease" but does not go below 1.
+javascript
+Copy code
+updateQuantity("increase", 1); // Output: 2
+updateQuantity("decrease", 1); // Output: 1
+Scenario 2:
+Write a function to handle clicks on multiple + and - buttons for a list of products:
+
+html
+Copy code
+<div class="product">
+    <button class="decrease">-</button>
+    <span class="quantity">1</span>
+    <button class="increase">+</button>
+</div>
+Each button should only update the quantity for its respective product.
+Scenario 3:
+A cart stores the following items:
+
+javascript
+Copy code
+const cart = [
+    { id: 1, name: "Product A", price: 20, quantity: 1 },
+    { id: 2, name: "Product B", price: 30, quantity: 2 },
+];
+Write a function to:
+
+Increase the quantity of an item by its id.
+Recalculate and display the cart's total price.
+Scenario 4:
+Write a function to dynamically display a "Remove" button for a product if its quantity is set to 1. Clicking "Remove" should delete the product from the cart.
+
+Challenge
+Create a small JavaScript program with the following functionality:
+
+A list of products displayed with + and - buttons.
+Dynamically update the total price for all products combined when quantities change.
+Store the updated cart data in Local Storage so it persists across page reloads.
+These questions and scenarios will strengthen your understanding of the topic. Let me know if you need help solving any of these!
+
+
+
+
+
+
+You said:
+    <p  id = "quantity" class="price">0</p>
+ChatGPT said:
+ChatGPT
+Your <p> element with the id="quantity" and class="price" can be dynamically updated in JavaScript. Let’s dive into how you can manipulate it for an e-commerce web app scenario using the + and - buttons.
+
+Example Scenario
+You have buttons to increase and decrease the quantity, and the quantity is displayed in this <p> element. Here's how you can make it functional:
+
+.......................................................................................................................................................................................................................................................
+
+js question like this?
+
+ChatGPT said:
+ChatGPT
+If you're looking for JavaScript questions similar to your scenario—managing dynamic data like a shopping cart, working with DOM, and using localStorage—here are a few challenging yet practical examples:
+
+Question 1: Shopping Cart Management
+You are given a shopping cart stored in localStorage with the following format:
+
+json
+Copy code
+[
+  { "id": 1, "name": "Laptop", "price": 800, "quantity": 1 },
+  { "id": 2, "name": "Phone", "price": 500, "quantity": 2 }
+]
+Write the following functions:
+
+getTotalPrice(): Calculate and return the total price of items in the cart (price × quantity).
+addItem(newItem): Add a new item to the cart. If the item already exists (based on id), increase its quantity.
+removeItem(itemId): Remove an item from the cart based on its id.
+saveCart(): Save the cart back to localStorage.
+
+...................................................................................................................................................................................................................................................
+Question 2: Dynamic Product Rendering
+Write a JavaScript function renderProducts() that takes an array of products and dynamically renders them as cards in the DOM. Each card should display:
+
+Product image (img)
+Product name
+Price
+Two buttons: Add to Cart and Remove from Cart
+When the Add to Cart button is clicked:
+
+Save the product to the cart (stored in localStorage).
+When the Remove from Cart button is clicked:
+
+Remove the product from the cart.
+
+.............................................................................................................................................................................................
+Question 3: Quantity Update in Cart
+Given an array of cart items:
+
+javascript
+Copy code
+let cart = [
+  { id: 1, name: "Shoe", price: 100, quantity: 1 },
+  { id: 2, name: "Shirt", price: 50, quantity: 2 }
+];
+Write the following functions:
+
+incrementQuantity(id): Increment the quantity of a product in the cart.
+decrementQuantity(id): Decrease the quantity of a product in the cart. If the quantity reaches 0, remove the item from the cart.
+Ensure all updates are saved to localStorage.
+........................................................................
+..................................................................
+
+Question 4: Wishlist Management
+Create a "Wishlist" feature. Write JavaScript to:
+
+Toggle an item between the cart and the wishlist.
+Ensure that an item cannot exist in both at the same time.
+Save both cart and wishlist to localStorage and reflect the changes on the UI.
+Question 5: Search Functionality
+Create a search bar for products. Write a JavaScript function searchProducts(keyword) that filters the products array based on the search term (case-insensitive) and displays matching products on the UI.
+.......................................................................
+........................................................................
+Question 6: Cart Summary
+Given the cart data:
+
+javascript
+Copy code
+let cart = [
+  { id: 1, name: "Book", price: 20, quantity: 3 },
+  { id: 2, name: "Pen", price: 2, quantity: 5 }
+];
+Write a function getCartSummary() that returns:
+
+Total items in the cart (sum of all quantities).
+Total cost of items in the cart.

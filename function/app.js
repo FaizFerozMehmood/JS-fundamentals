@@ -91,53 +91,74 @@
 // }
 
 
-function checkData(){
-  let counter = 0
-  let arrOfNumBer = [0,false,3,4,5]
-  arrOfNumBer.forEach((item)=>{
-    if(!item){
-counter = counter + 1
-    }
-  })
+// function checkData(){
+//   let counter = 0
+//   let arrOfNumBer = [0,false,3,4,5]
+//   arrOfNumBer.forEach((item)=>{
+//     if(!item){
+// counter = counter + 1
+//     }
+//   })
 
-  console.log("counter",counter);
+//   console.log("counter",counter);
   
-}
-checkData()
+// }
+// checkData()
 
 
-const input = document.getElementById('input');
-const btn = document.getElementById('btn');
-let container = document.querySelector('.container')
-const arry = ["faiz","mahmood","kurovi"];
-function renderBar(data){
-  container.innerHTML = ""
-  data.forEach((item)=>{
-  let ele = `<p>${item}</p>`
+// const input = document.getElementById('input');
+// const btn = document.getElementById('btn');
+// let container = document.querySelector('.container')
+// const arry = ["faiz","mahmood","kurovi"];
+// function renderBar(data){
+//   container.innerHTML = ""
+//   data.forEach((item)=>{
+//   let ele = `<p>${item}</p>`
   
-  container.innerHTML += ele
+//   container.innerHTML += ele
     
-  })
-}
-renderBar(arry)
+//   })
+// }
+// renderBar(arry)
   
-  btn.addEventListener('click',()=>{
-    let inputValue = input.value
-    console.log(inputValue);
+//   btn.addEventListener('click',()=>{
+//     let inputValue = input.value
+//     console.log(inputValue);
     
-    let filterVal = arry.filter((val)=> {
-     return val.includes(inputValue)
-    })
-    console.log(filterVal);
-    setTimeout(()=>{
-      renderBar(filterVal)
-    },1000)
+//     let filterVal = arry.filter((val)=> {
+//      return val.includes(inputValue)
+//     })
+//     console.log(filterVal);
+//     setTimeout(()=>{
+//       renderBar(filterVal)
+//     },1000)
     
   
   
     
    
     
-  })
+//   })
 
-// }
+
+
+
+// getTotalPrice(): Calculate and return the total price of items in the cart (price × quantity).
+// addItem(newItem): Add a new item to the cart. If the item already exists (based on id), increase its quantity.
+// removeItem(itemId): Remove an item from the cart based on its id.
+// saveCart(): Save the cart back to localStorage.
+let arr = [
+ 
+  {id: 1, name: 'Laptop', price: 800, quantity: 1},
+
+  {id: 2, name: 'Phone', price: 500, quantity: 2}
+]
+// console.log(arr)
+let get = JSON.parse(localStorage.getItem('data'))
+let store = localStorage.setItem("data",JSON.stringify(arr))
+console.log(get);
+
+function getTotalPrice(){
+
+  
+}
