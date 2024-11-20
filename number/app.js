@@ -78,7 +78,6 @@ console.log(defaul());
 //  an array of numbers and returns the largest one.
 
 function getGreatest(args){
-    
 let greatest = args[0]
 args.forEach((arg)=>{
     if(arg > greatest){
@@ -86,8 +85,5 @@ args.forEach((arg)=>{
     }
 })
 return greatest
-    
 }
-
-
 console.log(getGreatest([1,2,3,4,5]));
