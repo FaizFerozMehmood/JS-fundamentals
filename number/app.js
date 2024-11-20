@@ -73,3 +73,12 @@ return "value mad "
 return vlu
 }
 console.log(defaul());
+
+// Find the Largest Number: Create a function that takes
+//  an array of numbers and returns the largest one.
+
+function getGreatest(args){
+
+
+}
+console.log(getGreatest([1,2,3,4,5]));
