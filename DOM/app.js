@@ -136,4 +136,12 @@ console.log(obj)
 // });
 
 
+const objj ={
+  name:"faiz",
+  age:21
+}
+function mYfUNction(value){
+  return objj
+}
 
+mYfUNction(objj)

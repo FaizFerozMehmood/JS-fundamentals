@@ -50,6 +50,6 @@ function decrement(index) {
 getCartData();
 
 orderBtn.addEventListener('click',()=>{
- window.location.href = 'login.html'
+ window.location.href = 
   
 })
