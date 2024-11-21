@@ -144,4 +144,4 @@ function mYfUNction(value){
   return value
 }
 
-mYfUNction(objj)
+ console.log(mYfUNction(objj));
