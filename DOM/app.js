@@ -141,7 +141,7 @@ const objj ={
   age:21
 }
 function mYfUNction(value){
-  return objj
+  return value
 }
 
 mYfUNction(objj)
