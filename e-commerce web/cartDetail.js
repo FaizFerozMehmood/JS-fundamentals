@@ -1,17 +1,15 @@
 const btn = document.getElementById("btn");
+const orderBtn = document.getElementById("orderBtn");
 let cardContainerInHomePage = document.getElementById("cardContainerInHomePage");
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
 
-// Log initial cart data for debugging
 
-// Button event to navigate to index.html
 btn.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
-// Function to render cart data on the page
 function getCartData() {
-  cardContainerInHomePage.innerHTML = ""; // Clear existing content
+  cardContainerInHomePage.innerHTML = ""; 
   cartData.forEach((element, index) => {
     const card = `
       <div class="product-card">
@@ -25,32 +23,33 @@ function getCartData() {
         <button onclick="decrement(${index})" class="decrement-btn">-</button>
       </div>
     `;
-    cardContainerInHomePage.innerHTML += card; // Append card to the container
+    cardContainerInHomePage.innerHTML += card; 
   });
 }
 
-// Function to delete an item from the cart
 function deleteItem(ind) {
-  cartData.splice(ind, 1); // Remove item from array
-  localStorage.setItem("products-cart", JSON.stringify(cartData)); // Update local storage
-  getCartData(); // Re-render cart
+  cartData.splice(ind, 1); 
+  localStorage.setItem("products-cart", JSON.stringify(cartData)); 
+  getCartData(); 
 }
 
-// Function to increment quantity
 function increment(index) {
-  // Ensure quantity property exists and increment it
   cartData[index].quantity = (cartData[index].quantity || 0) + 1;
-  localStorage.setItem("products-cart", JSON.stringify(cartData)); // Update local storage
-  getCartData(); // Re-render cart
+  localStorage.setItem("products-cart", JSON.stringify(cartData)); 
+  getCartData()
 }
 
-// Function to decrement quantity
 function decrement(index) {
   if (cartData[index].quantity > 0) {
-    cartData[index].quantity -= 1; // Decrement quantity
-    localStorage.setItem("products-cart", JSON.stringify(cartData)); // Update local storage
-    getCartData(); // Re-render cart
+    cartData[index].quantity -= 1; 
+    localStorage.setItem("products-cart", JSON.stringify(cartData)); 
+    getCartData(); 
   }
 }
 
 getCartData();
+
+orderBtn.addEventListener('click',()=>{
+ window.location.href = 'login.html'
+  
+})

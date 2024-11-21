@@ -84,6 +84,9 @@ args.forEach((arg)=>{
       greatest = arg    
     }
 })
-return greatest
+return greatest;
 }
 console.log(getGreatest([1,2,3,4,5]));
+
+
+
