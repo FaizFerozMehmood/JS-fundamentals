@@ -179,4 +179,19 @@ function FINDLARGESTVALUE(arr){
 }
 console.log(FINDLARGESTVALUE([6,2,3,4,5]));
 
+function removeDUplicate(arr){
+let myarr = [0]
+
+arr.forEach(element => {
+  if(!myarr.includes(element)){
+    myarr.push(element)
+    
+  }
+});
+return myarr
+  
+}
+console.log(removeDUplicate([1,2,3,4,56,1,1,1]));
+
+
 
