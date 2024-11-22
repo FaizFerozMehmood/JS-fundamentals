@@ -38,18 +38,6 @@
 //  }
 
 //  herFun(obj)
- 
-
-
-
-
-
-
-
-
-
-
-
 
 
 // const input = document.getElementById('input')
@@ -147,18 +135,24 @@
 // addItem(newItem): Add a new item to the cart. If the item already exists (based on id), increase its quantity.
 // removeItem(itemId): Remove an item from the cart based on its id.
 // saveCart(): Save the cart back to localStorage.
-let arr = [
+// let arr = [
  
-  {id: 1, name: 'Laptop', price: 800, quantity: 1},
+//   {id: 1, name: 'Laptop', price: 800, quantity: 1},
 
-  {id: 2, name: 'Phone', price: 500, quantity: 2}
-]
-// console.log(arr)
-let get = JSON.parse(localStorage.getItem('data'))
-let store = localStorage.setItem("data",JSON.stringify(arr))
-console.log(get);
+//   {id: 2, name: 'Phone', price: 500, quantity: 2}
+// ]
+// // console.log(arr)
+// let get = JSON.parse(localStorage.getItem('data'))
+// let store = localStorage.setItem("data",JSON.stringify(arr))
+// console.log(get);
 
-function getTotalPrice(){
+// function getTotalPrice(){
 
   
+// }
+
+function reverseStr (str){
+let stin = str.split("").reverse().join("")
+return stin
 }
+console.log(reverseStr("hello"));

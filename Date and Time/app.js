@@ -10,3 +10,4 @@ var employee = {
     }
 };
 console.log(employee.isTodayOff());
+// console.log(new Date().getDay());

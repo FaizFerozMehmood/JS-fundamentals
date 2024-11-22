@@ -50,6 +50,5 @@ function decrement(index) {
 getCartData();
 
 orderBtn.addEventListener('click',()=>{
- window.location.href = 
-  
+ window.location.href = "create.js"
 })
