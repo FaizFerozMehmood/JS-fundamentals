@@ -161,15 +161,22 @@ console.log(palindrome("mAAM"));
 
 // FINDLARGESTVALUE
 
-function FindLargest(arr){
-let solve = arr[0]
-arr.forEach(element => {
-  if(element > solve ){
-solve = element
-  }
-});
-return solve
+// function FindLargest(arr){
+// let solve = arr[0]
+// arr.forEach(element => {
+//   if(element > solve ){
+// solve = element
+//   }
+// });
+// return solve
+// }
+// console.log(FindLargest([6,2,3,4,5]));
+
+function FINDLARGESTVALUE(arr){
+  let res = Math.max(...arr)
+  console.log(res);
+  
 }
-console.log(FindLargest([6,2,3,4,5]));
+console.log(FINDLARGESTVALUE([6,2,3,4,5]));
 
 
