@@ -120,17 +120,7 @@
 //     setTimeout(()=>{
 //       renderBar(filterVal)
 //     },1000)
-    
-  
-  
-    
-   
-    
 //   })
-
-
-
-
 // getTotalPrice(): Calculate and return the total price of items in the cart (price × quantity).
 // addItem(newItem): Add a new item to the cart. If the item already exists (based on id), increase its quantity.
 // removeItem(itemId): Remove an item from the cart based on its id.
@@ -151,8 +141,21 @@
   
 // }
 
-function reverseStr (str){
-let stin = str.split("").reverse().join("")
-return stin
+// function reverseStr (str){
+// let stin = str.split("").reverse().join("")
+// return stin
+// }
+// console.log(reverseStr("hello"));
+
+function palindrome(value){
+let str = value.toLowerCase()
+console.log(str);
+
+let rev = value.split('').reverse().join('')
+return str ==rev.toLowerCase()
+
 }
-console.log(reverseStr("hello"));
+console.log(palindrome("maam"));
+console.log(palindrome("maam"));
+console.log(palindrome("maaM"));
+
