@@ -205,3 +205,27 @@ return arr.reduce((a,b)=> a + b,0)
 }
 console.log(sum([1,2,3]));
 
+// Advanced Level
+// Flatten a Nested Array
+// Write a function to flatten a nested array.
+let arrr =[[1, 2], [3, [4, 5]]]
+//  → [1, 2, 3, 4, 5]
+console.log(arrr.flat().flat());
+
+
+// Anagrams
+// Write a function that checks if two strings are anagrams of each other.
+// Example: "listen" and "silent" → true
+
+// Find the First Non-Repeated Character
+// Write a function that returns the first non-repeated character in a string.
+// Example: "swiss" → "w"
+
+// Sum of Digits in a Number
+// Write a function to calculate the sum of digits of a number.
+// Example: 123 → 6
+
+// Longest Word in a Sentence
+// Write a function to find the longest word in a sentence.
+// Example: "I love programming" → "programming"
+
