@@ -157,5 +157,19 @@ return str ==rev.toLowerCase()
 }
 console.log(palindrome("maam"));
 console.log(palindrome("maam"));
-console.log(palindrome("maaM"));
+console.log(palindrome("mAAM"));
+
+// FINDLARGESTVALUE
+
+function FindLargest(arr){
+let solve = arr[0]
+arr.forEach(element => {
+  if(element > solve ){
+solve = element
+  }
+});
+return solve
+}
+console.log(FindLargest([6,2,3,4,5]));
+
 
