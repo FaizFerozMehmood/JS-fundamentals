@@ -172,12 +172,16 @@ console.log(palindrome("mAAM"));
 // }
 // console.log(FindLargest([6,2,3,4,5]));
 
+
+
 function FINDLARGESTVALUE(arr){
   let res = Math.max(...arr)
   console.log(res);
   
 }
 console.log(FINDLARGESTVALUE([6,2,3,4,5]));
+
+
 
 function removeDUplicate(arr){
 let myarr = [0]
@@ -194,4 +198,10 @@ return myarr
 console.log(removeDUplicate([1,2,3,4,56,1,1,1]));
 
 
+
+
+function sum(arr){
+return arr.reduce((a,b)=> a + b,0)
+}
+console.log(sum([1,2,3]));
 
