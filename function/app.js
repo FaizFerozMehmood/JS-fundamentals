@@ -257,3 +257,18 @@ console.log(sumofD());
 // Write a function to find the longest word in a sentence.
 // Example: "I love programming" → "programming"
 
+function FindLargestValue(arr){
+console.log(arr.split(' '));
+let split = arr.split(' ')
+let largest =''
+split.forEach((word)=>{
+  if(word.length > largest.length){
+    largest = word
+  }
+})
+return largest
+
+
+}
+console.log(FindLargestValue("I love programming"));
+
