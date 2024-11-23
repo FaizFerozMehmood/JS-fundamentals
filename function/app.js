@@ -216,14 +216,42 @@ console.log(arrr.flat().flat());
 // Anagrams
 // Write a function that checks if two strings are anagrams of each other.
 // Example: "listen" and "silent" → true
+// function MyFun(arr){
+//   let arrr = arr.split('')
+//   let mystr = "silent".split('')
+  
+
+
+// }
+// console.log(MyFun("listen"));
+
+
 
 // Find the First Non-Repeated Character
 // Write a function that returns the first non-repeated character in a string.
 // Example: "swiss" → "w"
+function NoNrEP(){
+  let myarr = []
+  let str = "swiss".split('')
+  str.find((ele)=>{
+    if(!myarr.includes(ele)){
+      myarr.push(ele)
+    }
+  })
+return myarr
+}
+console.log(NoNrEP());
 
 // Sum of Digits in a Number
 // Write a function to calculate the sum of digits of a number.
 // Example: 123 → 6
+function sumofD(){
+  let numarr = [1,2,3]
+  return numarr.reduce((a,b)=> a+b)
+}
+console.log(sumofD());
+
+  
 
 // Longest Word in a Sentence
 // Write a function to find the longest word in a sentence.
