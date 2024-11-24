@@ -203,7 +203,7 @@ console.log(removeDUplicate([1,2,3,4,56,1,1,1]));
 function sum(arr){
 return arr.reduce((a,b)=> a + b,0)
 }
-console.log(sum([1,2,3]));
+console.log(sum([1,2,3]));//6
 
 // Advanced Level
 // Flatten a Nested Array
@@ -258,7 +258,7 @@ console.log(sumofD());
 // Example: "I love programming" → "programming"
 
 function FindLargestValue(arr){
-console.log(arr.split(' '));
+// console.log(arr.split(' '));
 let split = arr.split(' ')
 let largest =''
 split.forEach((word)=>{
