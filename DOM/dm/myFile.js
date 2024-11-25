@@ -24,7 +24,9 @@ function delFun(elememt){
 }
 function editFun(elememt){
     console.log(elememt);
-    elememt.parentElement
+   const pre = elememt.parentElement
+    console.log(pre);
+    
  
     
 }
