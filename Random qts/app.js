@@ -12,4 +12,18 @@ let quotes = [
       ];
       
   
+ const btn = document.getElementById('btn')
+ const ul = document.getElementById('p')
  
+ 
+ function generateRendomNumber(){
+   let randomIndex = Math.floor(Math.random() * quotes.length)
+   console.log(randomIndex);
+   
+   let RandomQuotes = quotes[randomIndex]
+   console.log(RandomQuotes);
+   
+   
+   ul.innerHTML +=`<li>${RandomQuotes.text}${RandomQuotes.author}</li>`
+  }
+  btn.addEventListener('click',generateRendomNumber)
