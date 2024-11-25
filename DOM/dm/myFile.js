@@ -16,3 +16,15 @@ ul.innerHTML+=`
 `
 input.value =""
 }
+function delFun(elememt){
+    console.log(elememt);
+    elememt.parentElement.remove()
+ 
+    
+}
+function editFun(elememt){
+    console.log(elememt);
+    elememt.parentElement
+ 
+    
+}
