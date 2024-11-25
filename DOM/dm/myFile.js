@@ -9,7 +9,7 @@ console.log(input.value);
 // ul.innerHTML =`<li>${input.value}</li>`
 ul.innerHTML+=`
 <li>
-<span>${input.value} </span>
+<span id ="span">${input.value} </span>
 <button onclick="editFun(this)">edit</button>
     <button onclick="delFun(this)">del</button>
 </li>
@@ -24,8 +24,10 @@ function delFun(elememt){
 }
 function editFun(elememt){
     console.log(elememt);
-   const pre = elememt.parentElement
-    console.log(pre);
+   const pre =span.innerText
+   const updateValue = prompt("update todo ",pre)
+    console.log(updateValue);
+    pre.textContent=updateValue
     
  
     
