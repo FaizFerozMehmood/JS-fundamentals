@@ -223,4 +223,9 @@ return myarr
 // console.log( myarr);
 
 }
-console.log(Hrarr([1,2,3,4,5]));
+console.log(Hrarr([1,2,3,4,5,6]));
+
+
+let arr1 = [1,2,3,4,5,6]
+let ind = Math.floor(arr1.length / 2)
+console.log(ind);
