@@ -208,3 +208,19 @@ else{
 }
 }
 
+
+
+function Hrarr(arr){
+let myarr =arr[0]
+
+arr.forEach((data)=>{
+if(myarr < data){
+  myarr = data
+  
+}
+})
+return myarr
+// console.log( myarr);
+
+}
+console.log(Hrarr([1,2,3,4,5]));
