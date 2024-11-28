@@ -260,3 +260,10 @@ function compareFun(arr){
  
 }
 console.log(compareFun([1,2,3,[4,5,[0,9,8]]]));
+
+//  Array.isArray :Method to check whether the data is an array or not ,return true if the condition satisfies, false otherwise
+let arrrr = []
+console.log(Array.isArray(arrrr));
+
+
+
