@@ -211,21 +211,27 @@ else{
 
 
 function Hrarr(arr){
+  // console.log(Math.max(...arr));
+  let mYARR =Math.max(...arr)
+  console.log("max",mYARR);
+  
 let myarr =arr[0]
 
 arr.forEach((data)=>{
-if(myarr < data){
+if(myarr > data){
   myarr = data
   
 }
 })
 return myarr
-// console.log( myarr);
 
 }
-console.log(Hrarr([1,2,3,4,5,6,7]));
+console.log("my greatest value",Hrarr([1,2,3,4,7,6,5]));
 
 
 let arr1 = [1,2,3,4,5,6]
 let ind = Math.floor(arr1.length / 2)
 console.log(ind);
+
+
+
