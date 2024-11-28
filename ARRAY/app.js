@@ -235,3 +235,28 @@ console.log(ind);
 
 
 
+function compareFun(arr){
+ let arr2 = []
+ arr.forEach((data)=>{
+  if(Array.isArray(data)){
+    data.forEach((val)=>{
+      if(Array.isArray(val)){
+        val.forEach((final)=>{
+          arr2.push(final)
+        })
+      }else{
+        arr2.push(val)
+      }
+    })
+    
+  }else{
+    arr2.push(data)
+  }
+  
+  
+ })
+ console.log("arr",arr2);
+ 
+ 
+}
+console.log(compareFun([1,2,3,[4,5,[0,9,8]]]));
