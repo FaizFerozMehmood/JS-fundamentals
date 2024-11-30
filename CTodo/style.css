@@ -1,4 +1,4 @@
-body{
+/* body{
   background-color: #333;
 }
 .container {
@@ -71,4 +71,9 @@ ul li {
 
 ul li:hover {
   transform: scale(1.02);
+} */
+
+li{
+  display: inline;
+  margin-right: 100;
 }
