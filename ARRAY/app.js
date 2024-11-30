@@ -261,9 +261,90 @@ function compareFun(arr){
 }
 console.log(compareFun([1,2,3,[4,5,[0,9,8]]]));
 
-//  Array.isArray :Method to check whether the data is an array or not ,return true if the condition satisfies, false otherwise
+//  Array.isArray :Method to check whether the data is an array 
+// or not ,return true if the condition satisfies, false otherwise
 let arrrr = []
 console.log(Array.isArray(arrrr));
+
+
+
+// find()
+// Purpose: Returns the first element in an array that satisfies a given condition.
+// Syntax:
+// javascript
+// Copy code
+// array.find(callback(element[, index[, array]])[, thisArg])
+// Key Points:
+// Returns only one element (the first match).
+// Returns undefined if no element satisfies the condition.
+// Example:
+// javascript
+// Copy code
+// const numbers = [10, 20, 30, 40];
+// const result = numbers.find(num => num > 25);
+// console.log(result); // Output: 30
+// filter()
+// Purpose: Returns a new array with all elements that satisfy the given condition.
+// Syntax:
+// javascript
+// Copy code
+// array.filter(callback(element[, index[, array]])[, thisArg])
+// Key Points:
+// Returns all matching elements in an array.
+// If no elements match, it returns an empty array.
+// Example:
+// javascript
+// Copy code
+// const numbers = [10, 20, 30, 40];
+// const result = numbers.filter(num => num > 25);
+// console.log(result); // Output: [30, 40]
+// Differences Between find() and filter()
+// Feature	find()	filter()
+// Output	Single element or undefined	Array of matching elements
+// Use Case	When you need only one matching element	When you need all matches
+// Return Type	Single value	Array
+// Related Questions for Practice
+// find() Questions:
+
+// Write a function to find the first even number in an array.
+// How do you use find() to locate a student with a specific ID from a list of objects?
+const obj = [
+  {student:"faiz",id:123},
+  {student:"umair",id:123},
+  {student:"ali",id:123},
+  {student:"jaffer",id:123}
+]
+let findObj = obj.find((item)=> item.student=="faiz")
+console.log(findObj);
+
+// Can find() return undefined? Demonstrate this with an example.
+// filter() Questions:
+
+// Write a function to filter out odd numbers from an array.
+// How can you use filter() to extract users above the age of 25 from a list of user objects?
+// Use filter() to get all strings from an array containing mixed data types.
+// Combo Questions:
+
+// How would you use both find() and filter() to find a specific object and filter all objects matching a condition?
+// Given an array of products, find the first product that costs more than $50 and filter all products that cost less than $100.
+// What's the difference between find() and filter()? Explain with practical examples.
+// Performance-related Questions:
+
+// Is find() more efficient than filter() for finding the first match? Why?
+// What happens when the callback function in filter() returns false for all elements in the array?
+// Code Debugging Questions:
+
+// Debug the following code:
+// javascript
+// Copy code
+// const numbers = [1, 2, 3, 4];
+// const firstOdd = numbers.filter(num => num % 2 !== 0);
+// console.log(firstOdd); // Expected: 1, Actual: ?
+// What's wrong and how to fix it?
+// Feel free to pick any question for deeper exploration!
+
+
+
 
 
 
