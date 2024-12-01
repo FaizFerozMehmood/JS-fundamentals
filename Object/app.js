@@ -11,7 +11,9 @@ obj.password = 23456
 obj.email = "faiz@gmail.com"
 console.log(obj);
 
-console.log(delete obj);
+// console.log(delete obj);
+delete obj.email
+console.log(obj);
 
 
 const newObj = new Object()
