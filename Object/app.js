@@ -11,12 +11,15 @@ obj.password = 23456
 obj.email = "faiz@gmail.com"
 console.log(obj);
 
+console.log(delete obj);
+
+
 const newObj = new Object()
 newObj.name = "ali"
 newObj.password = 23456
 newObj.email = "faiz@gmail.com"
 newObj["address"] = "karachi"
-//You can access object properties in two way , dit notation and square barket
+//You can access object properties in two way , dot notation and square barket
 console.log(newObj["address"]);
 
 const myobj = {
