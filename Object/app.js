@@ -34,4 +34,16 @@ console.log(`welcome ${this.name } your email is ${this.email}`)
 
  }
 }
-myobj.greet()
+myobj.greet();
+
+let herobj = {
+  name:"umaira",
+  email:"umaira@gmail.com",
+  herFun :function(){
+  name:"faiz"
+  console.log(`I welcome you ${this.name}`);
+  
+  }
+}
+;
+herobj.herFun()
