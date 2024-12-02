@@ -1,5 +1,5 @@
 const btn = document.getElementById("btn");
-import './firebase/create.js';
+import './create.js';
 const orderBtn = document.getElementById("orderBtn");
 let cardContainerInHomePage = document.getElementById("cardContainerInHomePage");
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
@@ -51,5 +51,5 @@ function decrement(index) {
 getCartData();
 
 orderBtn.addEventListener('click',()=>{
-  window.location.href = "./firebase/create.js";
+  window.location.href = "create.js";
 })

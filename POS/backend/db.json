@@ -1,0 +1,27 @@
+{
+    "products": [
+        {
+            "id": 123,
+            "name": "orange",
+            "price": "90",
+            "image": "https://media.istockphoto.com/id/1952235891/photo/ripe-orange-fruits-and-orange-slices-levitating-in-air-on-white-background-file-contains.webp?a=1&b=1&s=612x612&w=0&k=20&c=hgfQSjlCvTEwzAlEdXA58s7pSLcz_pxJLQwVyciVteo="
+        },
+        {
+            "id": 23,
+            "name": "banana",
+            "price": "50",
+            "image": "https://media.istockphoto.com/id/1291262112/photo/banana.webp?a=1&b=1&s=612x612&w=0&k=20&c=KSmjx5R8Qk4mzzGw8tAP3CAPoSH_zdXD7sZYd1lBuD4="
+        },
+        {
+            "id": 53,
+            "name": "kiwi",
+            "price": "30",
+            "image": "https://media.istockphoto.com/id/186858235/photo/kiwifruit.webp?a=1&b=1&s=612x612&w=0&k=20&c=AydcOjIAJAUWMohMRVGbr5xSLGqPaaDKWZdMHcWAK9U="
+        },
+         { "id":1763,
+        "name":"pomegranate",
+        "price":"70",
+        "image": "https://media.istockphoto.com/id/475373289/photo/pomegranate-seeds.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZjeaU0cgvq4aydYCTYvg_FJS2mHGVkDDqlp8nXelWTo="
+      }
+    ]
+}
