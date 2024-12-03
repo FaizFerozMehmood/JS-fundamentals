@@ -73,13 +73,19 @@ for(let i = 1; i <= 10; i++){
 // number using for loop. Table number & length should be
 // taken as an input from user.
  // Take table number input from the user
-let tableNumber = parseInt(prompt("Enter the number to print the multiplication table for:"));
+// let tableNumber = parseInt(prompt("Enter the number to print the multiplication table for:"));
 
-// Take length of the table from the user
-let tableLength = parseInt(prompt("Enter the length of the multiplication table:"));
+// // Take length of the table from the user
+// let tableLength = parseInt(prompt("Enter the length of the multiplication table:"));
 
-// Print the multiplication table using a for loop
-console.log(`Multiplication Table of ${tableNumber}:`);
-for(let i = 1; i <= tableLength; i++) {
-    console.log(`${tableNumber} x ${i} = ${tableNumber * i}`);
+// // Print the multiplication table using a for loop
+// console.log(`Multiplication Table of ${tableNumber}:`);
+// for(let i = 1; i <= tableLength; i++) {
+//     console.log(`${tableNumber} x ${i} = ${tableNumber * i}`);
+// }
+
+function handleObj(obj){
+return Object.keys(obj).length
 }
+const myObj = {1:"a",2:"b"}
+console.log(handleObj(myObj));
