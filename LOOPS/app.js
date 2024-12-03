@@ -84,8 +84,26 @@ for(let i = 1; i <= 10; i++){
 //     console.log(`${tableNumber} x ${i} = ${tableNumber * i}`);
 // }
 
+
+// finding the intersection of two objects 
 function handleObj(obj){
 return Object.keys(obj).length
 }
 const myObj = {1:"a",2:"b"}
 console.log(handleObj(myObj));
+
+function intersection(obj1, obj2) {
+   const result = {};
+   for (let key in obj1) {
+     if (obj2.hasOwnProperty(key) && obj1[key] === obj2[key]) {
+       result[key] = obj1[key];
+     }
+   }
+   return result;
+ }
+ 
+ // Example usage
+ const obj1 = { a: 1, b: 2, c: 3 };
+ const obj2 = { a: 1, c: 3, d: 4 };
+ console.log(intersection(obj1, obj2)); // Output: { a: 1, c: 3 }
+ 
