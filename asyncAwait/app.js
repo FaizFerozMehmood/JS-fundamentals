@@ -12,8 +12,19 @@ try {
   console.log("data",data);
 } catch (error) {
   console.log(error);
-  
 }
 }
 myfun()
 
+const person = {
+  name: 'John Doe',
+  age: 30,
+  address: {
+    city: 'New York',
+    country: 'USA'
+  }
+}
+const {name,age,address} = person
+let {city,country} = address
+console.log(name,age);
+console.log(city);
