@@ -75,7 +75,7 @@ function addtocart(id){
   }
 }
 icon.addEventListener('click',()=>{
-window.location.href  ="/card/cartDetail.html"  
+window.location.href  ="/"  
 })
 function getarr(data){
   input.addEventListener('input',(e)=>{
