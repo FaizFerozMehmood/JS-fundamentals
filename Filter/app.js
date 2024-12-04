@@ -40,3 +40,13 @@ let findValue = (...rst)=>{
 console.log(findValue(2,3,4,6,7,8,9));
 
 
+function filters(first,sec,thrd){
+console.log(first);
+return first
+
+}
+console.log(filters([
+    {id :1,name: "faiz"},
+    {id :1,name: "umair"},
+    {id :1,name: "ali"}
+)]);

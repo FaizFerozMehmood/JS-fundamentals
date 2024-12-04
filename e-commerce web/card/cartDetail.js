@@ -1,8 +1,8 @@
 const btn = document.getElementById("btn");
-import './create.js';
 const orderBtn = document.getElementById("orderBtn");
 let cardContainerInHomePage = document.getElementById("cardContainerInHomePage");
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
+import { auth, onAuthStateChanged } from "../account/create";
 
 
 btn.addEventListener("click", () => {
@@ -51,5 +51,16 @@ function decrement(index) {
 getCartData();
 
 orderBtn.addEventListener('click',()=>{
-  window.location.href = "create.js";
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/auth.user
+      // const uid = user.uid;
+      window.location.pathname ="./login/login.html"
+      // ...
+    } else {
+      window.location.pathname = "./index.html"
+    }
+  });
+  
 })
