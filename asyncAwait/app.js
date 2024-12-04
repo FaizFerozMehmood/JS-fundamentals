@@ -4,7 +4,7 @@
 //   .catch(error => console.error(error));
 
 
-
+// best way to handle fetch api
 async function myfun(){
 try {
   const response = await fetch('https://fakestoreapi.com/products')
