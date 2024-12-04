@@ -28,3 +28,30 @@ const {name,age,address} = person
 let {city,country} = address
 console.log(name,age);
 console.log(city);
+
+function checkEvenNumber(number) {
+  return new Promise((resolve, reject) => {
+    if (number % 2 === 0) {
+      resolve(`${number} is even.`);
+    } else {
+      reject(`${number} is odd.`);
+    }
+  });
+}
+
+// Usage
+checkEvenNumber(4)
+  .then((message) => {
+    console.log("Resolved:", message);
+  })
+  .catch((error) => {
+    console.log("Rejected:", error);
+  });
+
+checkEvenNumber(7)
+  .then((message) => {
+    console.log("Resolved:", message);
+  })
+  .catch((error) => {
+    console.log("Rejected:", error);
+  });
