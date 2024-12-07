@@ -90,3 +90,10 @@ console.log(getGreatest([1,2,3,4,5]));
 
 
 
+ let myNum = parseInt("12")
+ console.log(typeof myNum);
+//  it can be converted into number like this 
+let num4 = +"23"
+console.log(typeof num4);
+
+
