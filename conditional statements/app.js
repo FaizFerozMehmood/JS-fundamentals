@@ -50,3 +50,11 @@ for (let i = 0; i < number.length; i++) {
     console.log("odd");
   }
 }
+
+function checkIsEleg(score){
+return score > 60
+}
+if(checkIsEleg(70)){
+console.log("logged");
+
+}
