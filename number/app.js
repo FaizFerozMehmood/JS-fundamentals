@@ -96,6 +96,8 @@ console.log(getGreatest([1,2,3,4,5]));
 let num4 = +"23"
 console.log(typeof num4);
 
+
+
 const herArr = [1,2,3,4,5,6,7,3,3,3,3]
 function herFunction(arr){
 console.log(arr);
@@ -109,3 +111,21 @@ return unique
 }
 console.log(herFunction(herArr));
 
+const myFun=(arr)=>{
+ if(arr.length){
+    return [
+        {name :"faiz"},
+        {age :"21"},
+        {status :"single"},
+    ]
+    
+ }
+ if(!arr.length){
+    return [
+        {message :"sorry no data found"}
+    ]
+ }
+}
+
+console.log(myFun([1]));
+console.log(myFun([]));
