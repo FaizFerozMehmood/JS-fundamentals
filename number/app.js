@@ -120,7 +120,7 @@ const myFun=(arr)=>{
     ]
     
  }
- if(!arr.length){
+ else{
     return [
         {message :"sorry no data found"}
     ]
