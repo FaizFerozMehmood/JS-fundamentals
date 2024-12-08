@@ -47,3 +47,6 @@ let herobj = {
 }
 ;
 herobj.herFun()
+
+
+console.log(typeof null);

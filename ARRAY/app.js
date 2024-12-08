@@ -343,6 +343,11 @@ console.log(findObj);
 // What's wrong and how to fix it?
 // Feel free to pick any question for deeper exploration!
 
+const arrt = [1234,4,5,6]
+const newArr = [...arrt,12,3,4,45,]
+console.log(arrt,`sdkdj`);
+console.log(newArr,`newarry`);
+
 
 
 
