@@ -343,7 +343,7 @@ console.log(findObj);
 // What's wrong and how to fix it?
 // Feel free to pick any question for deeper exploration!
 
-const arrt = [1234,4,5,6]
+const arrt = [1234,4,5,6.1]
 const newArr = [...arrt,12,3,4,45,]
 console.log(arrt,`sdkdj`);
 console.log(newArr,`newarry`);
@@ -353,6 +353,8 @@ const firstOdd = numbers.filter(num => num % 2 !== 0);
 console.log(firstOdd); 
 
 
+const arryyyy = arrt.pop("hello")
+console.log(arryyyy);
 
 
 
