@@ -348,6 +348,10 @@ const newArr = [...arrt,12,3,4,45,]
 console.log(arrt,`sdkdj`);
 console.log(newArr,`newarry`);
 
+const numbers = [1, 2, 3, 4];
+const firstOdd = numbers.filter(num => num % 2 !== 0);
+console.log(firstOdd); 
+
 
 
 
