@@ -55,3 +55,14 @@ checkEvenNumber(7)
   .catch((error) => {
     console.log("Rejected:", error);
   });
+
+
+  function sayHello(){
+    return "hello WORLD"
+  }
+  // console.log(sayHello());
+  setTimeout(()=>{
+console.log(sayHello());
+
+  },2000)
+  

@@ -314,7 +314,7 @@ const obj = [
   {student:"ali",id:123},
   {student:"jaffer",id:123}
 ]
-let findObj = obj.find((item)=> item.student=="faiz")
+let findObj = obj.find((item)=> item.id=="123")
 console.log(findObj);
 
 // Can find() return undefined? Demonstrate this with an example.
@@ -357,5 +357,17 @@ const arryyyy = arrt.pop("hello")
 console.log(arryyyy);
 
 
+
+function findgreatest(arr){
+  let greatest = arr[0]
+ arr.forEach((item)=>{
+if(item > greatest){
+ greatest = item
+ 
+}
+})
+return greatest
+}
+console.log(findgreatest([1,2,3,4,5,6]));
 
 
