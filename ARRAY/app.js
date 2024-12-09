@@ -397,6 +397,18 @@ function find2ndgreatest(arr) {
 console.log(find2ndgreatest([1, 2, 3, 4, 5, 6]));
  // Output: 5
 
+ function ways(arr){
+if(arr.length < 2){
+  return null
+}
+let sorted = arr.slice().sort((a,b)=> b-a)
+// console.log(sorted[1]);
+return `the 2nd gre is ${sorted[1]}`
+
+ }
+ console.log(ways([1,2,3,4,5,6,7,65,]));
+ 
+
 
 
 
