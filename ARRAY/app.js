@@ -358,16 +358,46 @@ console.log(arryyyy);
 
 
 
-function findgreatest(arr){
-  let greatest = arr[0]
- arr.forEach((item)=>{
-if(item > greatest){
- greatest = item
+// function findgreatest(arr){
+//   let greatest = arr[0]
+//  arr.forEach((item)=>{
+// if(item > greatest){
+//  greatest = item
  
+// }
+// })
+// return greatest
+// }
+// console.log(findgreatest([1,2,3,4,5,6]));
+
+function find2ndgreatest(arr) {
+  if (arr.length < 2) {
+    return null; 
+  }
+
+  let greatest = -Infinity;
+  let secondGreatest = -Infinity;
+  console.log(greatest);
+  
+
+  arr.forEach((item) => {
+    if (item > greatest) {
+      secondGreatest = greatest;
+      console.log(secondGreatest);
+      
+      greatest = item;
+    } else if (item > secondGreatest && item < greatest) {
+      secondGreatest = item;
+    }
+  });
+
+  return secondGreatest;
 }
-})
-return greatest
-}
-console.log(findgreatest([1,2,3,4,5,6]));
+
+console.log(find2ndgreatest([1, 2, 3, 4, 5, 6]));
+ // Output: 5
+
+
+
 
 
