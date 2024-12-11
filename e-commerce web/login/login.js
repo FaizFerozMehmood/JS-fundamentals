@@ -10,7 +10,7 @@ const btn = document.getElementById('btn')
 // })
 import {auth,signInWithEmailAndPassword} from "../account/create.js"
 btn.addEventListener('click',()=>{
-    signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email.value, password.value)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;

@@ -51,16 +51,17 @@ function decrement(index) {
 getCartData();
 
 orderBtn.addEventListener('click',()=>{
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
-      // const uid = user.uid;
-      window.location.pathname ="./login/login.html"
-      // ...
-    } else {
-      window.location.pathname = "./index.html"
-    }
-  });
+  window.location.href=""
+  // onAuthStateChanged(auth, (user) => {
+  //   if (user) {
+  //     // User is signed in, see docs for a list of available properties
+  //     // https://firebase.google.com/docs/reference/js/auth.user
+  //     // const uid = user.uid;
+  //     window.location.pathname ="./login/login.html"
+  //     // ...
+  //   } else {
+  //     window.location.pathname = "./index.html"
+  //   }
+  // });
   
 })
