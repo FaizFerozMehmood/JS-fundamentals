@@ -102,8 +102,15 @@ function intersection(obj1, obj2) {
    return result;
  }
  
- // Example usage
  const obj1 = { a: 1, b: 2, c: 3 };
  const obj2 = { a: 1, c: 3, d: 4 };
  console.log(intersection(obj1, obj2)); // Output: { a: 1, c: 3 }
  
+let arr = [1, 2, 3, 4, 5, 7, 8, 9];
+let res =[]
+arr.forEach((data,index)=>{
+   res.push(data +index+1) 
+   
+   
+})
+console.log(res);

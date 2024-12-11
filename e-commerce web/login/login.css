@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    /* background-color: aquamarine; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 10px;
+    align-items: center;
+}
+.subcontainer{
+    border: 2px solid black;
+    padding: 5%;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+#email{
+    padding: 13px 10%;
+    border-radius: 2px;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+#password{
+    padding: 13px 10%;
+    border-radius: 2px;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+#btncontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn{
+    padding: 10px 50px;
+    margin-top: 10px;
+    border-radius: 3px;
+background-color: green;
+color: rgb(214, 203, 203);
+cursor: pointer;
+}
