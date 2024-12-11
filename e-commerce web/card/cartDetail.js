@@ -2,7 +2,7 @@ const btn = document.getElementById("btn");
 const orderBtn = document.getElementById("orderBtn");
 let cardContainerInHomePage = document.getElementById("cardContainerInHomePage");
 const cartData = JSON.parse(localStorage.getItem("products-cart")) || [];
-import { auth, onAuthStateChanged } from "../account/create";
+import { auth, onAuthStateChanged } from "../account/create.js";
 
 
 btn.addEventListener("click", () => {
