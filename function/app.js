@@ -277,20 +277,26 @@ async function getData(){
   try {
     const response = await fetch('https://fakestoreapi.com/products')
     const data = await response.json()
-    // console.log(data[0].category);
-    
-    // mydata(data)
-// 
-    
-
+    mydata(data)
   } catch (error) {
     console.log(error);
-    
   }
 }
 getData()
+let Ulist = document.getElementById('Ulist')
+let btn = document.getElementById('btn')
+function mydata(data){
+  let categories =[]
+  categories = data.map((item)=> item.category)
+  console.log(categories);
+  btn.addEventListener('click',()=>{
+    let input = document.getElementById('input')
+    const res= categories.filter((value)=> value.toLowerCase().includes(input.value.toLowerCase()))
+   console.log(res);
 
+  })
 
+}
 
 
 
