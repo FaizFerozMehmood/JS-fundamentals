@@ -201,12 +201,10 @@ body{
     text-decoration: underline;
 }
 #input{
-    margin-right: 50px;
-    padding:7px 60px;
-    color: #ff6347; 
-    /* background-color: #941d1d; */
-    transform: scale(1.1);
-
+        margin-right: 10px;
+        padding: 7px 15px;
+        color: #333;
+        font-size: 14px;
 }
 #noTfound{
     display: flex;

@@ -6,7 +6,7 @@ import { auth, onAuthStateChanged } from "../account/create.js";
 
 
 btn.addEventListener("click", () => {
-  window.location.href = "index.html";
+  window.location.href = "./index.html";
 });
 
 function getCartData() {

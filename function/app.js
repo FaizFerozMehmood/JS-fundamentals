@@ -272,3 +272,56 @@ return largest
 }
 console.log(FindLargestValue("I love programming"));
 
+
+async function getData(){
+  try {
+    const response = await fetch('https://fakestoreapi.com/products')
+    const data = await response.json()
+    // console.log(data[0].category);
+    
+    // mydata(data)
+// 
+    
+
+  } catch (error) {
+    console.log(error);
+    
+  }
+}
+getData()
+
+
+
+
+
+
+
+// let Ulist = document.getElementById('Ulist')
+// let btn = document.getElementById('btn')
+// let input = document.getElementById('input')
+// let categories =[]
+// function mydata(data){
+//   categories = data.map((product)=> product.categories)
+//   console.log(categories);
+
+// data.forEach((product)=>{ 
+
+//   const category = `<li> ${product.category}</li>`
+// Ulist.innerHTML+=category
+// })
+
+// }
+// // btn.addEventListener('click',()=>{
+// //   console.log(input.value);
+
+
+// // })
+// function compareFun(category){
+// console.log(typeof category);
+// btn.addEventListener('click',()=>{
+//   console.log(input.value);
+//  const res = category?.filter((data,index)=>data.toLowerCase().includes(input.value))
+//   console.log(res);
+  
+// })
+// }

@@ -15,6 +15,7 @@ btn.addEventListener('click',()=>{
         // Signed in 
         const user = userCredential.user;
        console.log("loggedin",user);
+       window.location.href="./card/cartDetail.html"
        
       })
       .catch((error) => {
