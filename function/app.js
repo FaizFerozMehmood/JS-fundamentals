@@ -289,9 +289,9 @@ function mydata(data){
   let categories =[]
   categories = data.map((item)=> item.category)
   console.log(categories);
-  btn.addEventListener('click',()=>{
-    let input = document.getElementById('input')
-    const res= categories.filter((value)=> value.toLowerCase().includes(input.value.toLowerCase()))
+  input.addEventListener('input',(e)=>{
+    let inputvalue = e.target.value 
+    const res= categories.filter((value)=> value.toLowerCase().includes(inputvalue.toLowerCase()))
    console.log(res);
 
   })
