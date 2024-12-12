@@ -6,7 +6,7 @@
 // }
 
 let value = "😁";
-if(1===1){
+if(null){
     value = "😍"
 }
 console.log(value);
