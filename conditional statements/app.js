@@ -51,10 +51,16 @@ for (let i = 0; i < number.length; i++) {
   }
 }
 
-function checkIsEleg(score){
-return score > 60
+function checkIsEleg(score) {
+  return score > 60;
 }
-if(checkIsEleg(70)){
-console.log("logged");
+if (checkIsEleg(70)) {
+  console.log("logged");
+}
 
-}
+let arr = [1, 2, 3, 4, 5, 6];
+let storeValue = 0;
+arr.forEach((data) => {
+  data < 5 ? (storeValue += data) : "no";
+});
+console.log(storeValue);
