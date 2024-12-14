@@ -64,3 +64,12 @@ arr.forEach((data) => {
   data < 5 ? (storeValue += data) : "no";
 });
 console.log(storeValue);
+
+
+let user = true
+user ? 
+console.log("user is logged in ")
+:
+console.log("please logg in see features of the app");
+
+
