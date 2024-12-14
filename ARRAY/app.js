@@ -176,7 +176,7 @@
 
 // console.log(uuu);
 
-// //Flat method concates nested array in a single array,it does not modify the original array!
+// //Flat method concates nested array in a single one,it does not modify the original array!
 
 // let nestedArr = ["faiz",["mahmood"]]
 // console.log(nestedArr.flat());
@@ -389,3 +389,14 @@ function sumValueOfArr(arr) {
   return storeSum;
 }
 console.log(sumValueOfArr([1, 2, 3, 4, 5, 6]));
+
+
+const people = [
+  { name: "Alice", age: 22 },
+  { name: "Bob", age: 16 },
+  { name: "Charlie", age: 18 },
+  { name: "Diana", age: 25 }
+];
+
+const haveFilter = people.filter((person)=> person.age <=18)
+// console.log(haveFilter);
