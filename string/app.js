@@ -66,3 +66,11 @@ function isPalindrome(value){
     let reversed = str.split('').reverse().join('')
     return str === reversed
 }
+
+
+let arr1 = ["faiz","umair","ali"]
+let arr2 = ["faiz","umair","ali"]
+if(arr1[0]==arr2[0]){
+    console.log("yes");
+    
+}
