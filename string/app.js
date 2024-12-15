@@ -74,10 +74,6 @@ if(arr1[0]==arr2[0]){
     console.log("yes");
     
 }
-
-
-
-
 const arrobj = [
     { userName: "faiz", age: "21" },
     { userName: "umair", age: "31" },
