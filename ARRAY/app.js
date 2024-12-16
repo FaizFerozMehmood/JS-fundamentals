@@ -381,34 +381,45 @@
 //  }
 //  console.log(ways([1,2,3,4,5,6,7,65,]));
 
-function sumValueOfArr(arr) {
-  let storeSum = 0;
-  arr.forEach((data) => {
-    storeSum += data;
-  });
-  return storeSum;
+// function sumValueOfArr(arr) {
+//   let storeSum = 0;
+//   arr.forEach((data) => {
+//     storeSum += data;
+//   });
+//   return storeSum;
+// }
+// console.log(sumValueOfArr([1, 2, 3, 4, 5, 6]));
+
+
+// const people = [
+//   { name: "Alice", age: 22 },
+//   { name: "Bob", age: 16 },
+//   { name: "Charlie", age: 18 },
+//   { name: "Diana", age: 25 }
+// ];
+
+// const haveFilter = people.filter((person)=> person.age <=18)
+// // console.log(haveFilter);
+
+
+// const herfun =(arr)=>{
+// let herARR = []
+// arr.forEach((value)=>{
+//   if(!herARR.includes(value)){
+//     herARR.push(value)
+//   }
+// })
+// return herARR
+// }
+// console.log(herfun([1,1,1,1,2,3,4,5]));
+
+
+function findIntersection(arr,arr2){
+return arr.filter(ele=> ele.includes(arr2))
 }
-console.log(sumValueOfArr([1, 2, 3, 4, 5, 6]));
+let arr1 = [1,2,3,4,4,5,6,6]
+let arr2 = [0,0,0,9,4,5,6,6]
+
+console.log(findIntersection(arr1,arr2));
 
 
-const people = [
-  { name: "Alice", age: 22 },
-  { name: "Bob", age: 16 },
-  { name: "Charlie", age: 18 },
-  { name: "Diana", age: 25 }
-];
-
-const haveFilter = people.filter((person)=> person.age <=18)
-// console.log(haveFilter);
-
-
-const herfun =(arr)=>{
-let herARR = []
-arr.forEach((value)=>{
-  if(!herARR.includes(value)){
-    herARR.push(value)
-  }
-})
-return herARR
-}
-console.log(herfun([1,1,1,1,2,3,4,5]));
