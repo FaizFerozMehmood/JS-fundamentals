@@ -34,6 +34,7 @@ console.log(`welcome ${this.name } your email is ${this.email}`)
 
  }
 }
+
 myobj.greet();
 
 let herobj = {
@@ -50,3 +51,5 @@ herobj.herFun()
 
 
 console.log(typeof null);
+
+

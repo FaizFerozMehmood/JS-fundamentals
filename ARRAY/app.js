@@ -400,3 +400,15 @@ const people = [
 
 const haveFilter = people.filter((person)=> person.age <=18)
 // console.log(haveFilter);
+
+
+const herfun =(arr)=>{
+let herARR = []
+arr.forEach((value)=>{
+  if(!herARR.includes(value)){
+    herARR.push(value)
+  }
+})
+return herARR
+}
+console.log(herfun([1,1,1,1,2,3,4,5]));
