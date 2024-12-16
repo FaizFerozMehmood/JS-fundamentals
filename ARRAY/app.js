@@ -415,7 +415,7 @@
 
 
 function findIntersection(arr,arr2){
-return arr.filter(ele=> ele.includes(arr2))
+return arr.filter(ele=> arr2.includes(ele))
 }
 let arr1 = [1,2,3,4,4,5,6,6]
 let arr2 = [0,0,0,9,4,5,6,6]
