@@ -390,7 +390,6 @@
 // }
 // console.log(sumValueOfArr([1, 2, 3, 4, 5, 6]));
 
-
 // const people = [
 //   { name: "Alice", age: 22 },
 //   { name: "Bob", age: 16 },
@@ -400,7 +399,6 @@
 
 // const haveFilter = people.filter((person)=> person.age <=18)
 // // console.log(haveFilter);
-
 
 // const herfun =(arr)=>{
 // let herARR = []
@@ -413,13 +411,10 @@
 // }
 // console.log(herfun([1,1,1,1,2,3,4,5]));
 
-
-function findIntersection(arr,arr2){
-return arr.filter(ele=> arr2.includes(ele))
+function findIntersection(arr, arr2) {
+  return arr.filter((ele) => arr2.includes(ele));
 }
-let arr1 = [1,2,3,4,4,5,6,6]
-let arr2 = [0,0,0,9,4,5,6,6]
+let arr1 = [1, 2, 3, 4, 4, 5, 6, 6];
+let arr2 = [0, 0, 0, 9, 4, 5, 6, 6];
 
-console.log(findIntersection(arr1,arr2));
-
-
+console.log(findIntersection(arr1, arr2));

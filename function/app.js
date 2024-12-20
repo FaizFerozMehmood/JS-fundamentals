@@ -331,3 +331,10 @@ function mydata(data){
   
 // })
 // }
+function checkDataa(){
+  const value = []
+  if(value.length===0 || undefined)return "no data"
+
+}
+
+console.log(checkDataa());
