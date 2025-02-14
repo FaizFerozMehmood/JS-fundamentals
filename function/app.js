@@ -354,3 +354,42 @@ getValue.length > 2
 
 // // console.log(flatFun());
 // let storeReturn = flatFun([1, 2, 3, [4, 5], [6, 7, [8, 9]]]);
+
+
+
+function flatFun(flatAarr) {
+  const result = [];
+  
+  function flatten(arr) {
+    arr.forEach((item) => {
+      if (Array.isArray(item)) {
+        console.log("item",item);
+        
+        flatten(item); 
+        console.log("flatten",item);
+        
+      } else {
+        result.push(String(item)); 
+      }
+    });
+  }
+
+  flatten(flatAarr);
+  return result;
+}
+
+let storeReturn = flatFun([1, 2, 3, [4, 5], [6, 7, [8, 9]]]);
+console.log(storeReturn); // ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+
+function outerFunction(){
+const valuee = "outer function variable"
+function innerFunction (){
+  console.log(valuee);
+  
+}
+return innerFunction
+}
+
+const myClosure = outerFunction();
+myClosure();

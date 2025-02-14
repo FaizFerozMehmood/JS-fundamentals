@@ -95,3 +95,9 @@ const arrobj = [
   
   console.log(findValue(arrobj));
   
+
+  function getvalue(arr){
+      console.log(arr.split(" ,"));
+
+  }
+console.log(getvalue("ksdj123"));

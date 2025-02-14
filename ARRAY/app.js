@@ -418,3 +418,19 @@ let arr1 = [1, 2, 3, 4, 4, 5, 6, 6];
 let arr2 = [0, 0, 0, 9, 4, 5, 6, 6];
 
 console.log(findIntersection(arr1, arr2));
+
+function yourArr(arr) {
+  // console.log(arr[0].length -1);
+  // let answer
+  arr.forEach((element) => {
+    // console.log(element);
+    if (Array.isArray(element)) console.log(element[1]);
+  });
+}
+
+console.log(
+  yourArr([
+    [1, 3],
+    [4, 5],
+  ])
+);
