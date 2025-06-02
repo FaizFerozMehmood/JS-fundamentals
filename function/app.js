@@ -408,3 +408,9 @@ const myCounter = counter();
 myCounter();
 myCounter();
 myCounter();
+
+
+
+const myC = 12;
+const hrc = 12;
+console.log("=======",myC+hrc)
