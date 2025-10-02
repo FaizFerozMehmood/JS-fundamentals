@@ -1,3 +1,5 @@
+const mynum = 12;
+console.log(mynum++);
 // //  default parameters in function
 //  function buyProducts(name1 = "milk",name2 = "aalo",name3 = "channy k daal"){
 //     console.log(`remember to buy ${name1}`);
@@ -414,3 +416,4 @@ myCounter();
 const myC = 12;
 const hrc = 12;
 console.log("=======",myC+hrc)
+

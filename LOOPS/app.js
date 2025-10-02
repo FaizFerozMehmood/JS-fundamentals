@@ -47,12 +47,7 @@ console.log(getNumbersOfStrings(["abc", "dfrcjdjds"]));
 
 // }
 
-function herFun(stri) {
-  return stri.map((stri) => {
-    return stri.length;
-  });
-}
-// console.log(herFun(["faiz","andHisPartner"]));
+
 
 for (let i = 1; i <= 10; i++) {
   // console.log(`i = ${i}, ${i} * 2 = ${i * 2}`);
@@ -109,3 +104,35 @@ function fun(arr) {
   return getevenSum
 }
 console.log(fun([1, 2, 3, 4, 56]));
+
+
+const mydata = (data)=>{
+// console.log("data",data);
+const myd = data.map((dta)=> Number(dta * dta ))
+return myd
+}
+
+console.log(mydata([1,2,3]))
+
+
+
+function herFun(stri) {
+  return stri.map((stri) => {
+    console.log(stri);
+    
+    return stri.length;
+    
+  });
+}
+console.log(herFun(["faiz","andHisPartner"]));
+
+
+console.log("salaam!")
+
+
+function faizzz(vlu){
+  return vlu.map((vl)=>{
+    return vl.length
+  })
+}
+console.log(faizzz(["123456",["1",["2"]]]))
