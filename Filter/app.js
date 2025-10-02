@@ -55,7 +55,7 @@ console.log(findValue(2,3,4,6,7,8,9));
 
 
 function findData(vl){
- return vl.filter((data)=> data > 2)
+ return vl.find((data)=> data > 2)
 }
 
 console.log("your data =>",findData([1,2,3,4]));
