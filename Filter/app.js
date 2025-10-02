@@ -72,3 +72,9 @@ function findEven(number){
     return number.find((n)=> n % 2 ===0)
 }
 console.log(findEven([1,23,4,5,6,7,65,5,5,443,3,3,3,3,3,,223,43]))
+
+function filterAllOddNums(numbers){
+    return numbers.filter((n)=> n % 2 !==0)
+}
+console.log(filterAllOddNums([1,23,4,5,6,7,65,5,5,443,3,3,3,3,3,,223,43]))
+
