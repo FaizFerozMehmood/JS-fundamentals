@@ -40,13 +40,22 @@ let findValue = (...rst)=>{
 console.log(findValue(2,3,4,6,7,8,9));
 
 
-function filters(first,sec,thrd){
-console.log(first);
-return first
+// function filters(first,sec,thrd){
+// console.log(first);
+// return first
 
+// }
+// console.log(filters([
+//     {id :1,name: "faiz"},
+//     {id :1,name: "umair"},
+//     {id :1,name: "ali"}
+// )]);
+
+
+
+
+function findData(vl){
+ return vl.filter((data)=> data > 2)
 }
-console.log(filters([
-    {id :1,name: "faiz"},
-    {id :1,name: "umair"},
-    {id :1,name: "ali"}
-)]);
+
+console.log("your data =>",findData([1,2,3,4]));
