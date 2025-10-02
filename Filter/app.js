@@ -59,3 +59,10 @@ function findData(vl){
 }
 
 console.log("your data =>",findData([1,2,3,4]));
+
+// summmary
+// filter fun return all the element that matches the condition in an array 
+
+// while
+
+// find fun returns the first one that matches the condition
