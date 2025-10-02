@@ -78,3 +78,8 @@ function filterAllOddNums(numbers){
 }
 console.log(filterAllOddNums([1,23,4,5,6,7,65,5,5,443,3,3,3,3,3,,223,43]))
 
+function filterNames(name){
+return name.filter((n)=> n.startsWith("s"))
+}
+
+console.log(filterNames(["Ali","Faiz","sami"]))
