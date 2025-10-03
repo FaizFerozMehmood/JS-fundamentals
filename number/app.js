@@ -129,3 +129,11 @@ const myFun=(arr)=>{
 
 console.log(myFun([1]));
 console.log(myFun([]));
+
+
+function getrev(num){
+  const rev = num.toString().split("").reverse().join("")
+  console.log("rev",rev);
+  
+}
+getrev(12334)
