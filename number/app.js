@@ -137,3 +137,16 @@ function getrev(num){
   
 }
 getrev(12334)
+
+
+function remove(){
+    let arr = [1,2,3,4,4,5,6,6,6,7,7]
+    let newarr = []
+    arr.forEach((data)=>{
+      if(!newarr.includes(data)){
+        return newarr.push(data)
+      }
+    })
+return newarr
+}
+console.log(remove())
