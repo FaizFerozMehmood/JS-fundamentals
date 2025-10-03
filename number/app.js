@@ -150,3 +150,21 @@ function remove(){
 return newarr
 }
 console.log(remove())
+
+
+function removeDupByForLoop(){
+    let arrrrr = [1,2,3,4,4,5,6,6,6,7,7]
+    let newarrr = []
+    for(let i = 0; i < arrrrr.length;i++){
+        if(!newarrr.includes(arrrrr[i])){
+            newarrr.push(arrrrr[i])
+        }
+        
+    }
+    console.log("new arr after..",newarrr);
+    return newarrr
+
+}
+
+console.log(removeDupByForLoop())
+
