@@ -472,6 +472,18 @@ function findgreatest(numbers){
 console.log(findgreatest([1,2,3,4,5,6]))
 
 
+function findSmallest (numbers){
+  let mynum = numbers[0]
+  numbers.forEach((num)=>{
+    if(num < mynum){
+      mynum = num
+    }
+  })
+  return mynum
+}
+console.log(findSmallest([12,3.4,5.5,6]))
+
+
 
 
 
