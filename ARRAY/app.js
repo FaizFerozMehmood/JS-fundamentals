@@ -460,6 +460,18 @@ myNewA[1]= "dev"
 console.log(myNewA);
 
 
+function findgreatest(numbers){
+  let mynum = [0]
+   numbers.forEach((num)=>{
+    if(num > mynum){
+       mynum = num
+    }
+  })
+  return mynum
+}
+console.log(findgreatest([1,2,3,4,5,6]))
+
+
 
 
 
