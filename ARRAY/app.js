@@ -434,3 +434,32 @@ console.log(
     [4, 5],
   ])
 );
+
+// ways to define an array in js
+
+let ar = ["A","B","C"]
+
+
+let numm = new Array(1,2,3,4)
+
+
+let neW = Array.of(5,3,4,5) // as an argument
+console.log(neW);
+
+let str = "hello";
+let strA = Array.from(str)
+console.log(strA);
+
+let myStr = "faiz, mehmmod, is, a, student".split(",");
+console.log(myStr);
+
+
+let myNewA = []
+myNewA[0] = "FAIZ",
+myNewA[1]= "dev"
+console.log(myNewA);
+
+
+
+
+
