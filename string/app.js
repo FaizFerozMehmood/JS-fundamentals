@@ -175,3 +175,20 @@ function separateEvenOdd(numbers){
 
 }
 console.log(separateEvenOdd([1,2,3,3,4,4,5,56,6,6,7,]))
+
+
+
+function findUnique(numbers){
+     let count = {}
+     numbers.forEach((num)=>{
+      count[num] = (count[num] || 0 ) +1
+     })
+     let unique = []
+     numbers.forEach((num)=>{
+      if(count[num]===1){
+        unique.push(num)
+      }
+     })
+     return unique
+}
+console.log(findUnique([1,2,3,3,3,4,45,5,6,5,]))
