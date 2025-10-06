@@ -105,3 +105,17 @@
 
 let strr = "faiz"
 console.log(strr.split("").reverse().join(""))
+
+
+
+function findLargest(numbers){
+   let largest = numbers[0]
+   numbers.forEach((number)=>{
+    if(number > largest){
+      largest = number
+    }
+   })
+   return largest
+}
+
+console.log(findLargest([1,2,3,4,5,6,7,8]))
