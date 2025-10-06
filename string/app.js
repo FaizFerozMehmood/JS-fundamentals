@@ -148,3 +148,22 @@ function removeDups (numbers){
  return neww
 }
 console.log(removeDups([1,2,3,3,3,4,5,65,6,5,5,5]))
+
+
+
+function separateEvenOdd(arr){
+
+  let even = []
+  let odd =[]
+  arr.forEach((num)=> {
+    if(num % 2===0){
+      even.push(num)
+    }
+    if(num % 2!==0){
+      odd.push(num)
+    }
+  })
+  return {even , odd}
+}
+
+console.log(separateEvenOdd([1,2,3,4,5,5,6,6,7]))
