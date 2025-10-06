@@ -119,3 +119,18 @@ function findLargest(numbers){
 }
 
 console.log(findLargest([1,2,3,4,5,6,7,8]))
+
+function countVowel(str){
+  let vowel = "aeiou"
+  let count = 0
+
+  str.split("").forEach((vl)=>{
+    if(vowel.includes(vl)){
+      console.log("helooo");
+      count = count++
+      
+    }
+  })
+  return count;
+}
+console.log(countVowel("javascript"))
