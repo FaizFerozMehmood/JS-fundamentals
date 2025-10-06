@@ -1,103 +1,107 @@
-//first letter capital rest of the letter in lowerCase
-function capitalize(word) {
-return word[0].toUpperCase()+word.substring(1).toLowerCase()
-}
-
-console.log(capitalize("sam")); 
-console.log(capitalize("ALEX"));
-console.log(capitalize("chARLie"));
-
- function getNumberOfChars(name) {
-//     // number of characters in: name
-return name.length
-
-}
-
-
- function getFirstChar(name) {
-    // first character of: name
-    return name[name.length-1]
-
-}
-
-
-//  function getLastChar(name) {
-//     // last character of: name
-
+// //first letter capital rest of the letter in lowerCase
+// function capitalize(word) {
+// return word[0].toUpperCase()+word.substring(1).toLowerCase()
 // }
 
-//  function getLower(name) {
-//     // name all in lower case (example: "ABC" becomes "abc
-// /** @param {string} name */
-//  function getUpper(name) {
-//     // name all in upper case (example: "abc" becomes "ABC")
+// console.log(capitalize("sam")); 
+// console.log(capitalize("ALEX"));
+// console.log(capitalize("chARLie"));
 
-// }
-
-//  function getCapitalized(name) {
-//     // capitalized version of name (example: "alEX" becomes "Alex")
+//  function getNumberOfChars(name) {
+// //     // number of characters in: name
+// return name.length
 
 // }
 
 
-function herFun(str){
-    console.log(str);
+//  function getFirstChar(name) {
+//     // first character of: name
+//     return name[name.length-1]
+
+// }
+
+
+// //  function getLastChar(name) {
+// //     // last character of: name
+
+// // }
+
+// //  function getLower(name) {
+// //     // name all in lower case (example: "ABC" becomes "abc
+// // /** @param {string} name */
+// //  function getUpper(name) {
+// //     // name all in upper case (example: "abc" becomes "ABC")
+
+// // }
+
+// //  function getCapitalized(name) {
+// //     // capitalized version of name (example: "alEX" becomes "Alex")
+
+// // }
+
+
+// function herFun(str){
+//     console.log(str);
     
-   return str.map((vlu)=>{
-    return vlu.length
-   })
-}
-console.log(herFun(["abc","fef"]));
+//    return str.map((vlu)=>{
+//     return vlu.length
+//    })
+// }
+// console.log(herFun(["abc","fef"]));
 
-const input = document.getElementById('input')
-const btn  = document.getElementById('btn')
-btn.addEventListener('click',()=>{
-let userValue = input.value    
-if(isPalindrome(userValue)){
-    console.log(`${userValue} is palindrome`);
+// const input = document.getElementById('input')
+// const btn  = document.getElementById('btn')
+// btn.addEventListener('click',()=>{
+// let userValue = input.value    
+// if(isPalindrome(userValue)){
+//     console.log(`${userValue} is palindrome`);
     
-}
-else{
-    console.log(`${userValue} is not palindrome`);
-}
-})
-function isPalindrome(value){
-    let str = value.toLowerCase()
-    let reversed = str.split('').reverse().join('')
-    return str === reversed
-}
+// }
+// else{
+//     console.log(`${userValue} is not palindrome`);
+// }
+// })
+// function isPalindrome(value){
+//     let str = value.toLowerCase()
+//     let reversed = str.split('').reverse().join('')
+//     return str === reversed
+// }
 
 
-let arr1 = ["faiz","umair","ali"]
-let arr2 = ["faiz","umair","ali"]
-if(arr1[0]==arr2[0]){
-    console.log("yes");
+// let arr1 = ["faiz","umair","ali"]
+// let arr2 = ["faiz","umair","ali"]
+// if(arr1[0]==arr2[0]){
+//     console.log("yes");
     
-}
-const arrobj = [
-    { userName: "faiz", age: "21" },
-    { userName: "umair", age: "31" },
-  ];
+// }
+// const arrobj = [
+//     { userName: "faiz", age: "21" },
+//     { userName: "umair", age: "31" },
+//   ];
   
-  function findValue(objArray) {
-    const myarr = [
-      { userName: "faiz", age: "31" },
-      { userName: "ali", age: "31" },
-      { userName: "kashif", age: "31" },
-    ];
+//   function findValue(objArray) {
+//     const myarr = [
+//       { userName: "faiz", age: "31" },
+//       { userName: "ali", age: "31" },
+//       { userName: "kashif", age: "31" },
+//     ];
   
-    const intersection = myarr.filter((dta) =>
-      objArray.some((obj) => obj.userName === dta.userName)
-    );
+//     const intersection = myarr.filter((dta) =>
+//       objArray.some((obj) => obj.userName === dta.userName)
+//     );
   
-    return intersection;
-  }
+//     return intersection;
+//   }
   
-  console.log(findValue(arrobj));
+//   console.log(findValue(arrobj));
   
 
-  function getvalue(arr){
-      console.log(arr.split(" ,"));
+//   function getvalue(arr){
+//       console.log(arr.split(" ,"));
 
-  }
-console.log(getvalue("ksdj123"));
+//   }
+// console.log(getvalue("ksdj123"));
+
+
+let strr = "faiz"
+console.log(strr.split("").reverse().join(""))
