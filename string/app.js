@@ -134,3 +134,17 @@ function countVowel(str){
   return count;
 }
 console.log(countVowel("javascript"))
+
+
+
+
+function removeDups (numbers){
+ let neww = []
+ numbers.forEach((num)=>{
+  if(!neww.includes(num)){
+    neww.push(num)
+  }
+ })
+ return neww
+}
+console.log(removeDups([1,2,3,3,3,4,5,65,6,5,5,5]))
