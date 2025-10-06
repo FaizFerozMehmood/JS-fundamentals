@@ -151,19 +151,27 @@ console.log(removeDups([1,2,3,3,3,4,5,65,6,5,5,5]))
 
 
 
-function separateEvenOdd(arr){
+// function separateEvenOdd(arr){
 
-  let even = []
-  let odd =[]
-  arr.forEach((num)=> {
-    if(num % 2===0){
-      even.push(num)
-    }
-    if(num % 2!==0){
-      odd.push(num)
-    }
-  })
-  return {even , odd}
+//   let even = []
+//   let odd =[]
+//   arr.forEach((num)=> {
+//     if(num % 2===0){
+//       even.push(num)
+//     }
+//     if(num % 2!==0){
+//       odd.push(num)
+//     }
+//   })
+//   return {even , odd}
+// }
+
+// console.log(separateEvenOdd([1,2,3,4,5,5,6,6,7]))
+
+function separateEvenOdd(numbers){
+  const even = numbers.filter((num)=> num % 2 ===0)
+  const odd = numbers.filter((num)=> num % 2 !==0)
+  return {even, odd}
+
 }
-
-console.log(separateEvenOdd([1,2,3,4,5,5,6,6,7]))
+console.log(separateEvenOdd([1,2,3,3,4,4,5,56,6,6,7,]))
