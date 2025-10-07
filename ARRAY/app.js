@@ -490,3 +490,13 @@ function sum(number) {
 console.log(sum([1, 2, 3, 4]));
 
 
+function checknum(numbers){
+  let even = numbers.filter((num)=> num % 2 ===0)
+  let odd = numbers.filter((num)=> num % 2 !==0)
+ 
+  
+  return {even, odd}
+}
+console.log(checknum([1,2,3,4,5]))
+
+
