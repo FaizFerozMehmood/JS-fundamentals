@@ -480,36 +480,43 @@ console.log(findSmallest([12, 3.4, 5.5, 6]));
 // Write a function that returns the sum of all numbers in an array.
 
 function sum(number) {
- 
- 
-  let sumnum = number.reduce((accu,number)=>{
-     return accu+=number
-  },0)
-  return sumnum
+  let sumnum = number.reduce((accu, number) => {
+    return (accu += number);
+  }, 0);
+  return sumnum;
 }
 console.log(sum([1, 2, 3, 4]));
 
+function checknum(numbers) {
+  let even = numbers.filter((num) => num % 2 === 0);
+  let odd = numbers.filter((num) => num % 2 !== 0);
 
-function checknum(numbers){
-  let even = numbers.filter((num)=> num % 2 ===0)
-  let odd = numbers.filter((num)=> num % 2 !==0)
- 
-  
-  return {even, odd}
+  return { even, odd };
 }
-console.log(checknum([1,2,3,4,5]))
+console.log(checknum([1, 2, 3, 4, 5]));
 
 
-function reverseAString(str){
-  let reveresd = ""
 
-let neww = str.split("")
+function reverseAString(str) {
+  let reveresd = "";
 
-for(let i = str.length -1; i >=0 ; i--){
-  reveresd+=str[i]
+  let neww = str.split("");
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reveresd += str[i];
+  }
+
+  return reveresd;
 }
+console.log(reverseAString("javascript"));
 
-
-return reveresd
+function maximum(number){
+  let max = number[0]
+  number.forEach((num)=>{
+    if(max < num){
+      max = num
+    }
+  })
+  return max
 }
-console.log(reverseAString("javascript"))
+console.log(maximum([1,2,3,4,55,6,7]))
