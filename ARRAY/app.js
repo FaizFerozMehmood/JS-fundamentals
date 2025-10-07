@@ -437,71 +437,56 @@ console.log(
 
 // ways to define an array in js
 
-let ar = ["A","B","C"]
+let ar = ["A", "B", "C"];
 
+let numm = new Array(1, 2, 3, 4);
 
-let numm = new Array(1,2,3,4)
-
-
-let neW = Array.of(5,3,4,5) // as an argument
+let neW = Array.of(5, 3, 4, 5); // as an argument
 console.log(neW);
 
 let str = "hello";
-let strA = Array.from(str)
+let strA = Array.from(str);
 console.log(strA);
 
 let myStr = "faiz, mehmmod, is, a, student".split(",");
 console.log(myStr);
 
-
-let myNewA = []
-myNewA[0] = "FAIZ",
-myNewA[1]= "dev"
+let myNewA = [];
+(myNewA[0] = "FAIZ"), (myNewA[1] = "dev");
 console.log(myNewA);
 
-
-function findgreatest(numbers){
-  let mynum = [0]
-   numbers.forEach((num)=>{
-    if(num > mynum){
-       mynum = num
+function findgreatest(numbers) {
+  let mynum = [0];
+  numbers.forEach((num) => {
+    if (num > mynum) {
+      mynum = num;
     }
-  })
-  return mynum
+  });
+  return mynum;
 }
-console.log(findgreatest([1,2,3,4,5,6]))
+console.log(findgreatest([1, 2, 3, 4, 5, 6]));
 
-
-function findSmallest (numbers){
-  let mynum = numbers[0]
-  numbers.forEach((num)=>{
-    if(num < mynum){
-      mynum = num
+function findSmallest(numbers) {
+  let mynum = numbers[0];
+  numbers.forEach((num) => {
+    if (num < mynum) {
+      mynum = num;
     }
-  })
-  return mynum
+  });
+  return mynum;
 }
-console.log(findSmallest([12,3.4,5.5,6]))
-
-
-
+console.log(findSmallest([12, 3.4, 5.5, 6]));
 
 // Write a function that returns the sum of all numbers in an array.
 
-function sum(number){
-let sumNum = 0;
-number.forEach((num)=>{
-  if(num){
-    sumNum+=num
-  }
-
-})
-
-
-
-  return sumNum
+function sum(number) {
+ 
+ 
+  let sumnum = number.reduce((accu,number)=>{
+     return accu+=number
+  },0)
+  return sumnum
 }
-console.log(sum([1,2,3,4]))
-
+console.log(sum([1, 2, 3, 4]));
 
 
