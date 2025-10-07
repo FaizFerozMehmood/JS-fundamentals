@@ -486,4 +486,22 @@ console.log(findSmallest([12,3.4,5.5,6]))
 
 
 
+// Write a function that returns the sum of all numbers in an array.
+
+function sum(number){
+let sumNum = 0;
+number.forEach((num)=>{
+  if(num){
+    sumNum+=num
+  }
+
+})
+
+
+
+  return sumNum
+}
+console.log(sum([1,2,3,4]))
+
+
 
