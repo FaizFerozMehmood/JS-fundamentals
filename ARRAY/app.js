@@ -500,3 +500,16 @@ function checknum(numbers){
 console.log(checknum([1,2,3,4,5]))
 
 
+function reverseAString(str){
+  let reveresd = ""
+
+let neww = str.split("")
+
+for(let i = str.length -1; i >=0 ; i--){
+  reveresd+=str[i]
+}
+
+
+return reveresd
+}
+console.log(reverseAString("javascript"))
