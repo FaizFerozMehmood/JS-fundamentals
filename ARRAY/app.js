@@ -520,15 +520,24 @@ function maximum(number) {
 console.log(maximum([1, 2, 3, 4, 55, 6, 7]));
 
 function checkCount(str) {
-  let count = {}
-  str.split("").forEach((st)=>{
-     if(count[st]){
-      count[st] +=1
-     }
-     else{
-      count[st]=1
-     }
-  })
-  return count
+  let count = {};
+  str.split("").forEach((st) => {
+    if (count[st]) {
+      count[st] += 1;
+    } else {
+      count[st] = 1;
+    }
+  });
+  return count;
 }
 console.log(checkCount("Hello"));
+function removeDuplicates(number){
+  let myarr = []
+  number.forEach((num)=>{
+    if(!myarr.includes(num)){
+      myarr.push(num)
+    }
+  })
+return myarr
+}
+console.log(removeDuplicates([1,2,3,3,3,4,5,5]))
