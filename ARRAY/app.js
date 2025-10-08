@@ -495,8 +495,6 @@ function checknum(numbers) {
 }
 console.log(checknum([1, 2, 3, 4, 5]));
 
-
-
 function reverseAString(str) {
   let reveresd = "";
 
@@ -510,13 +508,27 @@ function reverseAString(str) {
 }
 console.log(reverseAString("javascript"));
 
-function maximum(number){
-  let max = number[0]
-  number.forEach((num)=>{
-    if(max < num){
-      max = num
+function maximum(number) {
+  let max = number[0];
+  number.forEach((num) => {
+    if (max < num) {
+      max = num;
     }
-  })
-  return max
+  });
+  return max;
 }
-console.log(maximum([1,2,3,4,55,6,7]))
+console.log(maximum([1, 2, 3, 4, 55, 6, 7]));
+
+function checkCount(str) {
+  let count = {}
+  str.split("").forEach((st)=>{
+     if(count[st]){
+      count[st] +=1
+     }
+     else{
+      count[st]=1
+     }
+  })
+  return count
+}
+console.log(checkCount("Hello"));
