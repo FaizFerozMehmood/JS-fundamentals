@@ -530,14 +530,35 @@ function checkCount(str) {
   });
   return count;
 }
+
 console.log(checkCount("Hello"));
-function removeDuplicates(number){
-  let myarr = []
-  number.forEach((num)=>{
-    if(!myarr.includes(num)){
-      myarr.push(num)
+
+function removeDuplicates(number) {
+  let myarr = [];
+  number.forEach((num) => {
+    if (!myarr.includes(num)) {
+      myarr.push(num);
     }
-  })
-return myarr
+  });
+  return myarr;
 }
-console.log(removeDuplicates([1,2,3,3,3,4,5,5]))
+console.log(removeDuplicates([1, 2, 3, 3, 3, 4, 5, 5]));
+
+
+
+function evenNumberOnly(number) {
+  const even = number.filter((num) => num % 2 === 0);
+  return even;
+}
+console.log(evenNumberOnly([1, 2, 3, 4, 5, 6, 7, 78]));
+
+function ispalindrome(str){
+ let lower = str.toLowerCase()
+ let reveresd = lower.split("").reverse().join("")
+console.log(lower);
+
+
+return lower === reveresd
+}
+console.log(ispalindrome("Maam"))
+console.log(ispalindrome("faiz"))
