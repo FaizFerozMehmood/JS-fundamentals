@@ -544,21 +544,31 @@ function removeDuplicates(number) {
 }
 console.log(removeDuplicates([1, 2, 3, 3, 3, 4, 5, 5]));
 
-
-
 function evenNumberOnly(number) {
   const even = number.filter((num) => num % 2 === 0);
   return even;
 }
 console.log(evenNumberOnly([1, 2, 3, 4, 5, 6, 7, 78]));
 
-function ispalindrome(str){
- let lower = str.toLowerCase()
- let reveresd = lower.split("").reverse().join("")
-console.log(lower);
+function ispalindrome(str) {
+  let lower = str.toLowerCase();
+  let reveresd = lower.split("").reverse().join("");
+  console.log(lower);
 
-
-return lower === reveresd
+  return lower === reveresd;
 }
-console.log(ispalindrome("Maam"))
-console.log(ispalindrome("faiz"))
+console.log(ispalindrome("Maam"));
+console.log(ispalindrome("faiz"));
+
+function countVowels(str) {
+  let vowels = "aeiou";
+  let count = 0
+  str.split("").forEach((vl) => {
+   if(vowels.includes(vl)){
+    count++
+   }
+  });
+  return count
+}
+
+console.log(countVowels("faiz"));
