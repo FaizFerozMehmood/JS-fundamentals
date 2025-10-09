@@ -588,6 +588,10 @@ console.log(filtered);
 
 
 function flattenArray(arr){
-  return arr.flat().flat()
+
+  // return arr.flat().flat()
+  return arr.flat(Infinity) //flatten no matter how deep the nesting goes.
+
+
 }
 console.log(flattenArray([1, [2, [3]]]))
