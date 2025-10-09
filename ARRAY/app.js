@@ -562,13 +562,25 @@ console.log(ispalindrome("faiz"));
 
 function countVowels(str) {
   let vowels = "aeiou";
-  let count = 0
+  let count = 0;
   str.split("").forEach((vl) => {
-   if(vowels.includes(vl)){
-    count++
-   }
+    if (vowels.includes(vl)) {
+      count++;
+    }
   });
-  return count
+  return count;
 }
 
 console.log(countVowels("faiz"));
+
+const users = [
+  { name: "faiz", age: 10 },
+  { name: "ali", age: 20 },
+  { name: "ghazi", age: 20 },
+  { name: "aatif", age: 40 },
+  { name: "muhammad", age: 0 },
+];
+
+const filtered = users.filter((user)=> user.age > 18)
+.map((user)=>user.name)
+console.log(filtered);
