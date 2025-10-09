@@ -584,3 +584,10 @@ const users = [
 const filtered = users.filter((user)=> user.age > 18)
 .map((user)=>user.name)
 console.log(filtered);
+
+
+
+function flattenArray(arr){
+  return arr.flat().flat()
+}
+console.log(flattenArray([1, [2, [3]]]))
