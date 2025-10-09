@@ -581,17 +581,19 @@ const users = [
   { name: "muhammad", age: 0 },
 ];
 
-const filtered = users.filter((user)=> user.age > 18)
-.map((user)=>user.name)
+const filtered = users.filter((user) => user.age > 18).map((user) => user.name);
 console.log(filtered);
 
-
-
-function flattenArray(arr){
-
+function flattenArray(arr) {
   // return arr.flat().flat()
-  return arr.flat(Infinity) //flatten no matter how deep the nesting goes.
-
-
+  return arr.flat(Infinity); //flatten no matter how deep the nesting goes.
 }
-console.log(flattenArray([1, [2, [3]]]))
+console.log(flattenArray([1, [2, [3]]]));
+
+// Write a function to merge two arrays and remove duplicates.
+
+function mergeArray(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])];
+}
+
+console.log(mergeArray([1, 2, 3, 4, 5, 5, 6], [5, 6, 6, 7, 8, 8]));
