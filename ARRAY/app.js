@@ -596,4 +596,13 @@ function mergeArray(arr1, arr2) {
   return [...new Set([...arr1, ...arr2])];
 }
 
-console.log(mergeArray([1, 2, 3, 4, 5, 5, 6], [5, 6, 6, 7, 8, 8]));
+// console.log(mergeArray([1, 2, 3, 4, 5, 5, 6], [5, 6, 6, 7, 8, 8]));
+
+
+function print(){
+  for(let i = 0; i <=10; i++){
+    console.log(i)
+  }
+}
+
+console.log(print())
