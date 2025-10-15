@@ -631,7 +631,9 @@ console.log(sum(1,2))
 
 let arr = [1,2,34,5]
 
-let min = arr.reduce((acc,current)=>{
-   return acc < current ? acc : current
-})
-console.log(min)
+// let min = arr.reduce((acc,current)=>{
+//    return acc < current ? acc : current
+// })
+
+let product = arr.reduce((acc,current)=> acc * current)
+console.log(product)
