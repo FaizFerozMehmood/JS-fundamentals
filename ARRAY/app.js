@@ -606,3 +606,26 @@ function print(){
 }
 
 console.log(print())
+
+
+
+function sum(num1,num2){
+
+
+return num1 +num2
+}
+console.log(sum(1,2))
+
+
+
+let arr= [1,2]
+
+let max = arr.reduce((acc, current)=>{
+   return acc > current ? acc :current
+},0)
+// const total = arr.reduce((acc,curent)=>{
+//   return acc + curent
+// },0)
+
+console.log(max)
+
