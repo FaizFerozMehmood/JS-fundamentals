@@ -618,14 +618,20 @@ console.log(sum(1,2))
 
 
 
-let arr= [1,2]
+// let arr= [1,2]
 
-let max = arr.reduce((acc, current)=>{
-   return acc > current ? acc :current
-},0)
+// let max = arr.reduce((acc, current)=>{
+//    return acc > current ? acc :current
+//   },0)
+//   console.log(max)
 // const total = arr.reduce((acc,curent)=>{
 //   return acc + curent
 // },0)
 
-console.log(max)
 
+let arr = [1,2,34,5]
+
+let min = arr.reduce((acc,current)=>{
+   return acc < current ? acc : current
+})
+console.log(min)
