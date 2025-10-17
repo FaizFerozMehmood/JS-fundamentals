@@ -622,7 +622,7 @@ console.log(sum(1,2))
 
 // let max = arr.reduce((acc, current)=>{
 //    return acc > current ? acc :current
-//   },0)
+//   },)
 //   console.log(max)
 // const total = arr.reduce((acc,curent)=>{
 //   return acc + curent
@@ -635,5 +635,31 @@ let arr = [1,2,34,5]
 //    return acc < current ? acc : current
 // })
 
-let product = arr.reduce((acc,current)=> acc * current)
-console.log(product)
+// let product = arr.reduce((acc,current)=> acc * current)
+// console.log(product)
+
+// let avrge = arr.reduce((acc,crt)=> acc + crt,0) / arr.length
+
+// console.log(avrge)
+
+
+// let arr
+let obj = [
+  {name:"faiz",subject :"english"},
+  {name:"umair",subject :"science"},
+  {name:"aatif",subject :"history"},
+  {name:"sami",subject :"math"},
+  {name:"salim",subject :"english"},
+
+]
+
+let subjectScore = obj.reduce((acc,currentValue)=>{
+  let subject = currentValue.subject
+console.log(currentValue.subject)
+//  currentValue[subject] = (currentValue[subject] || 0) +1
+acc[subject] = (acc[subject] || 0 ) +1
+return acc
+
+},{})
+
+console.log(subjectScore)
