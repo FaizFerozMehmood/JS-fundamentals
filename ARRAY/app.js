@@ -667,3 +667,25 @@ const totalll = products.reduce((acc, value) => {
   return acc
 }, {});
 console.log(totalll);
+
+
+let productss = [
+  { name: "Laptop", category: "Electronics" },
+  { name: "Shirt", category: "Clothing" },
+  { name: "Phone", category: "Electronics" },
+  { name: "Pants", category: "Clothing" },
+  { name: "Book", category: "Stationery" }
+];
+
+const groupProducts = productss.reduce((acc,value)=>{
+  let name = value.name;
+  let category = value.category;
+  console.log(name)
+  console.log(category)
+  if(!acc[category]){
+    acc[category] = []
+  }
+  acc[category].push(name)
+  return acc
+},{})
+console.log(groupProducts)
