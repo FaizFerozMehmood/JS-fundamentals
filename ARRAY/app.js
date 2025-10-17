@@ -598,25 +598,18 @@ function mergeArray(arr1, arr2) {
 
 // console.log(mergeArray([1, 2, 3, 4, 5, 5, 6], [5, 6, 6, 7, 8, 8]));
 
-
-function print(){
-  for(let i = 0; i <=10; i++){
-    console.log(i)
+function print() {
+  for (let i = 0; i <= 10; i++) {
+    console.log(i);
   }
 }
 
-console.log(print())
+console.log(print());
 
-
-
-function sum(num1,num2){
-
-
-return num1 +num2
+function sum(num1, num2) {
+  return num1 + num2;
 }
-console.log(sum(1,2))
-
-
+console.log(sum(1, 2));
 
 // let arr= [1,2]
 
@@ -628,8 +621,7 @@ console.log(sum(1,2))
 //   return acc + curent
 // },0)
 
-
-let arr = [1,2,34,5]
+let arr = [1, 2, 34, 5];
 
 // let min = arr.reduce((acc,current)=>{
 //    return acc < current ? acc : current
@@ -642,24 +634,36 @@ let arr = [1,2,34,5]
 
 // console.log(avrge)
 
-
 // let arr
 let obj = [
-  {name:"faiz",subject :"english"},
-  {name:"umair",subject :"science"},
-  {name:"aatif",subject :"history"},
-  {name:"sami",subject :"math"},
-  {name:"salim",subject :"english"},
+  { name: "faiz", subject: "english" },
+  { name: "umair", subject: "science" },
+  { name: "aatif", subject: "history" },
+  { name: "sami", subject: "math" },
+  { name: "salim", subject: "english" },
+];
 
-]
+let subjectScore = obj.reduce((acc, currentValue) => {
+  let subject = currentValue.subject;
+  console.log(currentValue.subject);
+  acc[subject] = (acc[subject] || 0) + 1;
+  return acc;
+}, {});
 
-let subjectScore = obj.reduce((acc,currentValue)=>{
-  let subject = currentValue.subject
-console.log(currentValue.subject)
-//  currentValue[subject] = (currentValue[subject] || 0) +1
-acc[subject] = (acc[subject] || 0 ) +1
-return acc
+console.log(subjectScore);
 
-},{})
+let products = [
+  { name: "Laptop", category: "Electronics" },
+  { name: "Shirt", category: "Clothing" },
+  { name: "Phone", category: "Electronics" },
+  { name: "Pants", category: "Clothing" },
+  { name: "Book", category: "Stationery" },
+];
 
-console.log(subjectScore)
+const totalll = products.reduce((acc, value) => {
+  let categories = value.category;
+  console.log(categories);
+  acc[categories] = (acc[categories] || 0) + 1;
+  return acc
+}, {});
+console.log(totalll);
