@@ -703,3 +703,25 @@ function GEToutput(data){
    return min
 }
 console.log(GEToutput([1,2,3,4,4]))
+
+// Create an array of student objects and group by subject using reduce().
+
+let students = [
+  { name: "faiz", subject: "english" },
+  { name: "umair", subject: "science" },
+  { name: "aatif", subject: "history" },
+  { name: "sami", subject: "math" },
+  { name: "salim", subject: "english" },
+];
+
+let groupedStudents = students.reduce((acc, value)=>{
+       let subjects = value.subject
+       let name = value.name
+       if(!acc[subjects]){
+        acc[subjects] = []
+       }
+       acc[subjects].push(name)
+       return acc
+},{})
+
+console.log(groupedStudents)
