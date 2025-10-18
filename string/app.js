@@ -192,3 +192,13 @@ function findUnique(numbers){
      return unique
 }
 console.log(findUnique([1,2,3,3,3,4,45,5,6,5,]))
+
+
+function checkString(str){
+ let reverse = str.split("").reverse("").join("")
+
+//  console.log("reverse",reverse);
+ return str === reverse
+}
+console.log(checkString("maam"))
+console.log(checkString("naam"))
