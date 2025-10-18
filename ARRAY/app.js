@@ -694,9 +694,12 @@ console.log(groupProducts)
 // Write a function to find the sum, max, and min of an array.
 
 function GEToutput(data){
-   let sumData = data.reduce((acc,value)=>{
-   return acc + value
-   },0)
-   return sumData
+   let min = data.reduce((acc,value)=>{
+  //  return acc + value
+  // return acc > value ? acc : value
+  return acc < value ? acc :value
+
+   })
+   return min
 }
 console.log(GEToutput([1,2,3,4,4]))
