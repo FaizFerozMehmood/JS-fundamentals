@@ -664,45 +664,42 @@ const totalll = products.reduce((acc, value) => {
   let categories = value.category;
   console.log(categories);
   acc[categories] = (acc[categories] || 0) + 1;
-  return acc
+  return acc;
 }, {});
 console.log(totalll);
-
 
 let productss = [
   { name: "Laptop", category: "Electronics" },
   { name: "Shirt", category: "Clothing" },
   { name: "Phone", category: "Electronics" },
   { name: "Pants", category: "Clothing" },
-  { name: "Book", category: "Stationery" }
+  { name: "Book", category: "Stationery" },
 ];
 
-const groupProducts = productss.reduce((acc,value)=>{
+const groupProducts = productss.reduce((acc, value) => {
   let name = value.name;
   let category = value.category;
-  console.log(name)
-  console.log(category)
-  if(!acc[category]){
-    acc[category] = []
+  console.log(name);
+  console.log(category);
+  if (!acc[category]) {
+    acc[category] = [];
   }
-  acc[category].push(name)
-  return acc
-},{})
-console.log(groupProducts)
-
+  acc[category].push(name);
+  return acc;
+}, {});
+console.log(groupProducts);
 
 // Write a function to find the sum, max, and min of an array.
 
-function GEToutput(data){
-   let min = data.reduce((acc,value)=>{
-  //  return acc + value
-  // return acc > value ? acc : value
-  return acc < value ? acc :value
-
-   })
-   return min
+function GEToutput(data) {
+  let min = data.reduce((acc, value) => {
+    //  return acc + value
+    // return acc > value ? acc : value
+    return acc < value ? acc : value;
+  });
+  return min;
 }
-console.log(GEToutput([1,2,3,4,4]))
+console.log(GEToutput([1, 2, 3, 4, 4]));
 
 // Create an array of student objects and group by subject using reduce().
 
@@ -714,14 +711,29 @@ let students = [
   { name: "salim", subject: "english" },
 ];
 
-let groupedStudents = students.reduce((acc, value)=>{
-       let subjects = value.subject
-       let name = value.name
-       if(!acc[subjects]){
-        acc[subjects] = []
-       }
-       acc[subjects].push(name)
-       return acc
-},{})
+let groupedStudents = students.reduce((acc, value) => {
+  let subjects = value.subject;
+  let name = value.name;
+  if (!acc[subjects]) {
+    acc[subjects] = [];
+  }
+  acc[subjects].push(name);
+  return acc;
+}, {});
 
-console.log(groupedStudents)
+console.log(groupedStudents);
+
+let productx = [
+  { name: "Laptop", category: "Electronics", price: 100 },
+  { name: "Shirt", category: "Clothing", price: 300 },
+  { name: "Phone", category: "Electronics", price: 1000 },
+  { name: "Pants", category: "Clothing", price: 10 },
+  { name: "Book", category: "Stationery", price: 20 },
+];
+
+productx.sort((a, b) => a.price - b.price);
+
+console.log(productx);
+
+const filteredPrice = [...productx].filter((data) => data.price > 100);
+console.log("filteredPrice", filteredPrice);
