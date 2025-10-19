@@ -5,13 +5,15 @@ import "./App.css";
 import Counter from "./components/Counter";
 import Props from "./components/Props";
 import RenderArray from "./components/RenderArray";
+import FetchData from "./components/FetchData";
 
 function App() {
   return (
     <div>
       {/* <Counter /> */}
       {/* <Props name="faiz" isStudent={true} age={20} /> */}
-      <RenderArray/>
+      {/* <RenderArray/> */}
+      <FetchData/>
     </div>
   );
 }

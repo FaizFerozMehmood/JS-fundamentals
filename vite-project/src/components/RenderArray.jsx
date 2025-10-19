@@ -30,8 +30,8 @@ function RenderArray() {
   return (
     <div>
         {
-            books.map((data)=>(
-                <div key={data.title}>
+            books.map((data,index)=>(
+                <div key={index}>
                     <h3> Title :{data.title}</h3>
                     <h4> Author :{data.author}</h4>
                     <h5> Year :{data.year}</h5>
