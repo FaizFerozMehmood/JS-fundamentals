@@ -32,13 +32,13 @@ app.post("/post", (req, res) => {
   }
 });
 
-
 let users = [
   { id: 1, name: "Ali", age: 25 },
   { id: 2, name: "Sara", age: 22 },
+  { id: 3, name: "saleh", age: 22 },
+  { id: 4, name: "ali", age: 22 },
+
 ];
-
-
 
 app.put("/user/:id", (req, res) => {
   try {
@@ -50,12 +50,25 @@ app.put("/user/:id", (req, res) => {
     }
     users[userIndex] = { id, ...updatedUser };
     return res.status(200).json({
-      message:"user updated!",
-      data:users[userIndex]
-    })
+      message: "user updated!",
+      data: users[userIndex],
+    });
   } catch (error) {}
 });
 
+app.delete("/user/:id", (req, res) => {
+  const userIndex = users.findIndex(u=> u.id === parseInt(req.params.id));
+  console.log(userIndex,"userIndex")
+  if (userIndex === -1)
+    return res.status(404).json({
+      message: "user not found!",
+    });
+  const deletedUser = users.splice(userIndex, 1);
+  res.status(201).json({
+    message: "user deleted",
+    deletedUser,
+  });
+});
 app.listen(PORT, () => {
   console.log(`server listening on http://localhost:${PORT}`);
 });
