@@ -11,6 +11,12 @@ app.get("/", (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+let users = [
+  { id: 1, name: "Ali", age: 25 },
+  { id: 2, name: "Sara", age: 22 },
+  { id: 3, name: "saleh", age: 22 },
+  { id: 4, name: "ali", age: 22 },
+];
 
 app.get("/:name", (req, res) => {
   const { name } = req.params;
@@ -20,25 +26,41 @@ app.get("/:name", (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-app.post("/post", (req, res) => {
-  try {
-    const data = req.body;
-    console.log("recieived,", data);
-    res.status(201).json({ message: "data created ", item: data });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: error.message });
+const validateUser = (req, res, next) => {
+  if (!req.body.name || !req.body.age) {
+    return res.status(400).json({
+      message: "all fields are required!!",
+    });
   }
+  if(typeof req.body.age !=="number"){
+    return res.status(400).json({
+      message:"age should be a number"
+    })
+  }
+  next();
+};
+app.post("/post", validateUser, (req, res) => {
+  const user = {
+    id:users.length+1,
+    name:req.body.name,
+    age:req.body.age
+  }
+  users.push(user)
+  res.status(201).json({
+    message:"user created",
+    data:user
+  })
 });
-
-let users = [
-  { id: 1, name: "Ali", age: 25 },
-  { id: 2, name: "Sara", age: 22 },
-  { id: 3, name: "saleh", age: 22 },
-  { id: 4, name: "ali", age: 22 },
-
-];
+// app.post("/post", (req, res) => {
+//   try {
+//     const data = req.body;
+//     console.log("recieived,", data);
+//     res.status(201).json({ message: "data created ", item: data });
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json({ message: error.message });
+//   }
+// });
 
 app.put("/user/:id", (req, res) => {
   try {
@@ -57,8 +79,8 @@ app.put("/user/:id", (req, res) => {
 });
 
 app.delete("/user/:id", (req, res) => {
-  const userIndex = users.findIndex(u=> u.id === parseInt(req.params.id));
-  console.log(userIndex,"userIndex")
+  const userIndex = users.findIndex((u) => u.id === parseInt(req.params.id));
+  console.log(userIndex, "userIndex");
   if (userIndex === -1)
     return res.status(404).json({
       message: "user not found!",
