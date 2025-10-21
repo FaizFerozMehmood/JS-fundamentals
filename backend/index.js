@@ -32,24 +32,19 @@ const validateUser = (req, res, next) => {
       message: "all fields are required!!",
     });
   }
-  if(typeof req.body.age !=="number"){
-    return res.status(400).json({
-      message:"age should be a number"
-    })
-  }
   next();
 };
 app.post("/post", validateUser, (req, res) => {
   const user = {
-    id:users.length+1,
-    name:req.body.name,
-    age:req.body.age
-  }
-  users.push(user)
+    id: users.length + 1,
+    name: req.body.name,
+    age: req.body.age,
+  };
+  users.push(user);
   res.status(201).json({
-    message:"user created",
-    data:user
-  })
+    message: "user created",
+    data: user,
+  });
 });
 // app.post("/post", (req, res) => {
 //   try {
@@ -61,7 +56,7 @@ app.post("/post", validateUser, (req, res) => {
 //     res.status(500).json({ message: error.message });
 //   }
 // });
-
+// ...
 app.put("/user/:id", (req, res) => {
   try {
     const id = parseInt(req.params.id);

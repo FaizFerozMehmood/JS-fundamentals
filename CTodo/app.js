@@ -85,3 +85,38 @@
 //     }
 //   });
 // });
+
+// Build a todo list with add & delete buttons.
+const input = document.getElementById("input");
+const addBtn = document.getElementById("addBtn");
+const removeBtn = document.getElementById("removeBtn");
+const listContainer = document.getElementById("listContainer")
+let listitem = [];
+
+function rederList(){
+    listContainer.innerHTML=""
+    listitem.map((data)=>{
+        const li = document.createElement("li")
+        li.textContent=data
+        listContainer.appendChild(li)
+        listContainer.style.display="block"
+    })
+}
+addBtn.addEventListener("click", () => {
+    let value = input.value.trim()
+    if(value===""){
+        alert("enter somthing")
+        return;
+    }
+  listitem.push(value);
+  console.log(listitem, "===>> listItems");
+rederList()
+ input.value = "";
+});
+
+removeBtn.addEventListener("click",()=>{
+    listitem.splice(0,listitem.length)
+    // listitem=[]
+    console.log(listitem)
+    rederList()
+})
