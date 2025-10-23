@@ -737,3 +737,5 @@ console.log(productx);
 
 const filteredPrice = [...productx].filter((data) => data.price > 100);
 console.log("filteredPrice", filteredPrice);
+
+
