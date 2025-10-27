@@ -70,3 +70,35 @@ export const deleteProduct = async (req, res) => {
     });
   }
 };
+
+export const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, des, price, image } = req.body;
+    const updateproductFields = {
+      title: title,
+      des: des,
+      price: price,
+      image: image,
+    };
+    const updated = await Product.findByIdAndUpdate(id, updateproductFields, {
+      new: true,
+      runValidators: true,
+    });
+    if (!updated) {
+     return res.status(404).json({
+        message: " product not found!",
+      });
+    }
+    res.status(200).json({
+      messaage: "product updated",
+      data: updated,
+    });
+  } catch (error) {
+    console.log("server error");
+    res.status(500).json({
+      message: "server error",
+      error: error.messaage,
+    });
+  }
+};
