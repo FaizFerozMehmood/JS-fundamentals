@@ -1,12 +1,15 @@
 import express from "express";
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 import { connectDataBase } from "./config/connect.js";
+import productRoutes from "./routes/productRoute.js";
 
 const app = express();
-dotenv.config()
+dotenv.config();
 const PORT = process.env.PORT || 2000;
 app.use(express.json());
-connectDataBase()
+connectDataBase();
+
+app.use("/product", productRoutes);
 
 app.get("/", (req, res) => {
   try {
