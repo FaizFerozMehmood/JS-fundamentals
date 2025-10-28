@@ -6,6 +6,7 @@ import Counter from "./components/Counter";
 import Props from "./components/Props";
 import RenderArray from "./components/RenderArray";
 import FetchData from "./components/FetchData";
+import GetProducts from "./components/product/GetProducts";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <Counter /> */}
       {/* <Props name="faiz" isStudent={true} age={20} /> */}
       {/* <RenderArray/> */}
-      <FetchData/>
+      {/* <FetchData/> */}
+      <GetProducts/>
     </div>
   );
 }
