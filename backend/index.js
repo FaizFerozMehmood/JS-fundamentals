@@ -2,12 +2,20 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDataBase } from "./config/connect.js";
 import productRoutes from "./routes/productRoute.js";
+import path from "path"
+import { fileURLToPath } from "url";
+
 import cors from "cors";
 
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 2000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 app.use(express.json());
+// app.use(express.urlencoded({ extended: true }))
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use(
   cors({
     origin: "http://localhost:5173",

@@ -1,8 +1,14 @@
 import Product from "../models/productModel.js";
 
 export const addProduct = async (req, res) => {
+  console.log("body=========..>>>", req.body)
+  console.log("body=========..>>>", req.file)
   try {
-    const { title, des, price, image } = req.body;
+    const { title, des, price } = req.body;
+        const image = req.file ? req.file.filename : "";
+            const imageUrl = `${req.protocol}://${req.get("host")}/uploads/${image}`;
+
+
     if (!title || !des || !price || !image) {
       return res.status(400).json({
         messaage: "all fields are required!",
@@ -11,8 +17,8 @@ export const addProduct = async (req, res) => {
     const product = new Product({
       title,
       des,
-      price,
-      image,
+      price:Number(price),
+      image:imageUrl
     });
     await product.save();
 

@@ -7,6 +7,7 @@ import Props from "./components/Props";
 import RenderArray from "./components/RenderArray";
 import FetchData from "./components/FetchData";
 import GetProducts from "./components/product/GetProducts";
+import PostProduct from "./components/product/PostProduct";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* <RenderArray/> */}
       {/* <FetchData/> */}
       <GetProducts/>
+      <PostProduct/>
     </div>
   );
 }

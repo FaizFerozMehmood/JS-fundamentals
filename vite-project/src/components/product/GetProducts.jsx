@@ -31,7 +31,11 @@ function GetProducts() {
               <h3>{data.title}</h3>
               <p>{data.des}</p>
               <p>{data.price}</p>
-              <img src={data.image} alt={data.title} width={100} />
+              <img
+                src={data.image}
+                // alt={data.title}
+                width={100}
+              />
             </div>
           ))
         : "no products availabe!"}
