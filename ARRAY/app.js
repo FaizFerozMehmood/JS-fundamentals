@@ -739,9 +739,11 @@ const filteredPrice = [...productx].filter((data) => data.price > 100);
 console.log("filteredPrice", filteredPrice);
 
 function numNumber(num) {
-  const min = num.reduce((acc, value) => {
-    return acc < value ? acc : value;
+  const max = num.reduce((acc, value) => {
+    // return acc < value ? acc : value;
+    return acc > value ? acc :value
+
   },{});
-  return min;
+  return max;
 }
 console.log(numNumber([1, 2, 3, 4, 5]));
