@@ -748,3 +748,9 @@ function numNumber(num) {
   return sum;
 }
 console.log(numNumber([1, 2]));
+
+function capitalize(word) {
+    return word.slice(0,1).toUpperCase()+word.slice(1).toLowerCase()
+
+}
+console.log(capitalize("faiz"))
