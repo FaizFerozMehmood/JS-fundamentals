@@ -11,6 +11,13 @@ function GetProducts() {
         const data = await axios.get("http://localhost:2000/product/get");
         if (data.status === 200) {
           setProduct(data?.data?.data);
+          localStorage.setItem("products", JSON.stringify(data?.data?.data));
+          // console.log("local storage === >>", localStorage.getItem("products"));
+          let getStrorageDaTa = localStorage.getItem("products");
+          if (getStrorageDaTa) {
+            const dataa = JSON.parse(getStrorageDaTa);
+            console.log("dataa====.", dataa);
+          }
         }
       } catch (error) {
         setError("error fetching product");

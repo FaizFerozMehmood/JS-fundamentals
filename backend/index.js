@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDataBase } from "./config/connect.js";
 import productRoutes from "./routes/productRoute.js";
-import path from "path"
+import path from "path";
 import { fileURLToPath } from "url";
 
 import cors from "cors";
