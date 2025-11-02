@@ -425,3 +425,11 @@ function check(a,b){
 console.log(check(1,2))
 
 
+function greet(name = "FAIZ"){
+  console.log(`Hello ${name}`)
+}
+
+console.log(greet())
+console.log(greet(null)) // bcoz null is a real value so it relace the default
+console.log(greet(undefined))
+
