@@ -433,3 +433,14 @@ user.name = "MEhmmod";
 user.city = "LAHORE";
 delete user.age;
 console.log(user); //{ name: 'faiz', age: 21 }
+
+function createuser() {
+  const data = { name: "faiz Mahmood", age: 23 };
+  return {
+    getName: () => data.name,
+  };
+}
+
+const userr = createuser();
+console.log(userr.data)
+console.log(userr.getName());
