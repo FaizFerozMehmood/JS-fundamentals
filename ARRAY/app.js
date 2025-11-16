@@ -742,15 +742,26 @@ function numNumber(num) {
   const sum = num.reduce((acc, value) => {
     // return acc < value ? acc : value;
     // return acc > value ? acc :value
-    return acc + value
-
-  },0);
+    return acc + value;
+  }, 0);
   return sum;
 }
 console.log(numNumber([1, 2]));
 
 function capitalize(word) {
-    return word.slice(0,1).toUpperCase()+word.slice(1).toLowerCase()
-
+  return word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase();
 }
-console.log(capitalize("faiz"))
+console.log(capitalize("faiz"));
+
+const arry = [1, 2, 3, 4, 4, 5];
+//Map always return a new array without modifying the original array whn you return it becomes the part of  new array
+const mapArray = arry.map((data) => {
+  return data + 1;
+});
+console.log("data=>", mapArray);
+
+// foreach: always return undefined used only for looping not creating a new array ... return doesnt work inside
+const foreach = arry.forEach((data) => {
+  return data + 1;
+});
+console.log("foreach", foreach);
